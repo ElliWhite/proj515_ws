@@ -1,0 +1,15 @@
+<launch>
+
+
+	<!--Sensor handled on robot-->
+
+	<!--Odometry handled on robot-->
+
+
+
+	<!--Transformation Configuration -->
+	<node name="robot_state_publisher" pkg="robot_state_publisher" type="state_publisher" />
+		<param name="robot_description" textfile="/home/olly/proj_ws/src/alpha_urdf/src/alpha-15.xml" />
+	<node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" />
+
+</launch> 

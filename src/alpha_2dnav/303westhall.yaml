@@ -1,0 +1,6 @@
+free_thresh: 0.196
+image: 303westhall.pgm
+negate: 0
+occupied_thresh: 0.65
+origin: [-3.1499999999999915, -3.299999999999997, 0.0]
+resolution: 0.05

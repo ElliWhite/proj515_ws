@@ -1,0 +1,354 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"mat_",
+				"mat_target_vels"
+			],
+			[
+				"mat",
+				"mat_wheel_vels"
+			],
+			[
+				"v_",
+				"v_left"
+			],
+			[
+				"taget",
+				"target_turn_vel"
+			],
+			[
+				"WE",
+				"WHEEL_BASE_LENGTH_M"
+			],
+			[
+				"WH",
+				"WHEEL_BASE_LENGTH_M"
+			],
+			[
+				"W",
+				"WHEEL_RADIUS"
+			],
+			[
+				"tar",
+				"target_vel"
+			],
+			[
+				"total",
+				"total_time"
+			],
+			[
+				"right",
+				"right_vel"
+			],
+			[
+				"time",
+				"time_list"
+			],
+			[
+				"lfet",
+				"left_vel_list"
+			],
+			[
+				"rigt",
+				"right_vel_list"
+			],
+			[
+				"left",
+				"left_vel_list"
+			],
+			[
+				"odom",
+				"odom_quat"
+			],
+			[
+				"new",
+				"new_y"
+			],
+			[
+				"pos",
+				"position"
+			],
+			[
+				"odom_",
+				"odom_msg"
+			],
+			[
+				"tra",
+				"translation"
+			],
+			[
+				"tran",
+				"transform"
+			],
+			[
+				"Wh",
+				"WHEEL_BASE_LENGTH_M"
+			],
+			[
+				"M",
+				"M_PER_STEP"
+			],
+			[
+				"ne",
+				"new_th"
+			],
+			[
+				"old",
+				"old_th"
+			],
+			[
+				"new_",
+				"new_th"
+			],
+			[
+				"old_",
+				"old_x"
+			],
+			[
+				"del",
+				"Delta_x"
+			],
+			[
+				"Ic",
+				"ICC_x"
+			],
+			[
+				"ICC",
+				"ICC_y"
+			],
+			[
+				"I",
+				"ICC_x"
+			],
+			[
+				"de",
+				"delta_Right_Pos"
+			],
+			[
+				"delat",
+				"delta_Left_Pos"
+			],
+			[
+				"dela",
+				"delta_Right_Pos"
+			],
+			[
+				"y",
+				"set_ylim"
+			],
+			[
+				"angle",
+				"angleOfPoint"
+			],
+			[
+				"angl",
+				"angleOfPoint"
+			],
+			[
+				"rage",
+				"ranges"
+			],
+			[
+				"ang",
+				"angleOfPoint"
+			],
+			[
+				"nu",
+				"numberOfPoints"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/home/elliottwhite/proj515_ws/alpha_urdf/src/display.launch",
+		"/home/elliottwhite/.ros/camera_info/head_camera_orig.yaml",
+		"/home/elliottwhite/PROJ515_Motor_Control_and_Odometry/main.cpp",
+		"/home/elliottwhite/proj515_ws/src/rplidar_interpret/scripts/lidar_plot.py",
+		"/home/elliottwhite/proj515_ws/src/pid_debugging/scripts/pid_plotting.py",
+		"/opt/ros/kinetic/lib/camera_calibration/cameracalibrator.py",
+		"/opt/ros/kinetic/share/usb_cam/launch/usb_cam-test.launch",
+		"/opt/ros/kinetic/share/aruco_detect/launch/aruco_detect.launch",
+		"/home/elliottwhite/proj515_ws/src/rplidar_ros/launch/rplidar.launch",
+		"/home/elliottwhite/proj515_ws/src/camera_tests/launch/camera_test.launch",
+		"/home/elliottwhite/PROJ515_Motors_F429ZI_with_Encoders/main.cpp",
+		"/home/elliottwhite/.ros/log/2baf5592-2ec9-11e9-941c-28e347a5b32e/roslaunch-elliottwhite-X550CC-20322.log",
+		"/home/elliottwhite/.ros/log/2baf5592-2ec9-11e9-941c-28e347a5b32e/master.log",
+		"/etc/bash.bashrc",
+		"/opt/ros/kinetic/lib/camera_calibration/tarfile_calibration.py",
+		"/opt/ros/kinetic/include/opencv-3.3.1-dev/opencv2/ccalib/multicalib.hpp",
+		"/opt/ros/kinetic/lib/camera_calibration/cameracheck.py",
+		"/opt/ros/kinetic/include/opencv-3.3.1-dev/opencv2/ccalib/omnidir.hpp",
+		"/opt/ros/kinetic/include/usb_cam/usb_cam.h",
+		"/home/elliottwhite/proj515_ws/src/rplidar_interpret/launch/plot_lidar.launch",
+		"/home/elliottwhite/PROJ515_AS5600/main.cpp",
+		"/home/elliottwhite/PROJ515_Motors_F429ZI_with_Encoders/ros_lib_kinetic/ros/node_handle.h",
+		"/home/elliottwhite/AS5600/main.cpp",
+		"/home/elliottwhite/Downloads/PROJ515_Motors_F429ZI_with_Encoders_CMAKE/CMakeLists.txt",
+		"/home/elliottwhite/proj515_ws/src/rosserial/rosserial_mbed/src/tests/time_test/time_test.cpp",
+		"/home/elliottwhite/.ros/log/119d058c-2401-11e9-9772-28e347a5b32e/master.log",
+		"/home/elliottwhite/.ros/log/428ea720-23fe-11e9-9772-28e347a5b32e/roslaunch-elliottwhite-X550CC-3266.log",
+		"/home/elliottwhite/.ros/log/latest/master.log",
+		"/home/elliottwhite/.ros/log/428ea720-23fe-11e9-9772-28e347a5b32e/roslaunch-elliottwhite-X550CC-3053.log",
+		"/home/elliottwhite/proj515_ws/src/rplidar_ros/launch/view_rplidar.launch",
+		"/home/elliottwhite/proj515_ws/src/rplidar_ros/scripts/rplidar.rules",
+		"/etc/udev/rules.d/70-snap.core.rules",
+		"/opt/ros/kinetic/share/fiducial_slam/launch/fiducial_rviz.launch",
+		"/home/elliottwhite/.bashrc"
+	],
+	"find":
+	{
+		"height": 20.8
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 20.8
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "pid_plotting.sublime-project",
+	"replace":
+	{
+		"height": 40.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 149.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

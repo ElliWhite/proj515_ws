@@ -1,0 +1,8 @@
+prefix=/home/elliottwhite/proj515_ws/install
+
+Name: pid_debugging
+Description: Description of pid_debugging
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/elliottwhite/proj515_ws/install/lib 
+Requires: 

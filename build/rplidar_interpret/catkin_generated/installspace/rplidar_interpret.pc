@@ -1,0 +1,8 @@
+prefix=/home/elliottwhite/proj515_ws/install
+
+Name: rplidar_interpret
+Description: Description of rplidar_interpret
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/elliottwhite/proj515_ws/install/lib 
+Requires: 

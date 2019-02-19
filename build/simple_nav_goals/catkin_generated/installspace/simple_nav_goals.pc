@@ -1,0 +1,8 @@
+prefix=/home/elliottwhite/proj515_ws/install
+
+Name: simple_nav_goals
+Description: Description of simple_nav_goals
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/elliottwhite/proj515_ws/install/lib 
+Requires: 
