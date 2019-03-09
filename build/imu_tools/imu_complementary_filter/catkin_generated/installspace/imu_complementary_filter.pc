@@ -1,0 +1,8 @@
+prefix=/home/elliottwhite/proj515_ws/install
+
+Name: imu_complementary_filter
+Description: Description of imu_complementary_filter
+Version: 1.1.6
+Cflags: -I/home/elliottwhite/proj515_ws/install/include
+Libs: -L/home/elliottwhite/proj515_ws/install/lib -lcomplementary_filter
+Requires: message_filters roscpp sensor_msgs std_msgs tf

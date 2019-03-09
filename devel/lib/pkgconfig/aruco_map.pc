@@ -1,0 +1,8 @@
+prefix=/home/elliottwhite/proj515_ws/devel
+
+Name: aruco_map
+Description: Description of aruco_map
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/elliottwhite/proj515_ws/devel/lib 
+Requires: 

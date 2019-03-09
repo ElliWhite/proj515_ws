@@ -1,0 +1,8 @@
+prefix=/home/elliottwhite/proj515_ws/install
+
+Name: libphidget21
+Description: Description of libphidget21
+Version: 0.7.7
+Cflags: 
+Libs: -L/home/elliottwhite/proj515_ws/install/lib 
+Requires: 

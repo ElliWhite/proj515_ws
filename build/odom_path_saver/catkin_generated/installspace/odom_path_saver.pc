@@ -1,0 +1,8 @@
+prefix=/home/elliottwhite/proj515_ws/install
+
+Name: odom_path_saver
+Description: Description of odom_path_saver
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/elliottwhite/proj515_ws/install/lib 
+Requires: 

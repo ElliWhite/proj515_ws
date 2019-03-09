@@ -1,0 +1,8 @@
+prefix=/home/elliottwhite/proj515_ws/devel
+
+Name: joy2vel
+Description: Description of joy2vel
+Version: 0.0.1
+Cflags: 
+Libs: -L/home/elliottwhite/proj515_ws/devel/lib 
+Requires: 

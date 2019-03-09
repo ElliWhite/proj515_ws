@@ -3,7 +3,7 @@
 
 	
 
-	<param name="robot_description" textfile="/home/olly/proj_ws/src/alpha_urdf/src/alpha-15.xml" />
+	<param name="robot_description" textfile="/home/elliottwhite/proj515_ws/src/alpha_urdf/src/alpha-15.xml" />
 	
 
 	<node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" />

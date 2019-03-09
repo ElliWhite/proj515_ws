@@ -1,0 +1,8 @@
+prefix=/home/elliottwhite/proj515_ws/install
+
+Name: phidgets_api
+Description: Description of phidgets_api
+Version: 0.7.7
+Cflags: -I/home/elliottwhite/proj515_ws/install/include
+Libs: -L/home/elliottwhite/proj515_ws/install/lib -lphidgets_api
+Requires: libphidget21

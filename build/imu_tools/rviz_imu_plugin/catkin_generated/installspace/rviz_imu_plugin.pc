@@ -1,0 +1,8 @@
+prefix=/home/elliottwhite/proj515_ws/install
+
+Name: rviz_imu_plugin
+Description: Description of rviz_imu_plugin
+Version: 1.1.6
+Cflags: 
+Libs: -L/home/elliottwhite/proj515_ws/install/lib 
+Requires: rviz
