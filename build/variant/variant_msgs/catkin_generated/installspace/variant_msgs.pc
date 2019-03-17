@@ -1,0 +1,8 @@
+prefix=/home/elliottwhite/proj515_ws/install
+
+Name: variant_msgs
+Description: Description of variant_msgs
+Version: 0.1.5
+Cflags: -I/home/elliottwhite/proj515_ws/install/include
+Libs: -L/home/elliottwhite/proj515_ws/install/lib 
+Requires: message_runtime std_msgs

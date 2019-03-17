@@ -1,0 +1,8 @@
+prefix=/home/elliottwhite/proj515_ws/install
+
+Name: variant_topic_tools
+Description: Description of variant_topic_tools
+Version: 0.1.5
+Cflags: -I/home/elliottwhite/proj515_ws/install/include
+Libs: -L/home/elliottwhite/proj515_ws/install/lib -lvariant_topic_tools
+Requires: roscpp roslib variant_msgs

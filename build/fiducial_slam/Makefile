@@ -68,6 +68,27 @@ install/fast: preinstall/fast
 	/usr/bin/cmake -P cmake_install.cmake
 .PHONY : install/fast
 
+# Special rule for the target edit_cache
+edit_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
+	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+.PHONY : edit_cache
+
+# Special rule for the target edit_cache
+edit_cache/fast: edit_cache
+
+.PHONY : edit_cache/fast
+
+# Special rule for the target list_install_components
+list_install_components:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
+.PHONY : list_install_components
+
+# Special rule for the target list_install_components
+list_install_components/fast: list_install_components
+
+.PHONY : list_install_components/fast
+
 # Special rule for the target install/strip
 install/strip: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
@@ -112,27 +133,6 @@ rebuild_cache/fast: rebuild_cache
 
 .PHONY : rebuild_cache/fast
 
-# Special rule for the target list_install_components
-list_install_components:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
-.PHONY : list_install_components
-
-# Special rule for the target list_install_components
-list_install_components/fast: list_install_components
-
-.PHONY : list_install_components/fast
-
-# Special rule for the target edit_cache
-edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
-.PHONY : edit_cache
-
-# Special rule for the target edit_cache
-edit_cache/fast: edit_cache
-
-.PHONY : edit_cache/fast
-
 # The main all target
 all: cmake_check_build_system
 	cd /home/elliottwhite/proj515_ws/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles /home/elliottwhite/proj515_ws/build/fiducial_slam/CMakeFiles/progress.marks
@@ -166,6 +166,51 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
+fiducial_slam/CMakeFiles/_run_tests_fiducial_slam_rostest_test_auto_init_403.test.dir/rule:
+	cd /home/elliottwhite/proj515_ws/build && $(MAKE) -f CMakeFiles/Makefile2 fiducial_slam/CMakeFiles/_run_tests_fiducial_slam_rostest_test_auto_init_403.test.dir/rule
+.PHONY : fiducial_slam/CMakeFiles/_run_tests_fiducial_slam_rostest_test_auto_init_403.test.dir/rule
+
+# Convenience name for target.
+_run_tests_fiducial_slam_rostest_test_auto_init_403.test: fiducial_slam/CMakeFiles/_run_tests_fiducial_slam_rostest_test_auto_init_403.test.dir/rule
+
+.PHONY : _run_tests_fiducial_slam_rostest_test_auto_init_403.test
+
+# fast build rule for target.
+_run_tests_fiducial_slam_rostest_test_auto_init_403.test/fast:
+	cd /home/elliottwhite/proj515_ws/build && $(MAKE) -f fiducial_slam/CMakeFiles/_run_tests_fiducial_slam_rostest_test_auto_init_403.test.dir/build.make fiducial_slam/CMakeFiles/_run_tests_fiducial_slam_rostest_test_auto_init_403.test.dir/build
+.PHONY : _run_tests_fiducial_slam_rostest_test_auto_init_403.test/fast
+
+# Convenience name for target.
+fiducial_slam/CMakeFiles/run_tests_fiducial_slam_rostest_test_auto_init_403.test.dir/rule:
+	cd /home/elliottwhite/proj515_ws/build && $(MAKE) -f CMakeFiles/Makefile2 fiducial_slam/CMakeFiles/run_tests_fiducial_slam_rostest_test_auto_init_403.test.dir/rule
+.PHONY : fiducial_slam/CMakeFiles/run_tests_fiducial_slam_rostest_test_auto_init_403.test.dir/rule
+
+# Convenience name for target.
+run_tests_fiducial_slam_rostest_test_auto_init_403.test: fiducial_slam/CMakeFiles/run_tests_fiducial_slam_rostest_test_auto_init_403.test.dir/rule
+
+.PHONY : run_tests_fiducial_slam_rostest_test_auto_init_403.test
+
+# fast build rule for target.
+run_tests_fiducial_slam_rostest_test_auto_init_403.test/fast:
+	cd /home/elliottwhite/proj515_ws/build && $(MAKE) -f fiducial_slam/CMakeFiles/run_tests_fiducial_slam_rostest_test_auto_init_403.test.dir/build.make fiducial_slam/CMakeFiles/run_tests_fiducial_slam_rostest_test_auto_init_403.test.dir/build
+.PHONY : run_tests_fiducial_slam_rostest_test_auto_init_403.test/fast
+
+# Convenience name for target.
+fiducial_slam/CMakeFiles/auto_init_403_test.dir/rule:
+	cd /home/elliottwhite/proj515_ws/build && $(MAKE) -f CMakeFiles/Makefile2 fiducial_slam/CMakeFiles/auto_init_403_test.dir/rule
+.PHONY : fiducial_slam/CMakeFiles/auto_init_403_test.dir/rule
+
+# Convenience name for target.
+auto_init_403_test: fiducial_slam/CMakeFiles/auto_init_403_test.dir/rule
+
+.PHONY : auto_init_403_test
+
+# fast build rule for target.
+auto_init_403_test/fast:
+	cd /home/elliottwhite/proj515_ws/build && $(MAKE) -f fiducial_slam/CMakeFiles/auto_init_403_test.dir/build.make fiducial_slam/CMakeFiles/auto_init_403_test.dir/build
+.PHONY : auto_init_403_test/fast
+
+# Convenience name for target.
 fiducial_slam/CMakeFiles/run_tests_fiducial_slam_rostest.dir/rule:
 	cd /home/elliottwhite/proj515_ws/build && $(MAKE) -f CMakeFiles/Makefile2 fiducial_slam/CMakeFiles/run_tests_fiducial_slam_rostest.dir/rule
 .PHONY : fiducial_slam/CMakeFiles/run_tests_fiducial_slam_rostest.dir/rule
@@ -179,21 +224,6 @@ run_tests_fiducial_slam_rostest: fiducial_slam/CMakeFiles/run_tests_fiducial_sla
 run_tests_fiducial_slam_rostest/fast:
 	cd /home/elliottwhite/proj515_ws/build && $(MAKE) -f fiducial_slam/CMakeFiles/run_tests_fiducial_slam_rostest.dir/build.make fiducial_slam/CMakeFiles/run_tests_fiducial_slam_rostest.dir/build
 .PHONY : run_tests_fiducial_slam_rostest/fast
-
-# Convenience name for target.
-fiducial_slam/CMakeFiles/visualization_msgs_generate_messages_lisp.dir/rule:
-	cd /home/elliottwhite/proj515_ws/build && $(MAKE) -f CMakeFiles/Makefile2 fiducial_slam/CMakeFiles/visualization_msgs_generate_messages_lisp.dir/rule
-.PHONY : fiducial_slam/CMakeFiles/visualization_msgs_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-visualization_msgs_generate_messages_lisp: fiducial_slam/CMakeFiles/visualization_msgs_generate_messages_lisp.dir/rule
-
-.PHONY : visualization_msgs_generate_messages_lisp
-
-# fast build rule for target.
-visualization_msgs_generate_messages_lisp/fast:
-	cd /home/elliottwhite/proj515_ws/build && $(MAKE) -f fiducial_slam/CMakeFiles/visualization_msgs_generate_messages_lisp.dir/build.make fiducial_slam/CMakeFiles/visualization_msgs_generate_messages_lisp.dir/build
-.PHONY : visualization_msgs_generate_messages_lisp/fast
 
 # Convenience name for target.
 fiducial_slam/CMakeFiles/run_tests_fiducial_slam.dir/rule:
@@ -226,34 +256,34 @@ fiducial_slam/fast:
 .PHONY : fiducial_slam/fast
 
 # Convenience name for target.
-fiducial_slam/CMakeFiles/visualization_msgs_generate_messages_py.dir/rule:
-	cd /home/elliottwhite/proj515_ws/build && $(MAKE) -f CMakeFiles/Makefile2 fiducial_slam/CMakeFiles/visualization_msgs_generate_messages_py.dir/rule
-.PHONY : fiducial_slam/CMakeFiles/visualization_msgs_generate_messages_py.dir/rule
+fiducial_slam/CMakeFiles/run_tests_fiducial_slam_rostest_test_create_map_aruco.xml.dir/rule:
+	cd /home/elliottwhite/proj515_ws/build && $(MAKE) -f CMakeFiles/Makefile2 fiducial_slam/CMakeFiles/run_tests_fiducial_slam_rostest_test_create_map_aruco.xml.dir/rule
+.PHONY : fiducial_slam/CMakeFiles/run_tests_fiducial_slam_rostest_test_create_map_aruco.xml.dir/rule
 
 # Convenience name for target.
-visualization_msgs_generate_messages_py: fiducial_slam/CMakeFiles/visualization_msgs_generate_messages_py.dir/rule
+run_tests_fiducial_slam_rostest_test_create_map_aruco.xml: fiducial_slam/CMakeFiles/run_tests_fiducial_slam_rostest_test_create_map_aruco.xml.dir/rule
 
-.PHONY : visualization_msgs_generate_messages_py
+.PHONY : run_tests_fiducial_slam_rostest_test_create_map_aruco.xml
 
 # fast build rule for target.
-visualization_msgs_generate_messages_py/fast:
-	cd /home/elliottwhite/proj515_ws/build && $(MAKE) -f fiducial_slam/CMakeFiles/visualization_msgs_generate_messages_py.dir/build.make fiducial_slam/CMakeFiles/visualization_msgs_generate_messages_py.dir/build
-.PHONY : visualization_msgs_generate_messages_py/fast
+run_tests_fiducial_slam_rostest_test_create_map_aruco.xml/fast:
+	cd /home/elliottwhite/proj515_ws/build && $(MAKE) -f fiducial_slam/CMakeFiles/run_tests_fiducial_slam_rostest_test_create_map_aruco.xml.dir/build.make fiducial_slam/CMakeFiles/run_tests_fiducial_slam_rostest_test_create_map_aruco.xml.dir/build
+.PHONY : run_tests_fiducial_slam_rostest_test_create_map_aruco.xml/fast
 
 # Convenience name for target.
-fiducial_slam/CMakeFiles/auto_init_403_test.dir/rule:
-	cd /home/elliottwhite/proj515_ws/build && $(MAKE) -f CMakeFiles/Makefile2 fiducial_slam/CMakeFiles/auto_init_403_test.dir/rule
-.PHONY : fiducial_slam/CMakeFiles/auto_init_403_test.dir/rule
+fiducial_slam/CMakeFiles/_run_tests_fiducial_slam_rostest.dir/rule:
+	cd /home/elliottwhite/proj515_ws/build && $(MAKE) -f CMakeFiles/Makefile2 fiducial_slam/CMakeFiles/_run_tests_fiducial_slam_rostest.dir/rule
+.PHONY : fiducial_slam/CMakeFiles/_run_tests_fiducial_slam_rostest.dir/rule
 
 # Convenience name for target.
-auto_init_403_test: fiducial_slam/CMakeFiles/auto_init_403_test.dir/rule
+_run_tests_fiducial_slam_rostest: fiducial_slam/CMakeFiles/_run_tests_fiducial_slam_rostest.dir/rule
 
-.PHONY : auto_init_403_test
+.PHONY : _run_tests_fiducial_slam_rostest
 
 # fast build rule for target.
-auto_init_403_test/fast:
-	cd /home/elliottwhite/proj515_ws/build && $(MAKE) -f fiducial_slam/CMakeFiles/auto_init_403_test.dir/build.make fiducial_slam/CMakeFiles/auto_init_403_test.dir/build
-.PHONY : auto_init_403_test/fast
+_run_tests_fiducial_slam_rostest/fast:
+	cd /home/elliottwhite/proj515_ws/build && $(MAKE) -f fiducial_slam/CMakeFiles/_run_tests_fiducial_slam_rostest.dir/build.make fiducial_slam/CMakeFiles/_run_tests_fiducial_slam_rostest.dir/build
+.PHONY : _run_tests_fiducial_slam_rostest/fast
 
 # Convenience name for target.
 fiducial_slam/CMakeFiles/_run_tests_fiducial_slam.dir/rule:
@@ -286,94 +316,19 @@ _run_tests_fiducial_slam_rostest_test_init_map_aruco.xml/fast:
 .PHONY : _run_tests_fiducial_slam_rostest_test_init_map_aruco.xml/fast
 
 # Convenience name for target.
-fiducial_slam/CMakeFiles/visualization_msgs_generate_messages_cpp.dir/rule:
-	cd /home/elliottwhite/proj515_ws/build && $(MAKE) -f CMakeFiles/Makefile2 fiducial_slam/CMakeFiles/visualization_msgs_generate_messages_cpp.dir/rule
-.PHONY : fiducial_slam/CMakeFiles/visualization_msgs_generate_messages_cpp.dir/rule
+fiducial_slam/CMakeFiles/clean_test_results_fiducial_slam.dir/rule:
+	cd /home/elliottwhite/proj515_ws/build && $(MAKE) -f CMakeFiles/Makefile2 fiducial_slam/CMakeFiles/clean_test_results_fiducial_slam.dir/rule
+.PHONY : fiducial_slam/CMakeFiles/clean_test_results_fiducial_slam.dir/rule
 
 # Convenience name for target.
-visualization_msgs_generate_messages_cpp: fiducial_slam/CMakeFiles/visualization_msgs_generate_messages_cpp.dir/rule
+clean_test_results_fiducial_slam: fiducial_slam/CMakeFiles/clean_test_results_fiducial_slam.dir/rule
 
-.PHONY : visualization_msgs_generate_messages_cpp
+.PHONY : clean_test_results_fiducial_slam
 
 # fast build rule for target.
-visualization_msgs_generate_messages_cpp/fast:
-	cd /home/elliottwhite/proj515_ws/build && $(MAKE) -f fiducial_slam/CMakeFiles/visualization_msgs_generate_messages_cpp.dir/build.make fiducial_slam/CMakeFiles/visualization_msgs_generate_messages_cpp.dir/build
-.PHONY : visualization_msgs_generate_messages_cpp/fast
-
-# Convenience name for target.
-fiducial_slam/CMakeFiles/run_tests_fiducial_slam_rostest_test_init_map_aruco.xml.dir/rule:
-	cd /home/elliottwhite/proj515_ws/build && $(MAKE) -f CMakeFiles/Makefile2 fiducial_slam/CMakeFiles/run_tests_fiducial_slam_rostest_test_init_map_aruco.xml.dir/rule
-.PHONY : fiducial_slam/CMakeFiles/run_tests_fiducial_slam_rostest_test_init_map_aruco.xml.dir/rule
-
-# Convenience name for target.
-run_tests_fiducial_slam_rostest_test_init_map_aruco.xml: fiducial_slam/CMakeFiles/run_tests_fiducial_slam_rostest_test_init_map_aruco.xml.dir/rule
-
-.PHONY : run_tests_fiducial_slam_rostest_test_init_map_aruco.xml
-
-# fast build rule for target.
-run_tests_fiducial_slam_rostest_test_init_map_aruco.xml/fast:
-	cd /home/elliottwhite/proj515_ws/build && $(MAKE) -f fiducial_slam/CMakeFiles/run_tests_fiducial_slam_rostest_test_init_map_aruco.xml.dir/build.make fiducial_slam/CMakeFiles/run_tests_fiducial_slam_rostest_test_init_map_aruco.xml.dir/build
-.PHONY : run_tests_fiducial_slam_rostest_test_init_map_aruco.xml/fast
-
-# Convenience name for target.
-fiducial_slam/CMakeFiles/visualization_msgs_generate_messages_eus.dir/rule:
-	cd /home/elliottwhite/proj515_ws/build && $(MAKE) -f CMakeFiles/Makefile2 fiducial_slam/CMakeFiles/visualization_msgs_generate_messages_eus.dir/rule
-.PHONY : fiducial_slam/CMakeFiles/visualization_msgs_generate_messages_eus.dir/rule
-
-# Convenience name for target.
-visualization_msgs_generate_messages_eus: fiducial_slam/CMakeFiles/visualization_msgs_generate_messages_eus.dir/rule
-
-.PHONY : visualization_msgs_generate_messages_eus
-
-# fast build rule for target.
-visualization_msgs_generate_messages_eus/fast:
-	cd /home/elliottwhite/proj515_ws/build && $(MAKE) -f fiducial_slam/CMakeFiles/visualization_msgs_generate_messages_eus.dir/build.make fiducial_slam/CMakeFiles/visualization_msgs_generate_messages_eus.dir/build
-.PHONY : visualization_msgs_generate_messages_eus/fast
-
-# Convenience name for target.
-fiducial_slam/CMakeFiles/_run_tests_fiducial_slam_rostest.dir/rule:
-	cd /home/elliottwhite/proj515_ws/build && $(MAKE) -f CMakeFiles/Makefile2 fiducial_slam/CMakeFiles/_run_tests_fiducial_slam_rostest.dir/rule
-.PHONY : fiducial_slam/CMakeFiles/_run_tests_fiducial_slam_rostest.dir/rule
-
-# Convenience name for target.
-_run_tests_fiducial_slam_rostest: fiducial_slam/CMakeFiles/_run_tests_fiducial_slam_rostest.dir/rule
-
-.PHONY : _run_tests_fiducial_slam_rostest
-
-# fast build rule for target.
-_run_tests_fiducial_slam_rostest/fast:
-	cd /home/elliottwhite/proj515_ws/build && $(MAKE) -f fiducial_slam/CMakeFiles/_run_tests_fiducial_slam_rostest.dir/build.make fiducial_slam/CMakeFiles/_run_tests_fiducial_slam_rostest.dir/build
-.PHONY : _run_tests_fiducial_slam_rostest/fast
-
-# Convenience name for target.
-fiducial_slam/CMakeFiles/run_tests_fiducial_slam_rostest_test_create_map_aruco.xml.dir/rule:
-	cd /home/elliottwhite/proj515_ws/build && $(MAKE) -f CMakeFiles/Makefile2 fiducial_slam/CMakeFiles/run_tests_fiducial_slam_rostest_test_create_map_aruco.xml.dir/rule
-.PHONY : fiducial_slam/CMakeFiles/run_tests_fiducial_slam_rostest_test_create_map_aruco.xml.dir/rule
-
-# Convenience name for target.
-run_tests_fiducial_slam_rostest_test_create_map_aruco.xml: fiducial_slam/CMakeFiles/run_tests_fiducial_slam_rostest_test_create_map_aruco.xml.dir/rule
-
-.PHONY : run_tests_fiducial_slam_rostest_test_create_map_aruco.xml
-
-# fast build rule for target.
-run_tests_fiducial_slam_rostest_test_create_map_aruco.xml/fast:
-	cd /home/elliottwhite/proj515_ws/build && $(MAKE) -f fiducial_slam/CMakeFiles/run_tests_fiducial_slam_rostest_test_create_map_aruco.xml.dir/build.make fiducial_slam/CMakeFiles/run_tests_fiducial_slam_rostest_test_create_map_aruco.xml.dir/build
-.PHONY : run_tests_fiducial_slam_rostest_test_create_map_aruco.xml/fast
-
-# Convenience name for target.
-fiducial_slam/CMakeFiles/visualization_msgs_generate_messages_nodejs.dir/rule:
-	cd /home/elliottwhite/proj515_ws/build && $(MAKE) -f CMakeFiles/Makefile2 fiducial_slam/CMakeFiles/visualization_msgs_generate_messages_nodejs.dir/rule
-.PHONY : fiducial_slam/CMakeFiles/visualization_msgs_generate_messages_nodejs.dir/rule
-
-# Convenience name for target.
-visualization_msgs_generate_messages_nodejs: fiducial_slam/CMakeFiles/visualization_msgs_generate_messages_nodejs.dir/rule
-
-.PHONY : visualization_msgs_generate_messages_nodejs
-
-# fast build rule for target.
-visualization_msgs_generate_messages_nodejs/fast:
-	cd /home/elliottwhite/proj515_ws/build && $(MAKE) -f fiducial_slam/CMakeFiles/visualization_msgs_generate_messages_nodejs.dir/build.make fiducial_slam/CMakeFiles/visualization_msgs_generate_messages_nodejs.dir/build
-.PHONY : visualization_msgs_generate_messages_nodejs/fast
+clean_test_results_fiducial_slam/fast:
+	cd /home/elliottwhite/proj515_ws/build && $(MAKE) -f fiducial_slam/CMakeFiles/clean_test_results_fiducial_slam.dir/build.make fiducial_slam/CMakeFiles/clean_test_results_fiducial_slam.dir/build
+.PHONY : clean_test_results_fiducial_slam/fast
 
 # Convenience name for target.
 fiducial_slam/CMakeFiles/_run_tests_fiducial_slam_rostest_test_create_map_aruco.xml.dir/rule:
@@ -391,49 +346,19 @@ _run_tests_fiducial_slam_rostest_test_create_map_aruco.xml/fast:
 .PHONY : _run_tests_fiducial_slam_rostest_test_create_map_aruco.xml/fast
 
 # Convenience name for target.
-fiducial_slam/CMakeFiles/clean_test_results_fiducial_slam.dir/rule:
-	cd /home/elliottwhite/proj515_ws/build && $(MAKE) -f CMakeFiles/Makefile2 fiducial_slam/CMakeFiles/clean_test_results_fiducial_slam.dir/rule
-.PHONY : fiducial_slam/CMakeFiles/clean_test_results_fiducial_slam.dir/rule
+fiducial_slam/CMakeFiles/run_tests_fiducial_slam_rostest_test_init_map_aruco.xml.dir/rule:
+	cd /home/elliottwhite/proj515_ws/build && $(MAKE) -f CMakeFiles/Makefile2 fiducial_slam/CMakeFiles/run_tests_fiducial_slam_rostest_test_init_map_aruco.xml.dir/rule
+.PHONY : fiducial_slam/CMakeFiles/run_tests_fiducial_slam_rostest_test_init_map_aruco.xml.dir/rule
 
 # Convenience name for target.
-clean_test_results_fiducial_slam: fiducial_slam/CMakeFiles/clean_test_results_fiducial_slam.dir/rule
+run_tests_fiducial_slam_rostest_test_init_map_aruco.xml: fiducial_slam/CMakeFiles/run_tests_fiducial_slam_rostest_test_init_map_aruco.xml.dir/rule
 
-.PHONY : clean_test_results_fiducial_slam
+.PHONY : run_tests_fiducial_slam_rostest_test_init_map_aruco.xml
 
 # fast build rule for target.
-clean_test_results_fiducial_slam/fast:
-	cd /home/elliottwhite/proj515_ws/build && $(MAKE) -f fiducial_slam/CMakeFiles/clean_test_results_fiducial_slam.dir/build.make fiducial_slam/CMakeFiles/clean_test_results_fiducial_slam.dir/build
-.PHONY : clean_test_results_fiducial_slam/fast
-
-# Convenience name for target.
-fiducial_slam/CMakeFiles/run_tests_fiducial_slam_rostest_test_auto_init_403.test.dir/rule:
-	cd /home/elliottwhite/proj515_ws/build && $(MAKE) -f CMakeFiles/Makefile2 fiducial_slam/CMakeFiles/run_tests_fiducial_slam_rostest_test_auto_init_403.test.dir/rule
-.PHONY : fiducial_slam/CMakeFiles/run_tests_fiducial_slam_rostest_test_auto_init_403.test.dir/rule
-
-# Convenience name for target.
-run_tests_fiducial_slam_rostest_test_auto_init_403.test: fiducial_slam/CMakeFiles/run_tests_fiducial_slam_rostest_test_auto_init_403.test.dir/rule
-
-.PHONY : run_tests_fiducial_slam_rostest_test_auto_init_403.test
-
-# fast build rule for target.
-run_tests_fiducial_slam_rostest_test_auto_init_403.test/fast:
-	cd /home/elliottwhite/proj515_ws/build && $(MAKE) -f fiducial_slam/CMakeFiles/run_tests_fiducial_slam_rostest_test_auto_init_403.test.dir/build.make fiducial_slam/CMakeFiles/run_tests_fiducial_slam_rostest_test_auto_init_403.test.dir/build
-.PHONY : run_tests_fiducial_slam_rostest_test_auto_init_403.test/fast
-
-# Convenience name for target.
-fiducial_slam/CMakeFiles/_run_tests_fiducial_slam_rostest_test_auto_init_403.test.dir/rule:
-	cd /home/elliottwhite/proj515_ws/build && $(MAKE) -f CMakeFiles/Makefile2 fiducial_slam/CMakeFiles/_run_tests_fiducial_slam_rostest_test_auto_init_403.test.dir/rule
-.PHONY : fiducial_slam/CMakeFiles/_run_tests_fiducial_slam_rostest_test_auto_init_403.test.dir/rule
-
-# Convenience name for target.
-_run_tests_fiducial_slam_rostest_test_auto_init_403.test: fiducial_slam/CMakeFiles/_run_tests_fiducial_slam_rostest_test_auto_init_403.test.dir/rule
-
-.PHONY : _run_tests_fiducial_slam_rostest_test_auto_init_403.test
-
-# fast build rule for target.
-_run_tests_fiducial_slam_rostest_test_auto_init_403.test/fast:
-	cd /home/elliottwhite/proj515_ws/build && $(MAKE) -f fiducial_slam/CMakeFiles/_run_tests_fiducial_slam_rostest_test_auto_init_403.test.dir/build.make fiducial_slam/CMakeFiles/_run_tests_fiducial_slam_rostest_test_auto_init_403.test.dir/build
-.PHONY : _run_tests_fiducial_slam_rostest_test_auto_init_403.test/fast
+run_tests_fiducial_slam_rostest_test_init_map_aruco.xml/fast:
+	cd /home/elliottwhite/proj515_ws/build && $(MAKE) -f fiducial_slam/CMakeFiles/run_tests_fiducial_slam_rostest_test_init_map_aruco.xml.dir/build.make fiducial_slam/CMakeFiles/run_tests_fiducial_slam_rostest_test_init_map_aruco.xml.dir/build
+.PHONY : run_tests_fiducial_slam_rostest_test_init_map_aruco.xml/fast
 
 src/estimator.o: src/estimator.cpp.o
 
@@ -550,30 +475,25 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... install"
-	@echo "... run_tests_fiducial_slam_rostest"
-	@echo "... visualization_msgs_generate_messages_lisp"
+	@echo "... edit_cache"
+	@echo "... _run_tests_fiducial_slam_rostest_test_auto_init_403.test"
+	@echo "... run_tests_fiducial_slam_rostest_test_auto_init_403.test"
+	@echo "... auto_init_403_test"
+	@echo "... list_install_components"
 	@echo "... install/strip"
+	@echo "... run_tests_fiducial_slam_rostest"
 	@echo "... test"
 	@echo "... run_tests_fiducial_slam"
-	@echo "... fiducial_slam"
 	@echo "... install/local"
-	@echo "... visualization_msgs_generate_messages_py"
-	@echo "... auto_init_403_test"
-	@echo "... _run_tests_fiducial_slam"
-	@echo "... rebuild_cache"
-	@echo "... _run_tests_fiducial_slam_rostest_test_init_map_aruco.xml"
-	@echo "... visualization_msgs_generate_messages_cpp"
-	@echo "... run_tests_fiducial_slam_rostest_test_init_map_aruco.xml"
-	@echo "... visualization_msgs_generate_messages_eus"
-	@echo "... _run_tests_fiducial_slam_rostest"
+	@echo "... fiducial_slam"
 	@echo "... run_tests_fiducial_slam_rostest_test_create_map_aruco.xml"
-	@echo "... list_install_components"
-	@echo "... visualization_msgs_generate_messages_nodejs"
-	@echo "... _run_tests_fiducial_slam_rostest_test_create_map_aruco.xml"
+	@echo "... _run_tests_fiducial_slam_rostest"
+	@echo "... _run_tests_fiducial_slam"
+	@echo "... _run_tests_fiducial_slam_rostest_test_init_map_aruco.xml"
 	@echo "... clean_test_results_fiducial_slam"
-	@echo "... run_tests_fiducial_slam_rostest_test_auto_init_403.test"
-	@echo "... _run_tests_fiducial_slam_rostest_test_auto_init_403.test"
-	@echo "... edit_cache"
+	@echo "... _run_tests_fiducial_slam_rostest_test_create_map_aruco.xml"
+	@echo "... rebuild_cache"
+	@echo "... run_tests_fiducial_slam_rostest_test_init_map_aruco.xml"
 	@echo "... src/estimator.o"
 	@echo "... src/estimator.i"
 	@echo "... src/estimator.s"

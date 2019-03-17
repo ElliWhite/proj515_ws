@@ -1,0 +1,6 @@
+-DROS_BUILD_SHARED_LIBS=1
+-DROS_PACKAGE_NAME="rqt_multiplot"
+-DROSCONSOLE_BACKEND_LOG4CXX
+-o
+/home/elliottwhite/proj515_ws/build/rqt_multiplot_plugin/rqt_multiplot/include/rqt_multiplot/moc_XmlSettings.cpp
+/home/elliottwhite/proj515_ws/src/rqt_multiplot_plugin/rqt_multiplot/include/rqt_multiplot/XmlSettings.h

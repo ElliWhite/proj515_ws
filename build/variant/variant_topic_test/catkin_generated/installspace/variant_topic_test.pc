@@ -1,0 +1,8 @@
+prefix=/home/elliottwhite/proj515_ws/install
+
+Name: variant_topic_test
+Description: Description of variant_topic_test
+Version: 0.1.5
+Cflags: 
+Libs: -L/home/elliottwhite/proj515_ws/install/lib -lvariant_topic_test
+Requires: roscpp std_msgs geometry_msgs variant_msgs variant_topic_tools

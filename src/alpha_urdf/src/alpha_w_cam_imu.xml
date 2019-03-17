@@ -58,6 +58,9 @@ Alpha robot urdf test
   <link name="imu">
     <visual>
       <origin rpy="0 -1.57 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="file:/home/elliottwhite/proj515_ws/src/alpha_urdf/src/urdf_imu.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
     </visual>
   </link>
 
@@ -66,7 +69,7 @@ Alpha robot urdf test
     <parent link="base_link"/>
     <child link="imu"/>
     <!--           x y z     -->
-    <origin rpy = "0 0 0" xyz = "0 0 0.388138"/>
+    <origin rpy = "0 3.14 1.57" xyz = "0.006206 0.0102 0.061"/> 
   </joint>
 
 

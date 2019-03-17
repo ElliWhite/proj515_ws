@@ -1,7 +1,7 @@
 <launch>
 
 	<!-- Run the map server --> 
-	<node name="map_server" pkg="map_server" type="map_server" args="$(find alpha_2dnav)/303.pgm 0.05"/>
+	<node name="map_server" pkg="map_server" type="map_server" args="$(find map)/303/303_march_2.pgm 0.05"/>
 
 	<!--- Run AMCL --> 
 	<include file="$(find alpha_2dnav)/launch/amcl_diff.launch" />

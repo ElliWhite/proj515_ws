@@ -1,3 +1,5 @@
  <launch>
-    <node pkg="odom_to_path_saver" type="odom_to_path_saver" name="odom_to_path_saver" />
+
+    <node pkg="odom_to_path_saver" type="map_to_odom_tf_listener.cpp" name="odom_to_path_saver"/>
+
  </launch>
