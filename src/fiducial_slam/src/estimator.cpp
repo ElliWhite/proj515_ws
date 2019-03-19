@@ -152,6 +152,7 @@ void Estimator::estimatePose(int fid, const vector<Point3d> &worldPoints,
         tvecHistory[fid] = tvec;
     }
 
+    // This is the location of the fiducial marker relative to the camera
     ft.fiducial_id = fid;
 
     ft.transform.translation.x = tvec[0];
@@ -241,6 +242,9 @@ void Estimator::estimatePoses(const fiducial_msgs::FiducialArray::ConstPtr& msg,
                 tf2::Vector3 vertex2(vertex.x, vertex.y, vertex.z);
                 // vertex in world coordinates
                 tf2::Vector3 worldPoint = fiducialTransform * vertex2;
+
+                ROS_INFO("Fid in world = %f %f %f", worldPoint.x(), worldPoint.y(), worldPoint.z());
+
                 allWorldPoints.push_back(Point3d(worldPoint.x(), worldPoint.y(), worldPoint.z()));
                 allImagePoints.push_back(corners[j]);
             }

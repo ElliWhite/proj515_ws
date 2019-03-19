@@ -3390,6 +3390,19 @@ _run_tests_aruco_detect/fast:
 .PHONY : _run_tests_aruco_detect/fast
 
 #=============================================================================
+# Target rules for targets named fiducial_localization
+
+# Build rule for target.
+fiducial_localization: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 fiducial_localization
+.PHONY : fiducial_localization
+
+# fast build rule for target.
+fiducial_localization/fast:
+	$(MAKE) -f fiducial_localization/CMakeFiles/fiducial_localization.dir/build.make fiducial_localization/CMakeFiles/fiducial_localization.dir/build
+.PHONY : fiducial_localization/fast
+
+#=============================================================================
 # Target rules for targets named _run_tests_fiducial_slam_rostest_test_auto_init_403.test
 
 # Build rule for target.
@@ -5249,6 +5262,7 @@ help:
 	@echo "... visualization_msgs_generate_messages_cpp"
 	@echo "... aruco_detect_gencfg"
 	@echo "... _run_tests_aruco_detect"
+	@echo "... fiducial_localization"
 	@echo "... _run_tests_fiducial_slam_rostest_test_auto_init_403.test"
 	@echo "... run_tests_fiducial_slam_rostest_test_auto_init_403.test"
 	@echo "... auto_init_403_test"

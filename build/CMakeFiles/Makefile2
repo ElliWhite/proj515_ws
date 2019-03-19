@@ -109,7 +109,7 @@ CMakeFiles/run_tests.dir/all: robot_localization/CMakeFiles/_run_tests_robot_loc
 
 # Build rule for subdir invocation for target.
 CMakeFiles/run_tests.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 34
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 33
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/run_tests.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 0
 .PHONY : CMakeFiles/run_tests.dir/rule
@@ -192,7 +192,7 @@ CMakeFiles/tests.dir/all: robot_localization/CMakeFiles/test_ukf.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/tests.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 34
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 33
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/tests.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 0
 .PHONY : CMakeFiles/tests.dir/rule
@@ -271,7 +271,7 @@ gtest/preinstall: gtest/gtest/preinstall
 gtest/CMakeFiles/gmock.dir/all:
 	$(MAKE) -f gtest/CMakeFiles/gmock.dir/build.make gtest/CMakeFiles/gmock.dir/depend
 	$(MAKE) -f gtest/CMakeFiles/gmock.dir/build.make gtest/CMakeFiles/gmock.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/elliottwhite/proj515_ws/build/CMakeFiles --progress-num=27 "Built target gmock"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/elliottwhite/proj515_ws/build/CMakeFiles --progress-num=28 "Built target gmock"
 .PHONY : gtest/CMakeFiles/gmock.dir/all
 
 # Build rule for subdir invocation for target.
@@ -303,12 +303,12 @@ clean: gtest/CMakeFiles/gmock.dir/clean
 gtest/CMakeFiles/gmock_main.dir/all:
 	$(MAKE) -f gtest/CMakeFiles/gmock_main.dir/build.make gtest/CMakeFiles/gmock_main.dir/depend
 	$(MAKE) -f gtest/CMakeFiles/gmock_main.dir/build.make gtest/CMakeFiles/gmock_main.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/elliottwhite/proj515_ws/build/CMakeFiles --progress-num=28,29 "Built target gmock_main"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/elliottwhite/proj515_ws/build/CMakeFiles --progress-num=29 "Built target gmock_main"
 .PHONY : gtest/CMakeFiles/gmock_main.dir/all
 
 # Build rule for subdir invocation for target.
 gtest/CMakeFiles/gmock_main.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 1
 	$(MAKE) -f CMakeFiles/Makefile2 gtest/CMakeFiles/gmock_main.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 0
 .PHONY : gtest/CMakeFiles/gmock_main.dir/rule
@@ -386,12 +386,12 @@ clean: gtest/gtest/CMakeFiles/gtest.dir/clean
 gtest/gtest/CMakeFiles/gtest_main.dir/all: gtest/gtest/CMakeFiles/gtest.dir/all
 	$(MAKE) -f gtest/gtest/CMakeFiles/gtest_main.dir/build.make gtest/gtest/CMakeFiles/gtest_main.dir/depend
 	$(MAKE) -f gtest/gtest/CMakeFiles/gtest_main.dir/build.make gtest/gtest/CMakeFiles/gtest_main.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/elliottwhite/proj515_ws/build/CMakeFiles --progress-num= "Built target gtest_main"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/elliottwhite/proj515_ws/build/CMakeFiles --progress-num=31 "Built target gtest_main"
 .PHONY : gtest/gtest/CMakeFiles/gtest_main.dir/all
 
 # Build rule for subdir invocation for target.
 gtest/gtest/CMakeFiles/gtest_main.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 2
 	$(MAKE) -f CMakeFiles/Makefile2 gtest/gtest/CMakeFiles/gtest_main.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 0
 .PHONY : gtest/gtest/CMakeFiles/gtest_main.dir/rule
@@ -559,7 +559,7 @@ phidgets_drivers/phidgets_api/preinstall:
 phidgets_drivers/phidgets_api/CMakeFiles/phidgets_api.dir/all: phidgets_drivers/libphidget21/CMakeFiles/EP_libphidget21.dir/all
 	$(MAKE) -f phidgets_drivers/phidgets_api/CMakeFiles/phidgets_api.dir/build.make phidgets_drivers/phidgets_api/CMakeFiles/phidgets_api.dir/depend
 	$(MAKE) -f phidgets_drivers/phidgets_api/CMakeFiles/phidgets_api.dir/build.make phidgets_drivers/phidgets_api/CMakeFiles/phidgets_api.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/elliottwhite/proj515_ws/build/CMakeFiles --progress-num=37,38,39 "Built target phidgets_api"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/elliottwhite/proj515_ws/build/CMakeFiles --progress-num=38,39 "Built target phidgets_api"
 .PHONY : phidgets_drivers/phidgets_api/CMakeFiles/phidgets_api.dir/all
 
 # Include target in all.
@@ -569,7 +569,7 @@ all: phidgets_drivers/phidgets_api/CMakeFiles/phidgets_api.dir/all
 
 # Build rule for subdir invocation for target.
 phidgets_drivers/phidgets_api/CMakeFiles/phidgets_api.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 5
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 4
 	$(MAKE) -f CMakeFiles/Makefile2 phidgets_drivers/phidgets_api/CMakeFiles/phidgets_api.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 0
 .PHONY : phidgets_drivers/phidgets_api/CMakeFiles/phidgets_api.dir/rule
@@ -811,7 +811,7 @@ rosserial/rosserial_arduino/CMakeFiles/rosserial_arduino_generate_messages_eus.d
 rosserial/rosserial_arduino/CMakeFiles/rosserial_arduino_generate_messages_eus.dir/all: rosserial/rosserial_arduino/CMakeFiles/_rosserial_arduino_generate_messages_check_deps_Test.dir/all
 	$(MAKE) -f rosserial/rosserial_arduino/CMakeFiles/rosserial_arduino_generate_messages_eus.dir/build.make rosserial/rosserial_arduino/CMakeFiles/rosserial_arduino_generate_messages_eus.dir/depend
 	$(MAKE) -f rosserial/rosserial_arduino/CMakeFiles/rosserial_arduino_generate_messages_eus.dir/build.make rosserial/rosserial_arduino/CMakeFiles/rosserial_arduino_generate_messages_eus.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/elliottwhite/proj515_ws/build/CMakeFiles --progress-num=61 "Built target rosserial_arduino_generate_messages_eus"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/elliottwhite/proj515_ws/build/CMakeFiles --progress-num=62 "Built target rosserial_arduino_generate_messages_eus"
 .PHONY : rosserial/rosserial_arduino/CMakeFiles/rosserial_arduino_generate_messages_eus.dir/all
 
 # Build rule for subdir invocation for target.
@@ -880,7 +880,7 @@ rosserial/rosserial_arduino/CMakeFiles/rosserial_arduino_gencpp.dir/all: rosseri
 
 # Build rule for subdir invocation for target.
 rosserial/rosserial_arduino/CMakeFiles/rosserial_arduino_gencpp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 1
 	$(MAKE) -f CMakeFiles/Makefile2 rosserial/rosserial_arduino/CMakeFiles/rosserial_arduino_gencpp.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 0
 .PHONY : rosserial/rosserial_arduino/CMakeFiles/rosserial_arduino_gencpp.dir/rule
@@ -908,12 +908,12 @@ rosserial/rosserial_arduino/CMakeFiles/rosserial_arduino_generate_messages_cpp.d
 rosserial/rosserial_arduino/CMakeFiles/rosserial_arduino_generate_messages_cpp.dir/all: rosserial/rosserial_arduino/CMakeFiles/_rosserial_arduino_generate_messages_check_deps_Test.dir/all
 	$(MAKE) -f rosserial/rosserial_arduino/CMakeFiles/rosserial_arduino_generate_messages_cpp.dir/build.make rosserial/rosserial_arduino/CMakeFiles/rosserial_arduino_generate_messages_cpp.dir/depend
 	$(MAKE) -f rosserial/rosserial_arduino/CMakeFiles/rosserial_arduino_generate_messages_cpp.dir/build.make rosserial/rosserial_arduino/CMakeFiles/rosserial_arduino_generate_messages_cpp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/elliottwhite/proj515_ws/build/CMakeFiles --progress-num= "Built target rosserial_arduino_generate_messages_cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/elliottwhite/proj515_ws/build/CMakeFiles --progress-num=61 "Built target rosserial_arduino_generate_messages_cpp"
 .PHONY : rosserial/rosserial_arduino/CMakeFiles/rosserial_arduino_generate_messages_cpp.dir/all
 
 # Build rule for subdir invocation for target.
 rosserial/rosserial_arduino/CMakeFiles/rosserial_arduino_generate_messages_cpp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 1
 	$(MAKE) -f CMakeFiles/Makefile2 rosserial/rosserial_arduino/CMakeFiles/rosserial_arduino_generate_messages_cpp.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 0
 .PHONY : rosserial/rosserial_arduino/CMakeFiles/rosserial_arduino_generate_messages_cpp.dir/rule
@@ -1046,12 +1046,12 @@ rosserial/rosserial_arduino/CMakeFiles/rosserial_arduino_generate_messages_lisp.
 rosserial/rosserial_arduino/CMakeFiles/rosserial_arduino_generate_messages_lisp.dir/all: rosserial/rosserial_arduino/CMakeFiles/_rosserial_arduino_generate_messages_check_deps_Test.dir/all
 	$(MAKE) -f rosserial/rosserial_arduino/CMakeFiles/rosserial_arduino_generate_messages_lisp.dir/build.make rosserial/rosserial_arduino/CMakeFiles/rosserial_arduino_generate_messages_lisp.dir/depend
 	$(MAKE) -f rosserial/rosserial_arduino/CMakeFiles/rosserial_arduino_generate_messages_lisp.dir/build.make rosserial/rosserial_arduino/CMakeFiles/rosserial_arduino_generate_messages_lisp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/elliottwhite/proj515_ws/build/CMakeFiles --progress-num=62 "Built target rosserial_arduino_generate_messages_lisp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/elliottwhite/proj515_ws/build/CMakeFiles --progress-num= "Built target rosserial_arduino_generate_messages_lisp"
 .PHONY : rosserial/rosserial_arduino/CMakeFiles/rosserial_arduino_generate_messages_lisp.dir/all
 
 # Build rule for subdir invocation for target.
 rosserial/rosserial_arduino/CMakeFiles/rosserial_arduino_generate_messages_lisp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 rosserial/rosserial_arduino/CMakeFiles/rosserial_arduino_generate_messages_lisp.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 0
 .PHONY : rosserial/rosserial_arduino/CMakeFiles/rosserial_arduino_generate_messages_lisp.dir/rule
@@ -1083,7 +1083,7 @@ rosserial/rosserial_arduino/CMakeFiles/rosserial_arduino_genlisp.dir/all: rosser
 
 # Build rule for subdir invocation for target.
 rosserial/rosserial_arduino/CMakeFiles/rosserial_arduino_genlisp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 rosserial/rosserial_arduino/CMakeFiles/rosserial_arduino_genlisp.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 0
 .PHONY : rosserial/rosserial_arduino/CMakeFiles/rosserial_arduino_genlisp.dir/rule
@@ -1145,7 +1145,7 @@ rosserial/rosserial_mbed/CMakeFiles/rosserial_mbed_genpy.dir/all: rosserial/ross
 
 # Build rule for subdir invocation for target.
 rosserial/rosserial_mbed/CMakeFiles/rosserial_mbed_genpy.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 2
 	$(MAKE) -f CMakeFiles/Makefile2 rosserial/rosserial_mbed/CMakeFiles/rosserial_mbed_genpy.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 0
 .PHONY : rosserial/rosserial_mbed/CMakeFiles/rosserial_mbed_genpy.dir/rule
@@ -1173,12 +1173,12 @@ rosserial/rosserial_mbed/CMakeFiles/rosserial_mbed_generate_messages_py.dir/all:
 rosserial/rosserial_mbed/CMakeFiles/rosserial_mbed_generate_messages_py.dir/all: rosserial/rosserial_mbed/CMakeFiles/_rosserial_mbed_generate_messages_check_deps_Test.dir/all
 	$(MAKE) -f rosserial/rosserial_mbed/CMakeFiles/rosserial_mbed_generate_messages_py.dir/build.make rosserial/rosserial_mbed/CMakeFiles/rosserial_mbed_generate_messages_py.dir/depend
 	$(MAKE) -f rosserial/rosserial_mbed/CMakeFiles/rosserial_mbed_generate_messages_py.dir/build.make rosserial/rosserial_mbed/CMakeFiles/rosserial_mbed_generate_messages_py.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/elliottwhite/proj515_ws/build/CMakeFiles --progress-num=68 "Built target rosserial_mbed_generate_messages_py"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/elliottwhite/proj515_ws/build/CMakeFiles --progress-num=68,69 "Built target rosserial_mbed_generate_messages_py"
 .PHONY : rosserial/rosserial_mbed/CMakeFiles/rosserial_mbed_generate_messages_py.dir/all
 
 # Build rule for subdir invocation for target.
 rosserial/rosserial_mbed/CMakeFiles/rosserial_mbed_generate_messages_py.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 2
 	$(MAKE) -f CMakeFiles/Makefile2 rosserial/rosserial_mbed/CMakeFiles/rosserial_mbed_generate_messages_py.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 0
 .PHONY : rosserial/rosserial_mbed/CMakeFiles/rosserial_mbed_generate_messages_py.dir/rule
@@ -1210,7 +1210,7 @@ rosserial/rosserial_mbed/CMakeFiles/rosserial_mbed_gennodejs.dir/all: rosserial/
 
 # Build rule for subdir invocation for target.
 rosserial/rosserial_mbed/CMakeFiles/rosserial_mbed_gennodejs.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 rosserial/rosserial_mbed/CMakeFiles/rosserial_mbed_gennodejs.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 0
 .PHONY : rosserial/rosserial_mbed/CMakeFiles/rosserial_mbed_gennodejs.dir/rule
@@ -1381,7 +1381,7 @@ all: rosserial/rosserial_mbed/CMakeFiles/rosserial_mbed_generate_messages.dir/al
 
 # Build rule for subdir invocation for target.
 rosserial/rosserial_mbed/CMakeFiles/rosserial_mbed_generate_messages.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 5
 	$(MAKE) -f CMakeFiles/Makefile2 rosserial/rosserial_mbed/CMakeFiles/rosserial_mbed_generate_messages.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 0
 .PHONY : rosserial/rosserial_mbed/CMakeFiles/rosserial_mbed_generate_messages.dir/rule
@@ -1409,12 +1409,12 @@ rosserial/rosserial_mbed/CMakeFiles/rosserial_mbed_generate_messages_nodejs.dir/
 rosserial/rosserial_mbed/CMakeFiles/rosserial_mbed_generate_messages_nodejs.dir/all: rosserial/rosserial_mbed/CMakeFiles/_rosserial_mbed_generate_messages_check_deps_Test.dir/all
 	$(MAKE) -f rosserial/rosserial_mbed/CMakeFiles/rosserial_mbed_generate_messages_nodejs.dir/build.make rosserial/rosserial_mbed/CMakeFiles/rosserial_mbed_generate_messages_nodejs.dir/depend
 	$(MAKE) -f rosserial/rosserial_mbed/CMakeFiles/rosserial_mbed_generate_messages_nodejs.dir/build.make rosserial/rosserial_mbed/CMakeFiles/rosserial_mbed_generate_messages_nodejs.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/elliottwhite/proj515_ws/build/CMakeFiles --progress-num=67 "Built target rosserial_mbed_generate_messages_nodejs"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/elliottwhite/proj515_ws/build/CMakeFiles --progress-num= "Built target rosserial_mbed_generate_messages_nodejs"
 .PHONY : rosserial/rosserial_mbed/CMakeFiles/rosserial_mbed_generate_messages_nodejs.dir/all
 
 # Build rule for subdir invocation for target.
 rosserial/rosserial_mbed/CMakeFiles/rosserial_mbed_generate_messages_nodejs.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 rosserial/rosserial_mbed/CMakeFiles/rosserial_mbed_generate_messages_nodejs.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 0
 .PHONY : rosserial/rosserial_mbed/CMakeFiles/rosserial_mbed_generate_messages_nodejs.dir/rule
@@ -1474,12 +1474,12 @@ rosserial/rosserial_mbed/CMakeFiles/rosserial_mbed_generate_messages_lisp.dir/al
 rosserial/rosserial_mbed/CMakeFiles/rosserial_mbed_generate_messages_lisp.dir/all: rosserial/rosserial_mbed/CMakeFiles/_rosserial_mbed_generate_messages_check_deps_Test.dir/all
 	$(MAKE) -f rosserial/rosserial_mbed/CMakeFiles/rosserial_mbed_generate_messages_lisp.dir/build.make rosserial/rosserial_mbed/CMakeFiles/rosserial_mbed_generate_messages_lisp.dir/depend
 	$(MAKE) -f rosserial/rosserial_mbed/CMakeFiles/rosserial_mbed_generate_messages_lisp.dir/build.make rosserial/rosserial_mbed/CMakeFiles/rosserial_mbed_generate_messages_lisp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/elliottwhite/proj515_ws/build/CMakeFiles --progress-num= "Built target rosserial_mbed_generate_messages_lisp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/elliottwhite/proj515_ws/build/CMakeFiles --progress-num=67 "Built target rosserial_mbed_generate_messages_lisp"
 .PHONY : rosserial/rosserial_mbed/CMakeFiles/rosserial_mbed_generate_messages_lisp.dir/all
 
 # Build rule for subdir invocation for target.
 rosserial/rosserial_mbed/CMakeFiles/rosserial_mbed_generate_messages_lisp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 1
 	$(MAKE) -f CMakeFiles/Makefile2 rosserial/rosserial_mbed/CMakeFiles/rosserial_mbed_generate_messages_lisp.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 0
 .PHONY : rosserial/rosserial_mbed/CMakeFiles/rosserial_mbed_generate_messages_lisp.dir/rule
@@ -1543,7 +1543,7 @@ rosserial/rosserial_mbed/CMakeFiles/rosserial_mbed_genlisp.dir/all: rosserial/ro
 
 # Build rule for subdir invocation for target.
 rosserial/rosserial_mbed/CMakeFiles/rosserial_mbed_genlisp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 1
 	$(MAKE) -f CMakeFiles/Makefile2 rosserial/rosserial_mbed/CMakeFiles/rosserial_mbed_genlisp.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 0
 .PHONY : rosserial/rosserial_mbed/CMakeFiles/rosserial_mbed_genlisp.dir/rule
@@ -1617,7 +1617,7 @@ all: rosserial/rosserial_msgs/CMakeFiles/rosserial_msgs_generate_messages.dir/al
 
 # Build rule for subdir invocation for target.
 rosserial/rosserial_msgs/CMakeFiles/rosserial_msgs_generate_messages.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 10
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 9
 	$(MAKE) -f CMakeFiles/Makefile2 rosserial/rosserial_msgs/CMakeFiles/rosserial_msgs_generate_messages.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 0
 .PHONY : rosserial/rosserial_msgs/CMakeFiles/rosserial_msgs_generate_messages.dir/rule
@@ -1745,7 +1745,7 @@ rosserial/rosserial_msgs/CMakeFiles/rosserial_msgs_gencpp.dir/all: rosserial/ros
 
 # Build rule for subdir invocation for target.
 rosserial/rosserial_msgs/CMakeFiles/rosserial_msgs_gencpp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 1
 	$(MAKE) -f CMakeFiles/Makefile2 rosserial/rosserial_msgs/CMakeFiles/rosserial_msgs_gencpp.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 0
 .PHONY : rosserial/rosserial_msgs/CMakeFiles/rosserial_msgs_gencpp.dir/rule
@@ -1776,12 +1776,12 @@ rosserial/rosserial_msgs/CMakeFiles/rosserial_msgs_generate_messages_cpp.dir/all
 rosserial/rosserial_msgs/CMakeFiles/rosserial_msgs_generate_messages_cpp.dir/all: rosserial/rosserial_msgs/CMakeFiles/_rosserial_msgs_generate_messages_check_deps_RequestServiceInfo.dir/all
 	$(MAKE) -f rosserial/rosserial_msgs/CMakeFiles/rosserial_msgs_generate_messages_cpp.dir/build.make rosserial/rosserial_msgs/CMakeFiles/rosserial_msgs_generate_messages_cpp.dir/depend
 	$(MAKE) -f rosserial/rosserial_msgs/CMakeFiles/rosserial_msgs_generate_messages_cpp.dir/build.make rosserial/rosserial_msgs/CMakeFiles/rosserial_msgs_generate_messages_cpp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/elliottwhite/proj515_ws/build/CMakeFiles --progress-num=69,70 "Built target rosserial_msgs_generate_messages_cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/elliottwhite/proj515_ws/build/CMakeFiles --progress-num=70 "Built target rosserial_msgs_generate_messages_cpp"
 .PHONY : rosserial/rosserial_msgs/CMakeFiles/rosserial_msgs_generate_messages_cpp.dir/all
 
 # Build rule for subdir invocation for target.
 rosserial/rosserial_msgs/CMakeFiles/rosserial_msgs_generate_messages_cpp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 1
 	$(MAKE) -f CMakeFiles/Makefile2 rosserial/rosserial_msgs/CMakeFiles/rosserial_msgs_generate_messages_cpp.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 0
 .PHONY : rosserial/rosserial_msgs/CMakeFiles/rosserial_msgs_generate_messages_cpp.dir/rule
@@ -2269,7 +2269,7 @@ rosserial/rosserial_client/CMakeFiles/_run_tests_rosserial_client_gtest_subscrib
 
 # Build rule for subdir invocation for target.
 rosserial/rosserial_client/CMakeFiles/_run_tests_rosserial_client_gtest_subscriber_test.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 34
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 33
 	$(MAKE) -f CMakeFiles/Makefile2 rosserial/rosserial_client/CMakeFiles/_run_tests_rosserial_client_gtest_subscriber_test.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 0
 .PHONY : rosserial/rosserial_client/CMakeFiles/_run_tests_rosserial_client_gtest_subscriber_test.dir/rule
@@ -2301,7 +2301,7 @@ rosserial/rosserial_client/CMakeFiles/_run_tests_rosserial_client.dir/all: rosse
 
 # Build rule for subdir invocation for target.
 rosserial/rosserial_client/CMakeFiles/_run_tests_rosserial_client.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 34
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 33
 	$(MAKE) -f CMakeFiles/Makefile2 rosserial/rosserial_client/CMakeFiles/_run_tests_rosserial_client.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 0
 .PHONY : rosserial/rosserial_client/CMakeFiles/_run_tests_rosserial_client.dir/rule
@@ -2333,7 +2333,7 @@ rosserial/rosserial_client/CMakeFiles/run_tests_rosserial_client.dir/all: rosser
 
 # Build rule for subdir invocation for target.
 rosserial/rosserial_client/CMakeFiles/run_tests_rosserial_client.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 3
 	$(MAKE) -f CMakeFiles/Makefile2 rosserial/rosserial_client/CMakeFiles/run_tests_rosserial_client.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 0
 .PHONY : rosserial/rosserial_client/CMakeFiles/run_tests_rosserial_client.dir/rule
@@ -2360,12 +2360,12 @@ clean: rosserial/rosserial_client/CMakeFiles/run_tests_rosserial_client.dir/clea
 rosserial/rosserial_client/CMakeFiles/float64_test.dir/all: gtest/gtest/CMakeFiles/gtest.dir/all
 	$(MAKE) -f rosserial/rosserial_client/CMakeFiles/float64_test.dir/build.make rosserial/rosserial_client/CMakeFiles/float64_test.dir/depend
 	$(MAKE) -f rosserial/rosserial_client/CMakeFiles/float64_test.dir/build.make rosserial/rosserial_client/CMakeFiles/float64_test.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/elliottwhite/proj515_ws/build/CMakeFiles --progress-num= "Built target float64_test"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/elliottwhite/proj515_ws/build/CMakeFiles --progress-num=27 "Built target float64_test"
 .PHONY : rosserial/rosserial_client/CMakeFiles/float64_test.dir/all
 
 # Build rule for subdir invocation for target.
 rosserial/rosserial_client/CMakeFiles/float64_test.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 2
 	$(MAKE) -f CMakeFiles/Makefile2 rosserial/rosserial_client/CMakeFiles/float64_test.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 0
 .PHONY : rosserial/rosserial_client/CMakeFiles/float64_test.dir/rule
@@ -2430,7 +2430,7 @@ rosserial/rosserial_client/CMakeFiles/run_tests_rosserial_client_gtest.dir/all: 
 
 # Build rule for subdir invocation for target.
 rosserial/rosserial_client/CMakeFiles/run_tests_rosserial_client_gtest.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 3
 	$(MAKE) -f CMakeFiles/Makefile2 rosserial/rosserial_client/CMakeFiles/run_tests_rosserial_client_gtest.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 0
 .PHONY : rosserial/rosserial_client/CMakeFiles/run_tests_rosserial_client_gtest.dir/rule
@@ -2464,7 +2464,7 @@ rosserial/rosserial_client/CMakeFiles/_run_tests_rosserial_client_gtest_float64_
 
 # Build rule for subdir invocation for target.
 rosserial/rosserial_client/CMakeFiles/_run_tests_rosserial_client_gtest_float64_test.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 34
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 33
 	$(MAKE) -f CMakeFiles/Makefile2 rosserial/rosserial_client/CMakeFiles/_run_tests_rosserial_client_gtest_float64_test.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 0
 .PHONY : rosserial/rosserial_client/CMakeFiles/_run_tests_rosserial_client_gtest_float64_test.dir/rule
@@ -2497,7 +2497,7 @@ rosserial/rosserial_client/CMakeFiles/_run_tests_rosserial_client_gtest.dir/all:
 
 # Build rule for subdir invocation for target.
 rosserial/rosserial_client/CMakeFiles/_run_tests_rosserial_client_gtest.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 34
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 33
 	$(MAKE) -f CMakeFiles/Makefile2 rosserial/rosserial_client/CMakeFiles/_run_tests_rosserial_client_gtest.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 0
 .PHONY : rosserial/rosserial_client/CMakeFiles/_run_tests_rosserial_client_gtest.dir/rule
@@ -2561,7 +2561,7 @@ rosserial/rosserial_client/CMakeFiles/run_tests_rosserial_client_gtest_float64_t
 
 # Build rule for subdir invocation for target.
 rosserial/rosserial_client/CMakeFiles/run_tests_rosserial_client_gtest_float64_test.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 2
 	$(MAKE) -f CMakeFiles/Makefile2 rosserial/rosserial_client/CMakeFiles/run_tests_rosserial_client_gtest_float64_test.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 0
 .PHONY : rosserial/rosserial_client/CMakeFiles/run_tests_rosserial_client_gtest_float64_test.dir/rule
@@ -3847,7 +3847,7 @@ rosserial/rosserial_server/CMakeFiles/rosserial_server_udp_socket_node.dir/all: 
 rosserial/rosserial_server/CMakeFiles/rosserial_server_udp_socket_node.dir/all: rosserial/rosserial_server/CMakeFiles/topic_tools_generate_messages_cpp.dir/all
 	$(MAKE) -f rosserial/rosserial_server/CMakeFiles/rosserial_server_udp_socket_node.dir/build.make rosserial/rosserial_server/CMakeFiles/rosserial_server_udp_socket_node.dir/depend
 	$(MAKE) -f rosserial/rosserial_server/CMakeFiles/rosserial_server_udp_socket_node.dir/build.make rosserial/rosserial_server/CMakeFiles/rosserial_server_udp_socket_node.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/elliottwhite/proj515_ws/build/CMakeFiles --progress-num=80 "Built target rosserial_server_udp_socket_node"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/elliottwhite/proj515_ws/build/CMakeFiles --progress-num= "Built target rosserial_server_udp_socket_node"
 .PHONY : rosserial/rosserial_server/CMakeFiles/rosserial_server_udp_socket_node.dir/all
 
 # Include target in all.
@@ -3857,7 +3857,7 @@ all: rosserial/rosserial_server/CMakeFiles/rosserial_server_udp_socket_node.dir/
 
 # Build rule for subdir invocation for target.
 rosserial/rosserial_server/CMakeFiles/rosserial_server_udp_socket_node.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 11
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 9
 	$(MAKE) -f CMakeFiles/Makefile2 rosserial/rosserial_server/CMakeFiles/rosserial_server_udp_socket_node.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 0
 .PHONY : rosserial/rosserial_server/CMakeFiles/rosserial_server_udp_socket_node.dir/rule
@@ -3950,7 +3950,7 @@ all: rosserial/rosserial_server/CMakeFiles/rosserial_server_serial_node.dir/all
 
 # Build rule for subdir invocation for target.
 rosserial/rosserial_server/CMakeFiles/rosserial_server_serial_node.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 11
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 10
 	$(MAKE) -f CMakeFiles/Makefile2 rosserial/rosserial_server/CMakeFiles/rosserial_server_serial_node.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 0
 .PHONY : rosserial/rosserial_server/CMakeFiles/rosserial_server_serial_node.dir/rule
@@ -4001,7 +4001,7 @@ rosserial/rosserial_server/CMakeFiles/rosserial_server_socket_node.dir/all: ross
 rosserial/rosserial_server/CMakeFiles/rosserial_server_socket_node.dir/all: rosserial/rosserial_server/CMakeFiles/topic_tools_generate_messages_cpp.dir/all
 	$(MAKE) -f rosserial/rosserial_server/CMakeFiles/rosserial_server_socket_node.dir/build.make rosserial/rosserial_server/CMakeFiles/rosserial_server_socket_node.dir/depend
 	$(MAKE) -f rosserial/rosserial_server/CMakeFiles/rosserial_server_socket_node.dir/build.make rosserial/rosserial_server/CMakeFiles/rosserial_server_socket_node.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/elliottwhite/proj515_ws/build/CMakeFiles --progress-num= "Built target rosserial_server_socket_node"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/elliottwhite/proj515_ws/build/CMakeFiles --progress-num=80 "Built target rosserial_server_socket_node"
 .PHONY : rosserial/rosserial_server/CMakeFiles/rosserial_server_socket_node.dir/all
 
 # Include target in all.
@@ -4461,7 +4461,7 @@ phidgets_drivers/phidgets_high_speed_encoder/CMakeFiles/phidgets_high_speed_enco
 phidgets_drivers/phidgets_high_speed_encoder/CMakeFiles/phidgets_high_speed_encoder.dir/all: phidgets_drivers/phidgets_high_speed_encoder/CMakeFiles/phidgets_high_speed_encoder_generate_messages.dir/all
 	$(MAKE) -f phidgets_drivers/phidgets_high_speed_encoder/CMakeFiles/phidgets_high_speed_encoder.dir/build.make phidgets_drivers/phidgets_high_speed_encoder/CMakeFiles/phidgets_high_speed_encoder.dir/depend
 	$(MAKE) -f phidgets_drivers/phidgets_high_speed_encoder/CMakeFiles/phidgets_high_speed_encoder.dir/build.make phidgets_drivers/phidgets_high_speed_encoder/CMakeFiles/phidgets_high_speed_encoder.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/elliottwhite/proj515_ws/build/CMakeFiles --progress-num= "Built target phidgets_high_speed_encoder"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/elliottwhite/proj515_ws/build/CMakeFiles --progress-num=40 "Built target phidgets_high_speed_encoder"
 .PHONY : phidgets_drivers/phidgets_high_speed_encoder/CMakeFiles/phidgets_high_speed_encoder.dir/all
 
 # Include target in all.
@@ -4471,7 +4471,7 @@ all: phidgets_drivers/phidgets_high_speed_encoder/CMakeFiles/phidgets_high_speed
 
 # Build rule for subdir invocation for target.
 phidgets_drivers/phidgets_high_speed_encoder/CMakeFiles/phidgets_high_speed_encoder.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 8
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 7
 	$(MAKE) -f CMakeFiles/Makefile2 phidgets_drivers/phidgets_high_speed_encoder/CMakeFiles/phidgets_high_speed_encoder.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 0
 .PHONY : phidgets_drivers/phidgets_high_speed_encoder/CMakeFiles/phidgets_high_speed_encoder.dir/rule
@@ -4503,7 +4503,7 @@ phidgets_drivers/phidgets_high_speed_encoder/CMakeFiles/phidgets_high_speed_enco
 
 # Build rule for subdir invocation for target.
 phidgets_drivers/phidgets_high_speed_encoder/CMakeFiles/phidgets_high_speed_encoder_genpy.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 phidgets_drivers/phidgets_high_speed_encoder/CMakeFiles/phidgets_high_speed_encoder_genpy.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 0
 .PHONY : phidgets_drivers/phidgets_high_speed_encoder/CMakeFiles/phidgets_high_speed_encoder_genpy.dir/rule
@@ -4531,12 +4531,12 @@ phidgets_drivers/phidgets_high_speed_encoder/CMakeFiles/phidgets_high_speed_enco
 phidgets_drivers/phidgets_high_speed_encoder/CMakeFiles/phidgets_high_speed_encoder_generate_messages_py.dir/all: phidgets_drivers/phidgets_high_speed_encoder/CMakeFiles/_phidgets_high_speed_encoder_generate_messages_check_deps_EncoderDecimatedSpeed.dir/all
 	$(MAKE) -f phidgets_drivers/phidgets_high_speed_encoder/CMakeFiles/phidgets_high_speed_encoder_generate_messages_py.dir/build.make phidgets_drivers/phidgets_high_speed_encoder/CMakeFiles/phidgets_high_speed_encoder_generate_messages_py.dir/depend
 	$(MAKE) -f phidgets_drivers/phidgets_high_speed_encoder/CMakeFiles/phidgets_high_speed_encoder_generate_messages_py.dir/build.make phidgets_drivers/phidgets_high_speed_encoder/CMakeFiles/phidgets_high_speed_encoder_generate_messages_py.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/elliottwhite/proj515_ws/build/CMakeFiles --progress-num=42 "Built target phidgets_high_speed_encoder_generate_messages_py"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/elliottwhite/proj515_ws/build/CMakeFiles --progress-num= "Built target phidgets_high_speed_encoder_generate_messages_py"
 .PHONY : phidgets_drivers/phidgets_high_speed_encoder/CMakeFiles/phidgets_high_speed_encoder_generate_messages_py.dir/all
 
 # Build rule for subdir invocation for target.
 phidgets_drivers/phidgets_high_speed_encoder/CMakeFiles/phidgets_high_speed_encoder_generate_messages_py.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 phidgets_drivers/phidgets_high_speed_encoder/CMakeFiles/phidgets_high_speed_encoder_generate_messages_py.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 0
 .PHONY : phidgets_drivers/phidgets_high_speed_encoder/CMakeFiles/phidgets_high_speed_encoder_generate_messages_py.dir/rule
@@ -4568,7 +4568,7 @@ phidgets_drivers/phidgets_high_speed_encoder/CMakeFiles/phidgets_high_speed_enco
 
 # Build rule for subdir invocation for target.
 phidgets_drivers/phidgets_high_speed_encoder/CMakeFiles/phidgets_high_speed_encoder_gencpp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 phidgets_drivers/phidgets_high_speed_encoder/CMakeFiles/phidgets_high_speed_encoder_gencpp.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 0
 .PHONY : phidgets_drivers/phidgets_high_speed_encoder/CMakeFiles/phidgets_high_speed_encoder_gencpp.dir/rule
@@ -4600,7 +4600,7 @@ phidgets_drivers/phidgets_high_speed_encoder/CMakeFiles/phidgets_high_speed_enco
 
 # Build rule for subdir invocation for target.
 phidgets_drivers/phidgets_high_speed_encoder/CMakeFiles/phidgets_high_speed_encoder_geneus.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 1
 	$(MAKE) -f CMakeFiles/Makefile2 phidgets_drivers/phidgets_high_speed_encoder/CMakeFiles/phidgets_high_speed_encoder_geneus.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 0
 .PHONY : phidgets_drivers/phidgets_high_speed_encoder/CMakeFiles/phidgets_high_speed_encoder_geneus.dir/rule
@@ -4641,7 +4641,7 @@ all: phidgets_drivers/phidgets_high_speed_encoder/CMakeFiles/phidgets_high_speed
 
 # Build rule for subdir invocation for target.
 phidgets_drivers/phidgets_high_speed_encoder/CMakeFiles/phidgets_high_speed_encoder_generate_messages.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 3
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 2
 	$(MAKE) -f CMakeFiles/Makefile2 phidgets_drivers/phidgets_high_speed_encoder/CMakeFiles/phidgets_high_speed_encoder_generate_messages.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 0
 .PHONY : phidgets_drivers/phidgets_high_speed_encoder/CMakeFiles/phidgets_high_speed_encoder_generate_messages.dir/rule
@@ -4669,12 +4669,12 @@ phidgets_drivers/phidgets_high_speed_encoder/CMakeFiles/phidgets_high_speed_enco
 phidgets_drivers/phidgets_high_speed_encoder/CMakeFiles/phidgets_high_speed_encoder_generate_messages_eus.dir/all: phidgets_drivers/phidgets_high_speed_encoder/CMakeFiles/_phidgets_high_speed_encoder_generate_messages_check_deps_EncoderDecimatedSpeed.dir/all
 	$(MAKE) -f phidgets_drivers/phidgets_high_speed_encoder/CMakeFiles/phidgets_high_speed_encoder_generate_messages_eus.dir/build.make phidgets_drivers/phidgets_high_speed_encoder/CMakeFiles/phidgets_high_speed_encoder_generate_messages_eus.dir/depend
 	$(MAKE) -f phidgets_drivers/phidgets_high_speed_encoder/CMakeFiles/phidgets_high_speed_encoder_generate_messages_eus.dir/build.make phidgets_drivers/phidgets_high_speed_encoder/CMakeFiles/phidgets_high_speed_encoder_generate_messages_eus.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/elliottwhite/proj515_ws/build/CMakeFiles --progress-num= "Built target phidgets_high_speed_encoder_generate_messages_eus"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/elliottwhite/proj515_ws/build/CMakeFiles --progress-num=41 "Built target phidgets_high_speed_encoder_generate_messages_eus"
 .PHONY : phidgets_drivers/phidgets_high_speed_encoder/CMakeFiles/phidgets_high_speed_encoder_generate_messages_eus.dir/all
 
 # Build rule for subdir invocation for target.
 phidgets_drivers/phidgets_high_speed_encoder/CMakeFiles/phidgets_high_speed_encoder_generate_messages_eus.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 1
 	$(MAKE) -f CMakeFiles/Makefile2 phidgets_drivers/phidgets_high_speed_encoder/CMakeFiles/phidgets_high_speed_encoder_generate_messages_eus.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 0
 .PHONY : phidgets_drivers/phidgets_high_speed_encoder/CMakeFiles/phidgets_high_speed_encoder_generate_messages_eus.dir/rule
@@ -4702,12 +4702,12 @@ phidgets_drivers/phidgets_high_speed_encoder/CMakeFiles/phidgets_high_speed_enco
 phidgets_drivers/phidgets_high_speed_encoder/CMakeFiles/phidgets_high_speed_encoder_generate_messages_cpp.dir/all: phidgets_drivers/phidgets_high_speed_encoder/CMakeFiles/_phidgets_high_speed_encoder_generate_messages_check_deps_EncoderDecimatedSpeed.dir/all
 	$(MAKE) -f phidgets_drivers/phidgets_high_speed_encoder/CMakeFiles/phidgets_high_speed_encoder_generate_messages_cpp.dir/build.make phidgets_drivers/phidgets_high_speed_encoder/CMakeFiles/phidgets_high_speed_encoder_generate_messages_cpp.dir/depend
 	$(MAKE) -f phidgets_drivers/phidgets_high_speed_encoder/CMakeFiles/phidgets_high_speed_encoder_generate_messages_cpp.dir/build.make phidgets_drivers/phidgets_high_speed_encoder/CMakeFiles/phidgets_high_speed_encoder_generate_messages_cpp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/elliottwhite/proj515_ws/build/CMakeFiles --progress-num=40 "Built target phidgets_high_speed_encoder_generate_messages_cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/elliottwhite/proj515_ws/build/CMakeFiles --progress-num= "Built target phidgets_high_speed_encoder_generate_messages_cpp"
 .PHONY : phidgets_drivers/phidgets_high_speed_encoder/CMakeFiles/phidgets_high_speed_encoder_generate_messages_cpp.dir/all
 
 # Build rule for subdir invocation for target.
 phidgets_drivers/phidgets_high_speed_encoder/CMakeFiles/phidgets_high_speed_encoder_generate_messages_cpp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 phidgets_drivers/phidgets_high_speed_encoder/CMakeFiles/phidgets_high_speed_encoder_generate_messages_cpp.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 0
 .PHONY : phidgets_drivers/phidgets_high_speed_encoder/CMakeFiles/phidgets_high_speed_encoder_generate_messages_cpp.dir/rule
@@ -4767,12 +4767,12 @@ phidgets_drivers/phidgets_high_speed_encoder/CMakeFiles/phidgets_high_speed_enco
 phidgets_drivers/phidgets_high_speed_encoder/CMakeFiles/phidgets_high_speed_encoder_generate_messages_lisp.dir/all: phidgets_drivers/phidgets_high_speed_encoder/CMakeFiles/_phidgets_high_speed_encoder_generate_messages_check_deps_EncoderDecimatedSpeed.dir/all
 	$(MAKE) -f phidgets_drivers/phidgets_high_speed_encoder/CMakeFiles/phidgets_high_speed_encoder_generate_messages_lisp.dir/build.make phidgets_drivers/phidgets_high_speed_encoder/CMakeFiles/phidgets_high_speed_encoder_generate_messages_lisp.dir/depend
 	$(MAKE) -f phidgets_drivers/phidgets_high_speed_encoder/CMakeFiles/phidgets_high_speed_encoder_generate_messages_lisp.dir/build.make phidgets_drivers/phidgets_high_speed_encoder/CMakeFiles/phidgets_high_speed_encoder_generate_messages_lisp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/elliottwhite/proj515_ws/build/CMakeFiles --progress-num=41 "Built target phidgets_high_speed_encoder_generate_messages_lisp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/elliottwhite/proj515_ws/build/CMakeFiles --progress-num= "Built target phidgets_high_speed_encoder_generate_messages_lisp"
 .PHONY : phidgets_drivers/phidgets_high_speed_encoder/CMakeFiles/phidgets_high_speed_encoder_generate_messages_lisp.dir/all
 
 # Build rule for subdir invocation for target.
 phidgets_drivers/phidgets_high_speed_encoder/CMakeFiles/phidgets_high_speed_encoder_generate_messages_lisp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 phidgets_drivers/phidgets_high_speed_encoder/CMakeFiles/phidgets_high_speed_encoder_generate_messages_lisp.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 0
 .PHONY : phidgets_drivers/phidgets_high_speed_encoder/CMakeFiles/phidgets_high_speed_encoder_generate_messages_lisp.dir/rule
@@ -4804,7 +4804,7 @@ phidgets_drivers/phidgets_high_speed_encoder/CMakeFiles/phidgets_high_speed_enco
 
 # Build rule for subdir invocation for target.
 phidgets_drivers/phidgets_high_speed_encoder/CMakeFiles/phidgets_high_speed_encoder_genlisp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 phidgets_drivers/phidgets_high_speed_encoder/CMakeFiles/phidgets_high_speed_encoder_genlisp.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 0
 .PHONY : phidgets_drivers/phidgets_high_speed_encoder/CMakeFiles/phidgets_high_speed_encoder_genlisp.dir/rule
@@ -4832,12 +4832,12 @@ phidgets_drivers/phidgets_high_speed_encoder/CMakeFiles/phidgets_high_speed_enco
 phidgets_drivers/phidgets_high_speed_encoder/CMakeFiles/phidgets_high_speed_encoder_generate_messages_nodejs.dir/all: phidgets_drivers/phidgets_high_speed_encoder/CMakeFiles/_phidgets_high_speed_encoder_generate_messages_check_deps_EncoderDecimatedSpeed.dir/all
 	$(MAKE) -f phidgets_drivers/phidgets_high_speed_encoder/CMakeFiles/phidgets_high_speed_encoder_generate_messages_nodejs.dir/build.make phidgets_drivers/phidgets_high_speed_encoder/CMakeFiles/phidgets_high_speed_encoder_generate_messages_nodejs.dir/depend
 	$(MAKE) -f phidgets_drivers/phidgets_high_speed_encoder/CMakeFiles/phidgets_high_speed_encoder_generate_messages_nodejs.dir/build.make phidgets_drivers/phidgets_high_speed_encoder/CMakeFiles/phidgets_high_speed_encoder_generate_messages_nodejs.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/elliottwhite/proj515_ws/build/CMakeFiles --progress-num= "Built target phidgets_high_speed_encoder_generate_messages_nodejs"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/elliottwhite/proj515_ws/build/CMakeFiles --progress-num=42 "Built target phidgets_high_speed_encoder_generate_messages_nodejs"
 .PHONY : phidgets_drivers/phidgets_high_speed_encoder/CMakeFiles/phidgets_high_speed_encoder_generate_messages_nodejs.dir/all
 
 # Build rule for subdir invocation for target.
 phidgets_drivers/phidgets_high_speed_encoder/CMakeFiles/phidgets_high_speed_encoder_generate_messages_nodejs.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 1
 	$(MAKE) -f CMakeFiles/Makefile2 phidgets_drivers/phidgets_high_speed_encoder/CMakeFiles/phidgets_high_speed_encoder_generate_messages_nodejs.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 0
 .PHONY : phidgets_drivers/phidgets_high_speed_encoder/CMakeFiles/phidgets_high_speed_encoder_generate_messages_nodejs.dir/rule
@@ -4869,7 +4869,7 @@ phidgets_drivers/phidgets_high_speed_encoder/CMakeFiles/phidgets_high_speed_enco
 
 # Build rule for subdir invocation for target.
 phidgets_drivers/phidgets_high_speed_encoder/CMakeFiles/phidgets_high_speed_encoder_gennodejs.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 1
 	$(MAKE) -f CMakeFiles/Makefile2 phidgets_drivers/phidgets_high_speed_encoder/CMakeFiles/phidgets_high_speed_encoder_gennodejs.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 0
 .PHONY : phidgets_drivers/phidgets_high_speed_encoder/CMakeFiles/phidgets_high_speed_encoder_gennodejs.dir/rule
@@ -4934,7 +4934,7 @@ rplidar_ros/preinstall:
 rplidar_ros/CMakeFiles/rplidarNode.dir/all:
 	$(MAKE) -f rplidar_ros/CMakeFiles/rplidarNode.dir/build.make rplidar_ros/CMakeFiles/rplidarNode.dir/depend
 	$(MAKE) -f rplidar_ros/CMakeFiles/rplidarNode.dir/build.make rplidar_ros/CMakeFiles/rplidarNode.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/elliottwhite/proj515_ws/build/CMakeFiles --progress-num=82,83 "Built target rplidarNode"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/elliottwhite/proj515_ws/build/CMakeFiles --progress-num=82,83,84 "Built target rplidarNode"
 .PHONY : rplidar_ros/CMakeFiles/rplidarNode.dir/all
 
 # Include target in all.
@@ -4944,7 +4944,7 @@ all: rplidar_ros/CMakeFiles/rplidarNode.dir/all
 
 # Build rule for subdir invocation for target.
 rplidar_ros/CMakeFiles/rplidarNode.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 3
 	$(MAKE) -f CMakeFiles/Makefile2 rplidar_ros/CMakeFiles/rplidarNode.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 0
 .PHONY : rplidar_ros/CMakeFiles/rplidarNode.dir/rule
@@ -4971,7 +4971,7 @@ clean: rplidar_ros/CMakeFiles/rplidarNode.dir/clean
 rplidar_ros/CMakeFiles/rplidarNodeClient.dir/all:
 	$(MAKE) -f rplidar_ros/CMakeFiles/rplidarNodeClient.dir/build.make rplidar_ros/CMakeFiles/rplidarNodeClient.dir/depend
 	$(MAKE) -f rplidar_ros/CMakeFiles/rplidarNodeClient.dir/build.make rplidar_ros/CMakeFiles/rplidarNodeClient.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/elliottwhite/proj515_ws/build/CMakeFiles --progress-num=84 "Built target rplidarNodeClient"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/elliottwhite/proj515_ws/build/CMakeFiles --progress-num= "Built target rplidarNodeClient"
 .PHONY : rplidar_ros/CMakeFiles/rplidarNodeClient.dir/all
 
 # Include target in all.
@@ -4981,7 +4981,7 @@ all: rplidar_ros/CMakeFiles/rplidarNodeClient.dir/all
 
 # Build rule for subdir invocation for target.
 rplidar_ros/CMakeFiles/rplidarNodeClient.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 rplidar_ros/CMakeFiles/rplidarNodeClient.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 0
 .PHONY : rplidar_ros/CMakeFiles/rplidarNodeClient.dir/rule
@@ -5605,7 +5605,7 @@ fiducial_msgs/CMakeFiles/fiducial_msgs_generate_messages_py.dir/all: fiducial_ms
 fiducial_msgs/CMakeFiles/fiducial_msgs_generate_messages_py.dir/all: fiducial_msgs/CMakeFiles/_fiducial_msgs_generate_messages_check_deps_FiducialMapEntryArray.dir/all
 	$(MAKE) -f fiducial_msgs/CMakeFiles/fiducial_msgs_generate_messages_py.dir/build.make fiducial_msgs/CMakeFiles/fiducial_msgs_generate_messages_py.dir/depend
 	$(MAKE) -f fiducial_msgs/CMakeFiles/fiducial_msgs_generate_messages_py.dir/build.make fiducial_msgs/CMakeFiles/fiducial_msgs_generate_messages_py.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/elliottwhite/proj515_ws/build/CMakeFiles --progress-num=20,21,22 "Built target fiducial_msgs_generate_messages_py"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/elliottwhite/proj515_ws/build/CMakeFiles --progress-num=21,22,23 "Built target fiducial_msgs_generate_messages_py"
 .PHONY : fiducial_msgs/CMakeFiles/fiducial_msgs_generate_messages_py.dir/all
 
 # Build rule for subdir invocation for target.
@@ -5845,12 +5845,12 @@ fiducial_msgs/CMakeFiles/fiducial_msgs_generate_messages_nodejs.dir/all: fiducia
 fiducial_msgs/CMakeFiles/fiducial_msgs_generate_messages_nodejs.dir/all: fiducial_msgs/CMakeFiles/_fiducial_msgs_generate_messages_check_deps_FiducialMapEntryArray.dir/all
 	$(MAKE) -f fiducial_msgs/CMakeFiles/fiducial_msgs_generate_messages_nodejs.dir/build.make fiducial_msgs/CMakeFiles/fiducial_msgs_generate_messages_nodejs.dir/depend
 	$(MAKE) -f fiducial_msgs/CMakeFiles/fiducial_msgs_generate_messages_nodejs.dir/build.make fiducial_msgs/CMakeFiles/fiducial_msgs_generate_messages_nodejs.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/elliottwhite/proj515_ws/build/CMakeFiles --progress-num=18,19 "Built target fiducial_msgs_generate_messages_nodejs"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/elliottwhite/proj515_ws/build/CMakeFiles --progress-num=18,19,20 "Built target fiducial_msgs_generate_messages_nodejs"
 .PHONY : fiducial_msgs/CMakeFiles/fiducial_msgs_generate_messages_nodejs.dir/all
 
 # Build rule for subdir invocation for target.
 fiducial_msgs/CMakeFiles/fiducial_msgs_generate_messages_nodejs.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 3
 	$(MAKE) -f CMakeFiles/Makefile2 fiducial_msgs/CMakeFiles/fiducial_msgs_generate_messages_nodejs.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 0
 .PHONY : fiducial_msgs/CMakeFiles/fiducial_msgs_generate_messages_nodejs.dir/rule
@@ -5946,7 +5946,7 @@ fiducial_msgs/CMakeFiles/fiducial_msgs_gencpp.dir/all: fiducial_msgs/CMakeFiles/
 
 # Build rule for subdir invocation for target.
 fiducial_msgs/CMakeFiles/fiducial_msgs_gencpp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 3
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 2
 	$(MAKE) -f CMakeFiles/Makefile2 fiducial_msgs/CMakeFiles/fiducial_msgs_gencpp.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 0
 .PHONY : fiducial_msgs/CMakeFiles/fiducial_msgs_gencpp.dir/rule
@@ -6019,7 +6019,7 @@ fiducial_msgs/CMakeFiles/fiducial_msgs_gennodejs.dir/all: fiducial_msgs/CMakeFil
 
 # Build rule for subdir invocation for target.
 fiducial_msgs/CMakeFiles/fiducial_msgs_gennodejs.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 3
 	$(MAKE) -f CMakeFiles/Makefile2 fiducial_msgs/CMakeFiles/fiducial_msgs_gennodejs.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 0
 .PHONY : fiducial_msgs/CMakeFiles/fiducial_msgs_gennodejs.dir/rule
@@ -6446,12 +6446,12 @@ fiducial_msgs/CMakeFiles/fiducial_msgs_generate_messages_cpp.dir/all: fiducial_m
 fiducial_msgs/CMakeFiles/fiducial_msgs_generate_messages_cpp.dir/all: fiducial_msgs/CMakeFiles/_fiducial_msgs_generate_messages_check_deps_FiducialMapEntryArray.dir/all
 	$(MAKE) -f fiducial_msgs/CMakeFiles/fiducial_msgs_generate_messages_cpp.dir/build.make fiducial_msgs/CMakeFiles/fiducial_msgs_generate_messages_cpp.dir/depend
 	$(MAKE) -f fiducial_msgs/CMakeFiles/fiducial_msgs_generate_messages_cpp.dir/build.make fiducial_msgs/CMakeFiles/fiducial_msgs_generate_messages_cpp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/elliottwhite/proj515_ws/build/CMakeFiles --progress-num=10,11,12 "Built target fiducial_msgs_generate_messages_cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/elliottwhite/proj515_ws/build/CMakeFiles --progress-num=11,12 "Built target fiducial_msgs_generate_messages_cpp"
 .PHONY : fiducial_msgs/CMakeFiles/fiducial_msgs_generate_messages_cpp.dir/all
 
 # Build rule for subdir invocation for target.
 fiducial_msgs/CMakeFiles/fiducial_msgs_generate_messages_cpp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 3
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 2
 	$(MAKE) -f CMakeFiles/Makefile2 fiducial_msgs/CMakeFiles/fiducial_msgs_generate_messages_cpp.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 0
 .PHONY : fiducial_msgs/CMakeFiles/fiducial_msgs_generate_messages_cpp.dir/rule
@@ -6987,7 +6987,7 @@ odom_path_saver/preinstall:
 odom_path_saver/CMakeFiles/odom_path_saver.dir/all:
 	$(MAKE) -f odom_path_saver/CMakeFiles/odom_path_saver.dir/build.make odom_path_saver/CMakeFiles/odom_path_saver.dir/depend
 	$(MAKE) -f odom_path_saver/CMakeFiles/odom_path_saver.dir/build.make odom_path_saver/CMakeFiles/odom_path_saver.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/elliottwhite/proj515_ws/build/CMakeFiles --progress-num= "Built target odom_path_saver"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/elliottwhite/proj515_ws/build/CMakeFiles --progress-num=37 "Built target odom_path_saver"
 .PHONY : odom_path_saver/CMakeFiles/odom_path_saver.dir/all
 
 # Include target in all.
@@ -6997,7 +6997,7 @@ all: odom_path_saver/CMakeFiles/odom_path_saver.dir/all
 
 # Build rule for subdir invocation for target.
 odom_path_saver/CMakeFiles/odom_path_saver.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 1
 	$(MAKE) -f CMakeFiles/Makefile2 odom_path_saver/CMakeFiles/odom_path_saver.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 0
 .PHONY : odom_path_saver/CMakeFiles/odom_path_saver.dir/rule
@@ -7139,7 +7139,7 @@ all: phidgets_drivers/phidgets_ik/CMakeFiles/phidgets_ik_node.dir/all
 
 # Build rule for subdir invocation for target.
 phidgets_drivers/phidgets_ik/CMakeFiles/phidgets_ik_node.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 9
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 8
 	$(MAKE) -f CMakeFiles/Makefile2 phidgets_drivers/phidgets_ik/CMakeFiles/phidgets_ik_node.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 0
 .PHONY : phidgets_drivers/phidgets_ik/CMakeFiles/phidgets_ik_node.dir/rule
@@ -7237,7 +7237,7 @@ all: phidgets_drivers/phidgets_ik/CMakeFiles/phidgets_ik.dir/all
 
 # Build rule for subdir invocation for target.
 phidgets_drivers/phidgets_ik/CMakeFiles/phidgets_ik.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 8
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 7
 	$(MAKE) -f CMakeFiles/Makefile2 phidgets_drivers/phidgets_ik/CMakeFiles/phidgets_ik.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 0
 .PHONY : phidgets_drivers/phidgets_ik/CMakeFiles/phidgets_ik.dir/rule
@@ -7333,7 +7333,7 @@ phidgets_drivers/phidgets_ik/CMakeFiles/phidgets_ik_gennodejs.dir/all: phidgets_
 
 # Build rule for subdir invocation for target.
 phidgets_drivers/phidgets_ik/CMakeFiles/phidgets_ik_gennodejs.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 1
 	$(MAKE) -f CMakeFiles/Makefile2 phidgets_drivers/phidgets_ik/CMakeFiles/phidgets_ik_gennodejs.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 0
 .PHONY : phidgets_drivers/phidgets_ik/CMakeFiles/phidgets_ik_gennodejs.dir/rule
@@ -7365,7 +7365,7 @@ phidgets_drivers/phidgets_ik/CMakeFiles/phidgets_ik_genpy.dir/all: phidgets_driv
 
 # Build rule for subdir invocation for target.
 phidgets_drivers/phidgets_ik/CMakeFiles/phidgets_ik_genpy.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 phidgets_drivers/phidgets_ik/CMakeFiles/phidgets_ik_genpy.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 0
 .PHONY : phidgets_drivers/phidgets_ik/CMakeFiles/phidgets_ik_genpy.dir/rule
@@ -7913,12 +7913,12 @@ clean: phidgets_drivers/phidgets_ik/CMakeFiles/phidgets_ik_genlisp.dir/clean
 phidgets_drivers/phidgets_ik/CMakeFiles/phidgets_ik_generate_messages_nodejs.dir/all: phidgets_drivers/phidgets_ik/CMakeFiles/_phidgets_ik_generate_messages_check_deps_SetDigitalOutput.dir/all
 	$(MAKE) -f phidgets_drivers/phidgets_ik/CMakeFiles/phidgets_ik_generate_messages_nodejs.dir/build.make phidgets_drivers/phidgets_ik/CMakeFiles/phidgets_ik_generate_messages_nodejs.dir/depend
 	$(MAKE) -f phidgets_drivers/phidgets_ik/CMakeFiles/phidgets_ik_generate_messages_nodejs.dir/build.make phidgets_drivers/phidgets_ik/CMakeFiles/phidgets_ik_generate_messages_nodejs.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/elliottwhite/proj515_ws/build/CMakeFiles --progress-num= "Built target phidgets_ik_generate_messages_nodejs"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/elliottwhite/proj515_ws/build/CMakeFiles --progress-num=45 "Built target phidgets_ik_generate_messages_nodejs"
 .PHONY : phidgets_drivers/phidgets_ik/CMakeFiles/phidgets_ik_generate_messages_nodejs.dir/all
 
 # Build rule for subdir invocation for target.
 phidgets_drivers/phidgets_ik/CMakeFiles/phidgets_ik_generate_messages_nodejs.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 1
 	$(MAKE) -f CMakeFiles/Makefile2 phidgets_drivers/phidgets_ik/CMakeFiles/phidgets_ik_generate_messages_nodejs.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 0
 .PHONY : phidgets_drivers/phidgets_ik/CMakeFiles/phidgets_ik_generate_messages_nodejs.dir/rule
@@ -7945,12 +7945,12 @@ clean: phidgets_drivers/phidgets_ik/CMakeFiles/phidgets_ik_generate_messages_nod
 phidgets_drivers/phidgets_ik/CMakeFiles/phidgets_ik_generate_messages_py.dir/all: phidgets_drivers/phidgets_ik/CMakeFiles/_phidgets_ik_generate_messages_check_deps_SetDigitalOutput.dir/all
 	$(MAKE) -f phidgets_drivers/phidgets_ik/CMakeFiles/phidgets_ik_generate_messages_py.dir/build.make phidgets_drivers/phidgets_ik/CMakeFiles/phidgets_ik_generate_messages_py.dir/depend
 	$(MAKE) -f phidgets_drivers/phidgets_ik/CMakeFiles/phidgets_ik_generate_messages_py.dir/build.make phidgets_drivers/phidgets_ik/CMakeFiles/phidgets_ik_generate_messages_py.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/elliottwhite/proj515_ws/build/CMakeFiles --progress-num=45 "Built target phidgets_ik_generate_messages_py"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/elliottwhite/proj515_ws/build/CMakeFiles --progress-num= "Built target phidgets_ik_generate_messages_py"
 .PHONY : phidgets_drivers/phidgets_ik/CMakeFiles/phidgets_ik_generate_messages_py.dir/all
 
 # Build rule for subdir invocation for target.
 phidgets_drivers/phidgets_ik/CMakeFiles/phidgets_ik_generate_messages_py.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 phidgets_drivers/phidgets_ik/CMakeFiles/phidgets_ik_generate_messages_py.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 0
 .PHONY : phidgets_drivers/phidgets_ik/CMakeFiles/phidgets_ik_generate_messages_py.dir/rule
@@ -8048,7 +8048,7 @@ phidgets_drivers/phidgets_imu/CMakeFiles/_run_tests_phidgets_imu_roslaunch-check
 
 # Build rule for subdir invocation for target.
 phidgets_drivers/phidgets_imu/CMakeFiles/_run_tests_phidgets_imu_roslaunch-check.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 34
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 33
 	$(MAKE) -f CMakeFiles/Makefile2 phidgets_drivers/phidgets_imu/CMakeFiles/_run_tests_phidgets_imu_roslaunch-check.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 0
 .PHONY : phidgets_drivers/phidgets_imu/CMakeFiles/_run_tests_phidgets_imu_roslaunch-check.dir/rule
@@ -8365,7 +8365,7 @@ phidgets_drivers/phidgets_imu/CMakeFiles/phidgets_imu.dir/all: phidgets_drivers/
 phidgets_drivers/phidgets_imu/CMakeFiles/phidgets_imu.dir/all: phidgets_drivers/phidgets_imu/CMakeFiles/std_srvs_generate_messages_nodejs.dir/all
 	$(MAKE) -f phidgets_drivers/phidgets_imu/CMakeFiles/phidgets_imu.dir/build.make phidgets_drivers/phidgets_imu/CMakeFiles/phidgets_imu.dir/depend
 	$(MAKE) -f phidgets_drivers/phidgets_imu/CMakeFiles/phidgets_imu.dir/build.make phidgets_drivers/phidgets_imu/CMakeFiles/phidgets_imu.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/elliottwhite/proj515_ws/build/CMakeFiles --progress-num= "Built target phidgets_imu"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/elliottwhite/proj515_ws/build/CMakeFiles --progress-num=47 "Built target phidgets_imu"
 .PHONY : phidgets_drivers/phidgets_imu/CMakeFiles/phidgets_imu.dir/all
 
 # Include target in all.
@@ -8605,7 +8605,7 @@ phidgets_drivers/phidgets_imu/CMakeFiles/phidgets_imu_node.dir/all: phidgets_dri
 phidgets_drivers/phidgets_imu/CMakeFiles/phidgets_imu_node.dir/all: phidgets_drivers/phidgets_imu/CMakeFiles/std_srvs_generate_messages_nodejs.dir/all
 	$(MAKE) -f phidgets_drivers/phidgets_imu/CMakeFiles/phidgets_imu_node.dir/build.make phidgets_drivers/phidgets_imu/CMakeFiles/phidgets_imu_node.dir/depend
 	$(MAKE) -f phidgets_drivers/phidgets_imu/CMakeFiles/phidgets_imu_node.dir/build.make phidgets_drivers/phidgets_imu/CMakeFiles/phidgets_imu_node.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/elliottwhite/proj515_ws/build/CMakeFiles --progress-num=47 "Built target phidgets_imu_node"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/elliottwhite/proj515_ws/build/CMakeFiles --progress-num= "Built target phidgets_imu_node"
 .PHONY : phidgets_drivers/phidgets_imu/CMakeFiles/phidgets_imu_node.dir/all
 
 # Include target in all.
@@ -8615,7 +8615,7 @@ all: phidgets_drivers/phidgets_imu/CMakeFiles/phidgets_imu_node.dir/all
 
 # Build rule for subdir invocation for target.
 phidgets_drivers/phidgets_imu/CMakeFiles/phidgets_imu_node.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 6
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 5
 	$(MAKE) -f CMakeFiles/Makefile2 phidgets_drivers/phidgets_imu/CMakeFiles/phidgets_imu_node.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 0
 .PHONY : phidgets_drivers/phidgets_imu/CMakeFiles/phidgets_imu_node.dir/rule
@@ -8648,7 +8648,7 @@ phidgets_drivers/phidgets_imu/CMakeFiles/_run_tests_phidgets_imu_roslaunch-check
 
 # Build rule for subdir invocation for target.
 phidgets_drivers/phidgets_imu/CMakeFiles/_run_tests_phidgets_imu_roslaunch-check_launch.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 34
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 33
 	$(MAKE) -f CMakeFiles/Makefile2 phidgets_drivers/phidgets_imu/CMakeFiles/_run_tests_phidgets_imu_roslaunch-check_launch.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 0
 .PHONY : phidgets_drivers/phidgets_imu/CMakeFiles/_run_tests_phidgets_imu_roslaunch-check_launch.dir/rule
@@ -8680,7 +8680,7 @@ phidgets_drivers/phidgets_imu/CMakeFiles/_run_tests_phidgets_imu.dir/all: phidge
 
 # Build rule for subdir invocation for target.
 phidgets_drivers/phidgets_imu/CMakeFiles/_run_tests_phidgets_imu.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 34
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 33
 	$(MAKE) -f CMakeFiles/Makefile2 phidgets_drivers/phidgets_imu/CMakeFiles/_run_tests_phidgets_imu.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 0
 .PHONY : phidgets_drivers/phidgets_imu/CMakeFiles/_run_tests_phidgets_imu.dir/rule
@@ -8793,7 +8793,7 @@ rosserial/rosserial_test/CMakeFiles/_run_tests_rosserial_test_rostest_test_rosse
 
 # Build rule for subdir invocation for target.
 rosserial/rosserial_test/CMakeFiles/_run_tests_rosserial_test_rostest_test_rosserial_server_serial.test.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 34
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 33
 	$(MAKE) -f CMakeFiles/Makefile2 rosserial/rosserial_test/CMakeFiles/_run_tests_rosserial_test_rostest_test_rosserial_server_serial.test.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 0
 .PHONY : rosserial/rosserial_test/CMakeFiles/_run_tests_rosserial_test_rostest_test_rosserial_server_serial.test.dir/rule
@@ -8881,7 +8881,7 @@ rosserial/rosserial_test/CMakeFiles/rosserial_test_rosserial_lib.dir/all: rosser
 
 # Build rule for subdir invocation for target.
 rosserial/rosserial_test/CMakeFiles/rosserial_test_rosserial_lib.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 10
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 9
 	$(MAKE) -f CMakeFiles/Makefile2 rosserial/rosserial_test/CMakeFiles/rosserial_test_rosserial_lib.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 0
 .PHONY : rosserial/rosserial_test/CMakeFiles/rosserial_test_rosserial_lib.dir/rule
@@ -8914,7 +8914,7 @@ rosserial/rosserial_test/CMakeFiles/_run_tests_rosserial_test_rostest_test_rosse
 
 # Build rule for subdir invocation for target.
 rosserial/rosserial_test/CMakeFiles/_run_tests_rosserial_test_rostest_test_rosserial_server_socket.test.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 34
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 33
 	$(MAKE) -f CMakeFiles/Makefile2 rosserial/rosserial_test/CMakeFiles/_run_tests_rosserial_test_rostest_test_rosserial_server_socket.test.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 0
 .PHONY : rosserial/rosserial_test/CMakeFiles/_run_tests_rosserial_test_rostest_test_rosserial_server_socket.test.dir/rule
@@ -8946,7 +8946,7 @@ rosserial/rosserial_test/CMakeFiles/_run_tests_rosserial_test.dir/all: rosserial
 
 # Build rule for subdir invocation for target.
 rosserial/rosserial_test/CMakeFiles/_run_tests_rosserial_test.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 34
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 33
 	$(MAKE) -f CMakeFiles/Makefile2 rosserial/rosserial_test/CMakeFiles/_run_tests_rosserial_test.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 0
 .PHONY : rosserial/rosserial_test/CMakeFiles/_run_tests_rosserial_test.dir/rule
@@ -9014,7 +9014,7 @@ rosserial/rosserial_test/CMakeFiles/_run_tests_rosserial_test_rostest.dir/all: r
 
 # Build rule for subdir invocation for target.
 rosserial/rosserial_test/CMakeFiles/_run_tests_rosserial_test_rostest.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 34
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 33
 	$(MAKE) -f CMakeFiles/Makefile2 rosserial/rosserial_test/CMakeFiles/_run_tests_rosserial_test_rostest.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 0
 .PHONY : rosserial/rosserial_test/CMakeFiles/_run_tests_rosserial_test_rostest.dir/rule
@@ -9047,7 +9047,7 @@ rosserial/rosserial_test/CMakeFiles/rosserial_test_publish_subscribe.dir/all: ro
 
 # Build rule for subdir invocation for target.
 rosserial/rosserial_test/CMakeFiles/rosserial_test_publish_subscribe.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 12
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 11
 	$(MAKE) -f CMakeFiles/Makefile2 rosserial/rosserial_test/CMakeFiles/rosserial_test_publish_subscribe.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 0
 .PHONY : rosserial/rosserial_test/CMakeFiles/rosserial_test_publish_subscribe.dir/rule
@@ -9144,7 +9144,7 @@ rosserial/rosserial_test/CMakeFiles/_run_tests_rosserial_test_rostest_test_rosse
 
 # Build rule for subdir invocation for target.
 rosserial/rosserial_test/CMakeFiles/_run_tests_rosserial_test_rostest_test_rosserial_python_socket.test.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 34
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 33
 	$(MAKE) -f CMakeFiles/Makefile2 rosserial/rosserial_test/CMakeFiles/_run_tests_rosserial_test_rostest_test_rosserial_python_socket.test.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 0
 .PHONY : rosserial/rosserial_test/CMakeFiles/_run_tests_rosserial_test_rostest_test_rosserial_python_socket.test.dir/rule
@@ -9293,7 +9293,7 @@ aruco_detect/CMakeFiles/_run_tests_aruco_detect_rostest_test_aruco_images.test.d
 
 # Build rule for subdir invocation for target.
 aruco_detect/CMakeFiles/_run_tests_aruco_detect_rostest_test_aruco_images.test.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 34
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 33
 	$(MAKE) -f CMakeFiles/Makefile2 aruco_detect/CMakeFiles/_run_tests_aruco_detect_rostest_test_aruco_images.test.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 0
 .PHONY : aruco_detect/CMakeFiles/_run_tests_aruco_detect_rostest_test_aruco_images.test.dir/rule
@@ -9389,7 +9389,7 @@ aruco_detect/CMakeFiles/_run_tests_aruco_detect_rostest.dir/all: aruco_detect/CM
 
 # Build rule for subdir invocation for target.
 aruco_detect/CMakeFiles/_run_tests_aruco_detect_rostest.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 34
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 33
 	$(MAKE) -f CMakeFiles/Makefile2 aruco_detect/CMakeFiles/_run_tests_aruco_detect_rostest.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 0
 .PHONY : aruco_detect/CMakeFiles/_run_tests_aruco_detect_rostest.dir/rule
@@ -9775,7 +9775,7 @@ aruco_detect/CMakeFiles/_run_tests_aruco_detect.dir/all: aruco_detect/CMakeFiles
 
 # Build rule for subdir invocation for target.
 aruco_detect/CMakeFiles/_run_tests_aruco_detect.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 34
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 33
 	$(MAKE) -f CMakeFiles/Makefile2 aruco_detect/CMakeFiles/_run_tests_aruco_detect.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 0
 .PHONY : aruco_detect/CMakeFiles/_run_tests_aruco_detect.dir/rule
@@ -9792,6 +9792,115 @@ aruco_detect/CMakeFiles/_run_tests_aruco_detect.dir/clean:
 
 # clean rule for target.
 clean: aruco_detect/CMakeFiles/_run_tests_aruco_detect.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Directory level rules for directory fiducial_localization
+
+# Convenience name for "all" pass in the directory.
+fiducial_localization/all: fiducial_localization/CMakeFiles/fiducial_localization.dir/all
+
+.PHONY : fiducial_localization/all
+
+# Convenience name for "clean" pass in the directory.
+fiducial_localization/clean: fiducial_localization/CMakeFiles/fiducial_localization.dir/clean
+
+.PHONY : fiducial_localization/clean
+
+# Convenience name for "preinstall" pass in the directory.
+fiducial_localization/preinstall:
+
+.PHONY : fiducial_localization/preinstall
+
+#=============================================================================
+# Target rules for target fiducial_localization/CMakeFiles/fiducial_localization.dir
+
+# All Build rule for target.
+fiducial_localization/CMakeFiles/fiducial_localization.dir/all: pid/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/all
+fiducial_localization/CMakeFiles/fiducial_localization.dir/all: pid/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/all
+fiducial_localization/CMakeFiles/fiducial_localization.dir/all: pid/CMakeFiles/roscpp_generate_messages_cpp.dir/all
+fiducial_localization/CMakeFiles/fiducial_localization.dir/all: pid/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/all
+fiducial_localization/CMakeFiles/fiducial_localization.dir/all: pid/CMakeFiles/std_msgs_generate_messages_cpp.dir/all
+fiducial_localization/CMakeFiles/fiducial_localization.dir/all: pid/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/all
+fiducial_localization/CMakeFiles/fiducial_localization.dir/all: pid/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/all
+fiducial_localization/CMakeFiles/fiducial_localization.dir/all: pid/CMakeFiles/roscpp_generate_messages_nodejs.dir/all
+fiducial_localization/CMakeFiles/fiducial_localization.dir/all: pid/CMakeFiles/std_msgs_generate_messages_py.dir/all
+fiducial_localization/CMakeFiles/fiducial_localization.dir/all: pid/CMakeFiles/std_msgs_generate_messages_nodejs.dir/all
+fiducial_localization/CMakeFiles/fiducial_localization.dir/all: pid/CMakeFiles/std_msgs_generate_messages_lisp.dir/all
+fiducial_localization/CMakeFiles/fiducial_localization.dir/all: pid/CMakeFiles/roscpp_generate_messages_lisp.dir/all
+fiducial_localization/CMakeFiles/fiducial_localization.dir/all: pid/CMakeFiles/std_msgs_generate_messages_eus.dir/all
+fiducial_localization/CMakeFiles/fiducial_localization.dir/all: pid/CMakeFiles/roscpp_generate_messages_eus.dir/all
+fiducial_localization/CMakeFiles/fiducial_localization.dir/all: pid/CMakeFiles/roscpp_generate_messages_py.dir/all
+fiducial_localization/CMakeFiles/fiducial_localization.dir/all: camera_tests/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/all
+fiducial_localization/CMakeFiles/fiducial_localization.dir/all: camera_tests/CMakeFiles/sensor_msgs_generate_messages_eus.dir/all
+fiducial_localization/CMakeFiles/fiducial_localization.dir/all: camera_tests/CMakeFiles/sensor_msgs_generate_messages_py.dir/all
+fiducial_localization/CMakeFiles/fiducial_localization.dir/all: camera_tests/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/all
+fiducial_localization/CMakeFiles/fiducial_localization.dir/all: camera_tests/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/all
+fiducial_localization/CMakeFiles/fiducial_localization.dir/all: camera_tests/CMakeFiles/geometry_msgs_generate_messages_py.dir/all
+fiducial_localization/CMakeFiles/fiducial_localization.dir/all: camera_tests/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/all
+fiducial_localization/CMakeFiles/fiducial_localization.dir/all: camera_tests/CMakeFiles/geometry_msgs_generate_messages_eus.dir/all
+fiducial_localization/CMakeFiles/fiducial_localization.dir/all: camera_tests/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/all
+fiducial_localization/CMakeFiles/fiducial_localization.dir/all: camera_tests/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/all
+fiducial_localization/CMakeFiles/fiducial_localization.dir/all: simple_nav_goals/CMakeFiles/actionlib_generate_messages_nodejs.dir/all
+fiducial_localization/CMakeFiles/fiducial_localization.dir/all: simple_nav_goals/CMakeFiles/actionlib_msgs_generate_messages_lisp.dir/all
+fiducial_localization/CMakeFiles/fiducial_localization.dir/all: simple_nav_goals/CMakeFiles/actionlib_msgs_generate_messages_py.dir/all
+fiducial_localization/CMakeFiles/fiducial_localization.dir/all: simple_nav_goals/CMakeFiles/actionlib_generate_messages_lisp.dir/all
+fiducial_localization/CMakeFiles/fiducial_localization.dir/all: simple_nav_goals/CMakeFiles/actionlib_generate_messages_eus.dir/all
+fiducial_localization/CMakeFiles/fiducial_localization.dir/all: simple_nav_goals/CMakeFiles/actionlib_msgs_generate_messages_eus.dir/all
+fiducial_localization/CMakeFiles/fiducial_localization.dir/all: simple_nav_goals/CMakeFiles/actionlib_generate_messages_cpp.dir/all
+fiducial_localization/CMakeFiles/fiducial_localization.dir/all: simple_nav_goals/CMakeFiles/actionlib_generate_messages_py.dir/all
+fiducial_localization/CMakeFiles/fiducial_localization.dir/all: simple_nav_goals/CMakeFiles/actionlib_msgs_generate_messages_cpp.dir/all
+fiducial_localization/CMakeFiles/fiducial_localization.dir/all: simple_nav_goals/CMakeFiles/actionlib_msgs_generate_messages_nodejs.dir/all
+fiducial_localization/CMakeFiles/fiducial_localization.dir/all: fiducial_msgs/CMakeFiles/fiducial_msgs_generate_messages_py.dir/all
+fiducial_localization/CMakeFiles/fiducial_localization.dir/all: fiducial_msgs/CMakeFiles/fiducial_msgs_generate_messages_lisp.dir/all
+fiducial_localization/CMakeFiles/fiducial_localization.dir/all: fiducial_msgs/CMakeFiles/tf2_msgs_generate_messages_lisp.dir/all
+fiducial_localization/CMakeFiles/fiducial_localization.dir/all: fiducial_msgs/CMakeFiles/tf2_msgs_generate_messages_py.dir/all
+fiducial_localization/CMakeFiles/fiducial_localization.dir/all: fiducial_msgs/CMakeFiles/tf2_msgs_generate_messages_eus.dir/all
+fiducial_localization/CMakeFiles/fiducial_localization.dir/all: fiducial_msgs/CMakeFiles/tf2_msgs_generate_messages_cpp.dir/all
+fiducial_localization/CMakeFiles/fiducial_localization.dir/all: fiducial_msgs/CMakeFiles/fiducial_msgs_generate_messages_nodejs.dir/all
+fiducial_localization/CMakeFiles/fiducial_localization.dir/all: fiducial_msgs/CMakeFiles/tf_generate_messages_cpp.dir/all
+fiducial_localization/CMakeFiles/fiducial_localization.dir/all: fiducial_msgs/CMakeFiles/tf_generate_messages_eus.dir/all
+fiducial_localization/CMakeFiles/fiducial_localization.dir/all: fiducial_msgs/CMakeFiles/tf_generate_messages_py.dir/all
+fiducial_localization/CMakeFiles/fiducial_localization.dir/all: fiducial_msgs/CMakeFiles/tf_generate_messages_nodejs.dir/all
+fiducial_localization/CMakeFiles/fiducial_localization.dir/all: fiducial_msgs/CMakeFiles/fiducial_msgs_generate_messages_eus.dir/all
+fiducial_localization/CMakeFiles/fiducial_localization.dir/all: fiducial_msgs/CMakeFiles/tf2_msgs_generate_messages_nodejs.dir/all
+fiducial_localization/CMakeFiles/fiducial_localization.dir/all: fiducial_msgs/CMakeFiles/tf_generate_messages_lisp.dir/all
+fiducial_localization/CMakeFiles/fiducial_localization.dir/all: fiducial_msgs/CMakeFiles/fiducial_msgs_generate_messages_cpp.dir/all
+fiducial_localization/CMakeFiles/fiducial_localization.dir/all: joy2vel/CMakeFiles/nav_msgs_generate_messages_nodejs.dir/all
+fiducial_localization/CMakeFiles/fiducial_localization.dir/all: joy2vel/CMakeFiles/nav_msgs_generate_messages_lisp.dir/all
+fiducial_localization/CMakeFiles/fiducial_localization.dir/all: joy2vel/CMakeFiles/nav_msgs_generate_messages_cpp.dir/all
+fiducial_localization/CMakeFiles/fiducial_localization.dir/all: joy2vel/CMakeFiles/nav_msgs_generate_messages_py.dir/all
+fiducial_localization/CMakeFiles/fiducial_localization.dir/all: joy2vel/CMakeFiles/nav_msgs_generate_messages_eus.dir/all
+	$(MAKE) -f fiducial_localization/CMakeFiles/fiducial_localization.dir/build.make fiducial_localization/CMakeFiles/fiducial_localization.dir/depend
+	$(MAKE) -f fiducial_localization/CMakeFiles/fiducial_localization.dir/build.make fiducial_localization/CMakeFiles/fiducial_localization.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/elliottwhite/proj515_ws/build/CMakeFiles --progress-num=10 "Built target fiducial_localization"
+.PHONY : fiducial_localization/CMakeFiles/fiducial_localization.dir/all
+
+# Include target in all.
+all: fiducial_localization/CMakeFiles/fiducial_localization.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+fiducial_localization/CMakeFiles/fiducial_localization.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 14
+	$(MAKE) -f CMakeFiles/Makefile2 fiducial_localization/CMakeFiles/fiducial_localization.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 0
+.PHONY : fiducial_localization/CMakeFiles/fiducial_localization.dir/rule
+
+# Convenience name for target.
+fiducial_localization: fiducial_localization/CMakeFiles/fiducial_localization.dir/rule
+
+.PHONY : fiducial_localization
+
+# clean rule for target.
+fiducial_localization/CMakeFiles/fiducial_localization.dir/clean:
+	$(MAKE) -f fiducial_localization/CMakeFiles/fiducial_localization.dir/build.make fiducial_localization/CMakeFiles/fiducial_localization.dir/clean
+.PHONY : fiducial_localization/CMakeFiles/fiducial_localization.dir/clean
+
+# clean rule for target.
+clean: fiducial_localization/CMakeFiles/fiducial_localization.dir/clean
 
 .PHONY : clean
 
@@ -9839,7 +9948,7 @@ fiducial_slam/CMakeFiles/_run_tests_fiducial_slam_rostest_test_auto_init_403.tes
 
 # Build rule for subdir invocation for target.
 fiducial_slam/CMakeFiles/_run_tests_fiducial_slam_rostest_test_auto_init_403.test.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 34
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 33
 	$(MAKE) -f CMakeFiles/Makefile2 fiducial_slam/CMakeFiles/_run_tests_fiducial_slam_rostest_test_auto_init_403.test.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 0
 .PHONY : fiducial_slam/CMakeFiles/_run_tests_fiducial_slam_rostest_test_auto_init_403.test.dir/rule
@@ -10045,7 +10154,7 @@ fiducial_slam/CMakeFiles/fiducial_slam.dir/all: aruco_detect/CMakeFiles/visualiz
 fiducial_slam/CMakeFiles/fiducial_slam.dir/all: aruco_detect/CMakeFiles/visualization_msgs_generate_messages_cpp.dir/all
 	$(MAKE) -f fiducial_slam/CMakeFiles/fiducial_slam.dir/build.make fiducial_slam/CMakeFiles/fiducial_slam.dir/depend
 	$(MAKE) -f fiducial_slam/CMakeFiles/fiducial_slam.dir/build.make fiducial_slam/CMakeFiles/fiducial_slam.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/elliottwhite/proj515_ws/build/CMakeFiles --progress-num=23,24 "Built target fiducial_slam"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/elliottwhite/proj515_ws/build/CMakeFiles --progress-num=24 "Built target fiducial_slam"
 .PHONY : fiducial_slam/CMakeFiles/fiducial_slam.dir/all
 
 # Include target in all.
@@ -10055,7 +10164,7 @@ all: fiducial_slam/CMakeFiles/fiducial_slam.dir/all
 
 # Build rule for subdir invocation for target.
 fiducial_slam/CMakeFiles/fiducial_slam.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 15
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 14
 	$(MAKE) -f CMakeFiles/Makefile2 fiducial_slam/CMakeFiles/fiducial_slam.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 0
 .PHONY : fiducial_slam/CMakeFiles/fiducial_slam.dir/rule
@@ -10121,7 +10230,7 @@ fiducial_slam/CMakeFiles/_run_tests_fiducial_slam_rostest.dir/all: fiducial_slam
 
 # Build rule for subdir invocation for target.
 fiducial_slam/CMakeFiles/_run_tests_fiducial_slam_rostest.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 34
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 33
 	$(MAKE) -f CMakeFiles/Makefile2 fiducial_slam/CMakeFiles/_run_tests_fiducial_slam_rostest.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 0
 .PHONY : fiducial_slam/CMakeFiles/_run_tests_fiducial_slam_rostest.dir/rule
@@ -10153,7 +10262,7 @@ fiducial_slam/CMakeFiles/_run_tests_fiducial_slam.dir/all: fiducial_slam/CMakeFi
 
 # Build rule for subdir invocation for target.
 fiducial_slam/CMakeFiles/_run_tests_fiducial_slam.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 34
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 33
 	$(MAKE) -f CMakeFiles/Makefile2 fiducial_slam/CMakeFiles/_run_tests_fiducial_slam.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 0
 .PHONY : fiducial_slam/CMakeFiles/_run_tests_fiducial_slam.dir/rule
@@ -10186,7 +10295,7 @@ fiducial_slam/CMakeFiles/_run_tests_fiducial_slam_rostest_test_init_map_aruco.xm
 
 # Build rule for subdir invocation for target.
 fiducial_slam/CMakeFiles/_run_tests_fiducial_slam_rostest_test_init_map_aruco.xml.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 34
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 33
 	$(MAKE) -f CMakeFiles/Makefile2 fiducial_slam/CMakeFiles/_run_tests_fiducial_slam_rostest_test_init_map_aruco.xml.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 0
 .PHONY : fiducial_slam/CMakeFiles/_run_tests_fiducial_slam_rostest_test_init_map_aruco.xml.dir/rule
@@ -10251,7 +10360,7 @@ fiducial_slam/CMakeFiles/_run_tests_fiducial_slam_rostest_test_create_map_aruco.
 
 # Build rule for subdir invocation for target.
 fiducial_slam/CMakeFiles/_run_tests_fiducial_slam_rostest_test_create_map_aruco.xml.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 34
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 33
 	$(MAKE) -f CMakeFiles/Makefile2 fiducial_slam/CMakeFiles/_run_tests_fiducial_slam_rostest_test_create_map_aruco.xml.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 0
 .PHONY : fiducial_slam/CMakeFiles/_run_tests_fiducial_slam_rostest_test_create_map_aruco.xml.dir/rule
@@ -10349,7 +10458,7 @@ imu_tools/imu_filter_madgwick/CMakeFiles/_run_tests_imu_filter_madgwick_gtest_im
 
 # Build rule for subdir invocation for target.
 imu_tools/imu_filter_madgwick/CMakeFiles/_run_tests_imu_filter_madgwick_gtest_imu_filter_madgwick-madgwick_test.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 34
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 33
 	$(MAKE) -f CMakeFiles/Makefile2 imu_tools/imu_filter_madgwick/CMakeFiles/_run_tests_imu_filter_madgwick_gtest_imu_filter_madgwick-madgwick_test.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 0
 .PHONY : imu_tools/imu_filter_madgwick/CMakeFiles/_run_tests_imu_filter_madgwick_gtest_imu_filter_madgwick-madgwick_test.dir/rule
@@ -10413,7 +10522,7 @@ imu_tools/imu_filter_madgwick/CMakeFiles/run_tests_imu_filter_madgwick_gtest_imu
 
 # Build rule for subdir invocation for target.
 imu_tools/imu_filter_madgwick/CMakeFiles/run_tests_imu_filter_madgwick_gtest_imu_filter_madgwick-madgwick_test.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 3
 	$(MAKE) -f CMakeFiles/Makefile2 imu_tools/imu_filter_madgwick/CMakeFiles/run_tests_imu_filter_madgwick_gtest_imu_filter_madgwick-madgwick_test.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 0
 .PHONY : imu_tools/imu_filter_madgwick/CMakeFiles/run_tests_imu_filter_madgwick_gtest_imu_filter_madgwick-madgwick_test.dir/rule
@@ -10440,7 +10549,7 @@ clean: imu_tools/imu_filter_madgwick/CMakeFiles/run_tests_imu_filter_madgwick_gt
 imu_tools/imu_filter_madgwick/CMakeFiles/imu_filter.dir/all: imu_tools/imu_filter_madgwick/CMakeFiles/imu_filter_madgwick_gencfg.dir/all
 	$(MAKE) -f imu_tools/imu_filter_madgwick/CMakeFiles/imu_filter.dir/build.make imu_tools/imu_filter_madgwick/CMakeFiles/imu_filter.dir/depend
 	$(MAKE) -f imu_tools/imu_filter_madgwick/CMakeFiles/imu_filter.dir/build.make imu_tools/imu_filter_madgwick/CMakeFiles/imu_filter.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/elliottwhite/proj515_ws/build/CMakeFiles --progress-num=31,32 "Built target imu_filter"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/elliottwhite/proj515_ws/build/CMakeFiles --progress-num=32 "Built target imu_filter"
 .PHONY : imu_tools/imu_filter_madgwick/CMakeFiles/imu_filter.dir/all
 
 # Include target in all.
@@ -10450,7 +10559,7 @@ all: imu_tools/imu_filter_madgwick/CMakeFiles/imu_filter.dir/all
 
 # Build rule for subdir invocation for target.
 imu_tools/imu_filter_madgwick/CMakeFiles/imu_filter.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 1
 	$(MAKE) -f CMakeFiles/Makefile2 imu_tools/imu_filter_madgwick/CMakeFiles/imu_filter.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 0
 .PHONY : imu_tools/imu_filter_madgwick/CMakeFiles/imu_filter.dir/rule
@@ -10488,7 +10597,7 @@ all: imu_tools/imu_filter_madgwick/CMakeFiles/imu_filter_node.dir/all
 
 # Build rule for subdir invocation for target.
 imu_tools/imu_filter_madgwick/CMakeFiles/imu_filter_node.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 3
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 2
 	$(MAKE) -f CMakeFiles/Makefile2 imu_tools/imu_filter_madgwick/CMakeFiles/imu_filter_node.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 0
 .PHONY : imu_tools/imu_filter_madgwick/CMakeFiles/imu_filter_node.dir/rule
@@ -10516,7 +10625,7 @@ imu_tools/imu_filter_madgwick/CMakeFiles/imu_filter_nodelet.dir/all: imu_tools/i
 imu_tools/imu_filter_madgwick/CMakeFiles/imu_filter_nodelet.dir/all: imu_tools/imu_filter_madgwick/CMakeFiles/imu_filter_madgwick_gencfg.dir/all
 	$(MAKE) -f imu_tools/imu_filter_madgwick/CMakeFiles/imu_filter_nodelet.dir/build.make imu_tools/imu_filter_madgwick/CMakeFiles/imu_filter_nodelet.dir/depend
 	$(MAKE) -f imu_tools/imu_filter_madgwick/CMakeFiles/imu_filter_nodelet.dir/build.make imu_tools/imu_filter_madgwick/CMakeFiles/imu_filter_nodelet.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/elliottwhite/proj515_ws/build/CMakeFiles --progress-num= "Built target imu_filter_nodelet"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/elliottwhite/proj515_ws/build/CMakeFiles --progress-num=35 "Built target imu_filter_nodelet"
 .PHONY : imu_tools/imu_filter_madgwick/CMakeFiles/imu_filter_nodelet.dir/all
 
 # Include target in all.
@@ -10559,7 +10668,7 @@ imu_tools/imu_filter_madgwick/CMakeFiles/imu_filter_madgwick-madgwick_test.dir/a
 
 # Build rule for subdir invocation for target.
 imu_tools/imu_filter_madgwick/CMakeFiles/imu_filter_madgwick-madgwick_test.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 3
 	$(MAKE) -f CMakeFiles/Makefile2 imu_tools/imu_filter_madgwick/CMakeFiles/imu_filter_madgwick-madgwick_test.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 0
 .PHONY : imu_tools/imu_filter_madgwick/CMakeFiles/imu_filter_madgwick-madgwick_test.dir/rule
@@ -10628,7 +10737,7 @@ imu_tools/imu_filter_madgwick/CMakeFiles/run_tests_imu_filter_madgwick.dir/all: 
 
 # Build rule for subdir invocation for target.
 imu_tools/imu_filter_madgwick/CMakeFiles/run_tests_imu_filter_madgwick.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 3
 	$(MAKE) -f CMakeFiles/Makefile2 imu_tools/imu_filter_madgwick/CMakeFiles/run_tests_imu_filter_madgwick.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 0
 .PHONY : imu_tools/imu_filter_madgwick/CMakeFiles/run_tests_imu_filter_madgwick.dir/rule
@@ -10660,7 +10769,7 @@ imu_tools/imu_filter_madgwick/CMakeFiles/_run_tests_imu_filter_madgwick_gtest.di
 
 # Build rule for subdir invocation for target.
 imu_tools/imu_filter_madgwick/CMakeFiles/_run_tests_imu_filter_madgwick_gtest.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 34
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 33
 	$(MAKE) -f CMakeFiles/Makefile2 imu_tools/imu_filter_madgwick/CMakeFiles/_run_tests_imu_filter_madgwick_gtest.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 0
 .PHONY : imu_tools/imu_filter_madgwick/CMakeFiles/_run_tests_imu_filter_madgwick_gtest.dir/rule
@@ -10692,7 +10801,7 @@ imu_tools/imu_filter_madgwick/CMakeFiles/_run_tests_imu_filter_madgwick.dir/all:
 
 # Build rule for subdir invocation for target.
 imu_tools/imu_filter_madgwick/CMakeFiles/_run_tests_imu_filter_madgwick.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 34
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 33
 	$(MAKE) -f CMakeFiles/Makefile2 imu_tools/imu_filter_madgwick/CMakeFiles/_run_tests_imu_filter_madgwick.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 0
 .PHONY : imu_tools/imu_filter_madgwick/CMakeFiles/_run_tests_imu_filter_madgwick.dir/rule
@@ -10724,7 +10833,7 @@ imu_tools/imu_filter_madgwick/CMakeFiles/run_tests_imu_filter_madgwick_gtest.dir
 
 # Build rule for subdir invocation for target.
 imu_tools/imu_filter_madgwick/CMakeFiles/run_tests_imu_filter_madgwick_gtest.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 3
 	$(MAKE) -f CMakeFiles/Makefile2 imu_tools/imu_filter_madgwick/CMakeFiles/run_tests_imu_filter_madgwick_gtest.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 0
 .PHONY : imu_tools/imu_filter_madgwick/CMakeFiles/run_tests_imu_filter_madgwick_gtest.dir/rule
@@ -10877,7 +10986,7 @@ robot_localization/CMakeFiles/_run_tests_robot_localization_gtest.dir/all: robot
 
 # Build rule for subdir invocation for target.
 robot_localization/CMakeFiles/_run_tests_robot_localization_gtest.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 34
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 33
 	$(MAKE) -f CMakeFiles/Makefile2 robot_localization/CMakeFiles/_run_tests_robot_localization_gtest.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 0
 .PHONY : robot_localization/CMakeFiles/_run_tests_robot_localization_gtest.dir/rule
@@ -10911,7 +11020,7 @@ robot_localization/CMakeFiles/_run_tests_robot_localization_rostest_test_test_ek
 
 # Build rule for subdir invocation for target.
 robot_localization/CMakeFiles/_run_tests_robot_localization_rostest_test_test_ekf_localization_node_interfaces.test.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 34
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 33
 	$(MAKE) -f CMakeFiles/Makefile2 robot_localization/CMakeFiles/_run_tests_robot_localization_rostest_test_test_ekf_localization_node_interfaces.test.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 0
 .PHONY : robot_localization/CMakeFiles/_run_tests_robot_localization_rostest_test_test_ekf_localization_node_interfaces.test.dir/rule
@@ -10943,7 +11052,7 @@ robot_localization/CMakeFiles/run_tests_robot_localization_gtest_filter_base-tes
 
 # Build rule for subdir invocation for target.
 robot_localization/CMakeFiles/run_tests_robot_localization_gtest_filter_base-test.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 5
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 4
 	$(MAKE) -f CMakeFiles/Makefile2 robot_localization/CMakeFiles/run_tests_robot_localization_gtest_filter_base-test.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 0
 .PHONY : robot_localization/CMakeFiles/run_tests_robot_localization_gtest_filter_base-test.dir/rule
@@ -10975,7 +11084,7 @@ robot_localization/CMakeFiles/run_tests_robot_localization_gtest.dir/all: robot_
 
 # Build rule for subdir invocation for target.
 robot_localization/CMakeFiles/run_tests_robot_localization_gtest.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 5
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 4
 	$(MAKE) -f CMakeFiles/Makefile2 robot_localization/CMakeFiles/run_tests_robot_localization_gtest.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 0
 .PHONY : robot_localization/CMakeFiles/run_tests_robot_localization_gtest.dir/rule
@@ -11074,7 +11183,7 @@ robot_localization/CMakeFiles/_run_tests_robot_localization_rostest_test_test_fi
 
 # Build rule for subdir invocation for target.
 robot_localization/CMakeFiles/_run_tests_robot_localization_rostest_test_test_filter_base_diagnostics_timestamps.test.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 34
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 33
 	$(MAKE) -f CMakeFiles/Makefile2 robot_localization/CMakeFiles/_run_tests_robot_localization_rostest_test_test_filter_base_diagnostics_timestamps.test.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 0
 .PHONY : robot_localization/CMakeFiles/_run_tests_robot_localization_rostest_test_test_filter_base_diagnostics_timestamps.test.dir/rule
@@ -11106,7 +11215,7 @@ robot_localization/CMakeFiles/run_tests_robot_localization_rostest_test_test_ukf
 
 # Build rule for subdir invocation for target.
 robot_localization/CMakeFiles/run_tests_robot_localization_rostest_test_test_ukf.test.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 7
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 6
 	$(MAKE) -f CMakeFiles/Makefile2 robot_localization/CMakeFiles/run_tests_robot_localization_rostest_test_test_ukf.test.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 0
 .PHONY : robot_localization/CMakeFiles/run_tests_robot_localization_rostest_test_test_ukf.test.dir/rule
@@ -11135,12 +11244,12 @@ robot_localization/CMakeFiles/filter_base-test.dir/all: robot_localization/CMake
 robot_localization/CMakeFiles/filter_base-test.dir/all: robot_localization/CMakeFiles/filter_base.dir/all
 	$(MAKE) -f robot_localization/CMakeFiles/filter_base-test.dir/build.make robot_localization/CMakeFiles/filter_base-test.dir/depend
 	$(MAKE) -f robot_localization/CMakeFiles/filter_base-test.dir/build.make robot_localization/CMakeFiles/filter_base-test.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/elliottwhite/proj515_ws/build/CMakeFiles --progress-num=25 "Built target filter_base-test"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/elliottwhite/proj515_ws/build/CMakeFiles --progress-num=26 "Built target filter_base-test"
 .PHONY : robot_localization/CMakeFiles/filter_base-test.dir/all
 
 # Build rule for subdir invocation for target.
 robot_localization/CMakeFiles/filter_base-test.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 5
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 4
 	$(MAKE) -f CMakeFiles/Makefile2 robot_localization/CMakeFiles/filter_base-test.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 0
 .PHONY : robot_localization/CMakeFiles/filter_base-test.dir/rule
@@ -11184,7 +11293,7 @@ robot_localization/CMakeFiles/_run_tests_robot_localization_rostest.dir/all: rob
 
 # Build rule for subdir invocation for target.
 robot_localization/CMakeFiles/_run_tests_robot_localization_rostest.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 34
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 33
 	$(MAKE) -f CMakeFiles/Makefile2 robot_localization/CMakeFiles/_run_tests_robot_localization_rostest.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 0
 .PHONY : robot_localization/CMakeFiles/_run_tests_robot_localization_rostest.dir/rule
@@ -11225,7 +11334,7 @@ all: robot_localization/CMakeFiles/ros_filter.dir/all
 
 # Build rule for subdir invocation for target.
 robot_localization/CMakeFiles/ros_filter.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 6
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 5
 	$(MAKE) -f CMakeFiles/Makefile2 robot_localization/CMakeFiles/ros_filter.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 0
 .PHONY : robot_localization/CMakeFiles/ros_filter.dir/rule
@@ -11263,7 +11372,7 @@ all: robot_localization/CMakeFiles/ukf.dir/all
 
 # Build rule for subdir invocation for target.
 robot_localization/CMakeFiles/ukf.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 3
 	$(MAKE) -f CMakeFiles/Makefile2 robot_localization/CMakeFiles/ukf.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 0
 .PHONY : robot_localization/CMakeFiles/ukf.dir/rule
@@ -11293,7 +11402,7 @@ robot_localization/CMakeFiles/robot_localization_estimator.dir/all: robot_locali
 robot_localization/CMakeFiles/robot_localization_estimator.dir/all: robot_localization/CMakeFiles/filter_base.dir/all
 	$(MAKE) -f robot_localization/CMakeFiles/robot_localization_estimator.dir/build.make robot_localization/CMakeFiles/robot_localization_estimator.dir/depend
 	$(MAKE) -f robot_localization/CMakeFiles/robot_localization_estimator.dir/build.make robot_localization/CMakeFiles/robot_localization_estimator.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/elliottwhite/proj515_ws/build/CMakeFiles --progress-num= "Built target robot_localization_estimator"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/elliottwhite/proj515_ws/build/CMakeFiles --progress-num=50 "Built target robot_localization_estimator"
 .PHONY : robot_localization/CMakeFiles/robot_localization_estimator.dir/all
 
 # Include target in all.
@@ -11372,7 +11481,7 @@ clean: robot_localization/CMakeFiles/ros_robot_localization_listener.dir/clean
 robot_localization/CMakeFiles/filter_utilities.dir/all:
 	$(MAKE) -f robot_localization/CMakeFiles/filter_utilities.dir/build.make robot_localization/CMakeFiles/filter_utilities.dir/depend
 	$(MAKE) -f robot_localization/CMakeFiles/filter_utilities.dir/build.make robot_localization/CMakeFiles/filter_utilities.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/elliottwhite/proj515_ws/build/CMakeFiles --progress-num=26 "Built target filter_utilities"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/elliottwhite/proj515_ws/build/CMakeFiles --progress-num= "Built target filter_utilities"
 .PHONY : robot_localization/CMakeFiles/filter_utilities.dir/all
 
 # Include target in all.
@@ -11382,7 +11491,7 @@ all: robot_localization/CMakeFiles/filter_utilities.dir/all
 
 # Build rule for subdir invocation for target.
 robot_localization/CMakeFiles/filter_utilities.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 robot_localization/CMakeFiles/filter_utilities.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 0
 .PHONY : robot_localization/CMakeFiles/filter_utilities.dir/rule
@@ -11443,7 +11552,7 @@ robot_localization/CMakeFiles/navsat_transform.dir/all: robot_localization/CMake
 robot_localization/CMakeFiles/navsat_transform.dir/all: robot_localization/CMakeFiles/ros_filter_utilities.dir/all
 	$(MAKE) -f robot_localization/CMakeFiles/navsat_transform.dir/build.make robot_localization/CMakeFiles/navsat_transform.dir/depend
 	$(MAKE) -f robot_localization/CMakeFiles/navsat_transform.dir/build.make robot_localization/CMakeFiles/navsat_transform.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/elliottwhite/proj515_ws/build/CMakeFiles --progress-num=35 "Built target navsat_transform"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/elliottwhite/proj515_ws/build/CMakeFiles --progress-num= "Built target navsat_transform"
 .PHONY : robot_localization/CMakeFiles/navsat_transform.dir/all
 
 # Include target in all.
@@ -11453,7 +11562,7 @@ all: robot_localization/CMakeFiles/navsat_transform.dir/all
 
 # Build rule for subdir invocation for target.
 robot_localization/CMakeFiles/navsat_transform.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 5
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 2
 	$(MAKE) -f CMakeFiles/Makefile2 robot_localization/CMakeFiles/navsat_transform.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 0
 .PHONY : robot_localization/CMakeFiles/navsat_transform.dir/rule
@@ -11567,7 +11676,7 @@ all: robot_localization/CMakeFiles/ekf.dir/all
 
 # Build rule for subdir invocation for target.
 robot_localization/CMakeFiles/ekf.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 3
 	$(MAKE) -f CMakeFiles/Makefile2 robot_localization/CMakeFiles/ekf.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 0
 .PHONY : robot_localization/CMakeFiles/ekf.dir/rule
@@ -11647,7 +11756,7 @@ all: robot_localization/CMakeFiles/ekf_localization_node.dir/all
 
 # Build rule for subdir invocation for target.
 robot_localization/CMakeFiles/ekf_localization_node.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 6
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 5
 	$(MAKE) -f CMakeFiles/Makefile2 robot_localization/CMakeFiles/ekf_localization_node.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 0
 .PHONY : robot_localization/CMakeFiles/ekf_localization_node.dir/rule
@@ -11812,7 +11921,7 @@ robot_localization/CMakeFiles/run_tests_robot_localization_rostest_test_test_ekf
 
 # Build rule for subdir invocation for target.
 robot_localization/CMakeFiles/run_tests_robot_localization_rostest_test_test_ekf.test.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 7
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 6
 	$(MAKE) -f CMakeFiles/Makefile2 robot_localization/CMakeFiles/run_tests_robot_localization_rostest_test_test_ekf.test.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 0
 .PHONY : robot_localization/CMakeFiles/run_tests_robot_localization_rostest_test_test_ekf.test.dir/rule
@@ -11982,7 +12091,7 @@ all: robot_localization/CMakeFiles/ukf_localization_node.dir/all
 
 # Build rule for subdir invocation for target.
 robot_localization/CMakeFiles/ukf_localization_node.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 7
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 6
 	$(MAKE) -f CMakeFiles/Makefile2 robot_localization/CMakeFiles/ukf_localization_node.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 0
 .PHONY : robot_localization/CMakeFiles/ukf_localization_node.dir/rule
@@ -12061,7 +12170,7 @@ all: robot_localization/CMakeFiles/robot_localization_generate_messages.dir/all
 
 # Build rule for subdir invocation for target.
 robot_localization/CMakeFiles/robot_localization_generate_messages.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 8
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 7
 	$(MAKE) -f CMakeFiles/Makefile2 robot_localization/CMakeFiles/robot_localization_generate_messages.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 0
 .PHONY : robot_localization/CMakeFiles/robot_localization_generate_messages.dir/rule
@@ -12126,12 +12235,12 @@ robot_localization/CMakeFiles/robot_localization_generate_messages_cpp.dir/all: 
 robot_localization/CMakeFiles/robot_localization_generate_messages_cpp.dir/all: robot_localization/CMakeFiles/geographic_msgs_generate_messages_cpp.dir/all
 	$(MAKE) -f robot_localization/CMakeFiles/robot_localization_generate_messages_cpp.dir/build.make robot_localization/CMakeFiles/robot_localization_generate_messages_cpp.dir/depend
 	$(MAKE) -f robot_localization/CMakeFiles/robot_localization_generate_messages_cpp.dir/build.make robot_localization/CMakeFiles/robot_localization_generate_messages_cpp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/elliottwhite/proj515_ws/build/CMakeFiles --progress-num=50,51 "Built target robot_localization_generate_messages_cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/elliottwhite/proj515_ws/build/CMakeFiles --progress-num=51 "Built target robot_localization_generate_messages_cpp"
 .PHONY : robot_localization/CMakeFiles/robot_localization_generate_messages_cpp.dir/all
 
 # Build rule for subdir invocation for target.
 robot_localization/CMakeFiles/robot_localization_generate_messages_cpp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 1
 	$(MAKE) -f CMakeFiles/Makefile2 robot_localization/CMakeFiles/robot_localization_generate_messages_cpp.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 0
 .PHONY : robot_localization/CMakeFiles/robot_localization_generate_messages_cpp.dir/rule
@@ -12163,7 +12272,7 @@ robot_localization/CMakeFiles/robot_localization_gencpp.dir/all: robot_localizat
 
 # Build rule for subdir invocation for target.
 robot_localization/CMakeFiles/robot_localization_gencpp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 1
 	$(MAKE) -f CMakeFiles/Makefile2 robot_localization/CMakeFiles/robot_localization_gencpp.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 0
 .PHONY : robot_localization/CMakeFiles/robot_localization_gencpp.dir/rule
@@ -12324,7 +12433,7 @@ robot_localization/CMakeFiles/filter_base.dir/all: robot_localization/CMakeFiles
 robot_localization/CMakeFiles/filter_base.dir/all: robot_localization/CMakeFiles/robot_localization_gencpp.dir/all
 	$(MAKE) -f robot_localization/CMakeFiles/filter_base.dir/build.make robot_localization/CMakeFiles/filter_base.dir/depend
 	$(MAKE) -f robot_localization/CMakeFiles/filter_base.dir/build.make robot_localization/CMakeFiles/filter_base.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/elliottwhite/proj515_ws/build/CMakeFiles --progress-num= "Built target filter_base"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/elliottwhite/proj515_ws/build/CMakeFiles --progress-num=25 "Built target filter_base"
 .PHONY : robot_localization/CMakeFiles/filter_base.dir/all
 
 # Include target in all.
@@ -12334,7 +12443,7 @@ all: robot_localization/CMakeFiles/filter_base.dir/all
 
 # Build rule for subdir invocation for target.
 robot_localization/CMakeFiles/filter_base.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 3
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 2
 	$(MAKE) -f CMakeFiles/Makefile2 robot_localization/CMakeFiles/filter_base.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 0
 .PHONY : robot_localization/CMakeFiles/filter_base.dir/rule
@@ -12366,7 +12475,7 @@ robot_localization/CMakeFiles/robot_localization_geneus.dir/all: robot_localizat
 
 # Build rule for subdir invocation for target.
 robot_localization/CMakeFiles/robot_localization_geneus.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 2
 	$(MAKE) -f CMakeFiles/Makefile2 robot_localization/CMakeFiles/robot_localization_geneus.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 0
 .PHONY : robot_localization/CMakeFiles/robot_localization_geneus.dir/rule
@@ -12559,12 +12668,12 @@ robot_localization/CMakeFiles/robot_localization_generate_messages_lisp.dir/all:
 robot_localization/CMakeFiles/robot_localization_generate_messages_lisp.dir/all: robot_localization/CMakeFiles/_robot_localization_generate_messages_check_deps_SetPose.dir/all
 	$(MAKE) -f robot_localization/CMakeFiles/robot_localization_generate_messages_lisp.dir/build.make robot_localization/CMakeFiles/robot_localization_generate_messages_lisp.dir/depend
 	$(MAKE) -f robot_localization/CMakeFiles/robot_localization_generate_messages_lisp.dir/build.make robot_localization/CMakeFiles/robot_localization_generate_messages_lisp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/elliottwhite/proj515_ws/build/CMakeFiles --progress-num=53,54 "Built target robot_localization_generate_messages_lisp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/elliottwhite/proj515_ws/build/CMakeFiles --progress-num=54 "Built target robot_localization_generate_messages_lisp"
 .PHONY : robot_localization/CMakeFiles/robot_localization_generate_messages_lisp.dir/all
 
 # Build rule for subdir invocation for target.
 robot_localization/CMakeFiles/robot_localization_generate_messages_lisp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 1
 	$(MAKE) -f CMakeFiles/Makefile2 robot_localization/CMakeFiles/robot_localization_generate_messages_lisp.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 0
 .PHONY : robot_localization/CMakeFiles/robot_localization_generate_messages_lisp.dir/rule
@@ -12598,7 +12707,7 @@ robot_localization/CMakeFiles/_run_tests_robot_localization_gtest_filter_base-te
 
 # Build rule for subdir invocation for target.
 robot_localization/CMakeFiles/_run_tests_robot_localization_gtest_filter_base-test.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 34
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 33
 	$(MAKE) -f CMakeFiles/Makefile2 robot_localization/CMakeFiles/_run_tests_robot_localization_gtest_filter_base-test.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 0
 .PHONY : robot_localization/CMakeFiles/_run_tests_robot_localization_gtest_filter_base-test.dir/rule
@@ -12663,7 +12772,7 @@ robot_localization/CMakeFiles/_run_tests_robot_localization.dir/all: robot_local
 
 # Build rule for subdir invocation for target.
 robot_localization/CMakeFiles/_run_tests_robot_localization.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 34
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 33
 	$(MAKE) -f CMakeFiles/Makefile2 robot_localization/CMakeFiles/_run_tests_robot_localization.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 0
 .PHONY : robot_localization/CMakeFiles/_run_tests_robot_localization.dir/rule
@@ -12733,7 +12842,7 @@ robot_localization/CMakeFiles/test_filter_base_diagnostics_timestamps.dir/all: r
 
 # Build rule for subdir invocation for target.
 robot_localization/CMakeFiles/test_filter_base_diagnostics_timestamps.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 8
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 7
 	$(MAKE) -f CMakeFiles/Makefile2 robot_localization/CMakeFiles/test_filter_base_diagnostics_timestamps.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 0
 .PHONY : robot_localization/CMakeFiles/test_filter_base_diagnostics_timestamps.dir/rule
@@ -12873,7 +12982,7 @@ robot_localization/CMakeFiles/run_tests_robot_localization_rostest_test_test_fil
 
 # Build rule for subdir invocation for target.
 robot_localization/CMakeFiles/run_tests_robot_localization_rostest_test_test_filter_base_diagnostics_timestamps.test.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 8
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 7
 	$(MAKE) -f CMakeFiles/Makefile2 robot_localization/CMakeFiles/run_tests_robot_localization_rostest_test_test_filter_base_diagnostics_timestamps.test.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 0
 .PHONY : robot_localization/CMakeFiles/run_tests_robot_localization_rostest_test_test_filter_base_diagnostics_timestamps.test.dir/rule
@@ -12911,7 +13020,7 @@ robot_localization/CMakeFiles/test_ekf.dir/all: robot_localization/CMakeFiles/fi
 
 # Build rule for subdir invocation for target.
 robot_localization/CMakeFiles/test_ekf.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 7
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 6
 	$(MAKE) -f CMakeFiles/Makefile2 robot_localization/CMakeFiles/test_ekf.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 0
 .PHONY : robot_localization/CMakeFiles/test_ekf.dir/rule
@@ -12945,7 +13054,7 @@ robot_localization/CMakeFiles/_run_tests_robot_localization_rostest_test_test_ek
 
 # Build rule for subdir invocation for target.
 robot_localization/CMakeFiles/_run_tests_robot_localization_rostest_test_test_ekf_localization_node_bag1.test.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 34
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 33
 	$(MAKE) -f CMakeFiles/Makefile2 robot_localization/CMakeFiles/_run_tests_robot_localization_rostest_test_test_ekf_localization_node_bag1.test.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 0
 .PHONY : robot_localization/CMakeFiles/_run_tests_robot_localization_rostest_test_test_ekf_localization_node_bag1.test.dir/rule
@@ -12979,7 +13088,7 @@ robot_localization/CMakeFiles/_run_tests_robot_localization_rostest_test_test_uk
 
 # Build rule for subdir invocation for target.
 robot_localization/CMakeFiles/_run_tests_robot_localization_rostest_test_test_ukf.test.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 34
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 33
 	$(MAKE) -f CMakeFiles/Makefile2 robot_localization/CMakeFiles/_run_tests_robot_localization_rostest_test_test_ukf.test.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 0
 .PHONY : robot_localization/CMakeFiles/_run_tests_robot_localization_rostest_test_test_ukf.test.dir/rule
@@ -13013,7 +13122,7 @@ robot_localization/CMakeFiles/_run_tests_robot_localization_rostest_test_test_ek
 
 # Build rule for subdir invocation for target.
 robot_localization/CMakeFiles/_run_tests_robot_localization_rostest_test_test_ekf.test.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 34
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 33
 	$(MAKE) -f CMakeFiles/Makefile2 robot_localization/CMakeFiles/_run_tests_robot_localization_rostest_test_test_ekf.test.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 0
 .PHONY : robot_localization/CMakeFiles/_run_tests_robot_localization_rostest_test_test_ekf.test.dir/rule
@@ -13052,7 +13161,7 @@ all: robot_localization/CMakeFiles/navsat_transform_node.dir/all
 
 # Build rule for subdir invocation for target.
 robot_localization/CMakeFiles/navsat_transform_node.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 6
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 3
 	$(MAKE) -f CMakeFiles/Makefile2 robot_localization/CMakeFiles/navsat_transform_node.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 0
 .PHONY : robot_localization/CMakeFiles/navsat_transform_node.dir/rule
@@ -13085,12 +13194,12 @@ robot_localization/CMakeFiles/robot_localization_generate_messages_eus.dir/all: 
 robot_localization/CMakeFiles/robot_localization_generate_messages_eus.dir/all: robot_localization/CMakeFiles/geographic_msgs_generate_messages_eus.dir/all
 	$(MAKE) -f robot_localization/CMakeFiles/robot_localization_generate_messages_eus.dir/build.make robot_localization/CMakeFiles/robot_localization_generate_messages_eus.dir/depend
 	$(MAKE) -f robot_localization/CMakeFiles/robot_localization_generate_messages_eus.dir/build.make robot_localization/CMakeFiles/robot_localization_generate_messages_eus.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/elliottwhite/proj515_ws/build/CMakeFiles --progress-num=52 "Built target robot_localization_generate_messages_eus"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/elliottwhite/proj515_ws/build/CMakeFiles --progress-num=52,53 "Built target robot_localization_generate_messages_eus"
 .PHONY : robot_localization/CMakeFiles/robot_localization_generate_messages_eus.dir/all
 
 # Build rule for subdir invocation for target.
 robot_localization/CMakeFiles/robot_localization_generate_messages_eus.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 2
 	$(MAKE) -f CMakeFiles/Makefile2 robot_localization/CMakeFiles/robot_localization_generate_messages_eus.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 0
 .PHONY : robot_localization/CMakeFiles/robot_localization_generate_messages_eus.dir/rule
@@ -13186,7 +13295,7 @@ robot_localization/CMakeFiles/robot_localization_genlisp.dir/all: robot_localiza
 
 # Build rule for subdir invocation for target.
 robot_localization/CMakeFiles/robot_localization_genlisp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 1
 	$(MAKE) -f CMakeFiles/Makefile2 robot_localization/CMakeFiles/robot_localization_genlisp.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 0
 .PHONY : robot_localization/CMakeFiles/robot_localization_genlisp.dir/rule
@@ -13348,7 +13457,7 @@ robot_localization/CMakeFiles/_run_tests_robot_localization_rostest_test_test_ek
 
 # Build rule for subdir invocation for target.
 robot_localization/CMakeFiles/_run_tests_robot_localization_rostest_test_test_ekf_localization_node_bag3.test.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 34
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 33
 	$(MAKE) -f CMakeFiles/Makefile2 robot_localization/CMakeFiles/_run_tests_robot_localization_rostest_test_test_ekf_localization_node_bag3.test.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 0
 .PHONY : robot_localization/CMakeFiles/_run_tests_robot_localization_rostest_test_test_ekf_localization_node_bag3.test.dir/rule
@@ -13510,7 +13619,7 @@ robot_localization/CMakeFiles/_run_tests_robot_localization_rostest_test_test_ek
 
 # Build rule for subdir invocation for target.
 robot_localization/CMakeFiles/_run_tests_robot_localization_rostest_test_test_ekf_localization_node_bag2.test.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 34
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 33
 	$(MAKE) -f CMakeFiles/Makefile2 robot_localization/CMakeFiles/_run_tests_robot_localization_rostest_test_test_ekf_localization_node_bag2.test.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 0
 .PHONY : robot_localization/CMakeFiles/_run_tests_robot_localization_rostest_test_test_ekf_localization_node_bag2.test.dir/rule
@@ -13672,7 +13781,7 @@ robot_localization/CMakeFiles/_run_tests_robot_localization_rostest_test_test_uk
 
 # Build rule for subdir invocation for target.
 robot_localization/CMakeFiles/_run_tests_robot_localization_rostest_test_test_ukf_localization_node_interfaces.test.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 34
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 33
 	$(MAKE) -f CMakeFiles/Makefile2 robot_localization/CMakeFiles/_run_tests_robot_localization_rostest_test_test_ukf_localization_node_interfaces.test.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 0
 .PHONY : robot_localization/CMakeFiles/_run_tests_robot_localization_rostest_test_test_ukf_localization_node_interfaces.test.dir/rule
@@ -13706,7 +13815,7 @@ robot_localization/CMakeFiles/_run_tests_robot_localization_rostest_test_test_uk
 
 # Build rule for subdir invocation for target.
 robot_localization/CMakeFiles/_run_tests_robot_localization_rostest_test_test_ukf_localization_node_bag1.test.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 34
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 33
 	$(MAKE) -f CMakeFiles/Makefile2 robot_localization/CMakeFiles/_run_tests_robot_localization_rostest_test_test_ukf_localization_node_bag1.test.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 0
 .PHONY : robot_localization/CMakeFiles/_run_tests_robot_localization_rostest_test_test_ukf_localization_node_bag1.test.dir/rule
@@ -13772,7 +13881,7 @@ robot_localization/CMakeFiles/_run_tests_robot_localization_rostest_test_test_uk
 
 # Build rule for subdir invocation for target.
 robot_localization/CMakeFiles/_run_tests_robot_localization_rostest_test_test_ukf_localization_node_bag2.test.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 34
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 33
 	$(MAKE) -f CMakeFiles/Makefile2 robot_localization/CMakeFiles/_run_tests_robot_localization_rostest_test_test_ukf_localization_node_bag2.test.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 0
 .PHONY : robot_localization/CMakeFiles/_run_tests_robot_localization_rostest_test_test_ukf_localization_node_bag2.test.dir/rule
@@ -13806,7 +13915,7 @@ robot_localization/CMakeFiles/_run_tests_robot_localization_rostest_test_test_uk
 
 # Build rule for subdir invocation for target.
 robot_localization/CMakeFiles/_run_tests_robot_localization_rostest_test_test_ukf_localization_node_bag3.test.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 34
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 33
 	$(MAKE) -f CMakeFiles/Makefile2 robot_localization/CMakeFiles/_run_tests_robot_localization_rostest_test_test_ukf_localization_node_bag3.test.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 0
 .PHONY : robot_localization/CMakeFiles/_run_tests_robot_localization_rostest_test_test_ukf_localization_node_bag3.test.dir/rule
@@ -13840,7 +13949,7 @@ robot_localization/CMakeFiles/_run_tests_robot_localization_rostest_test_test_ro
 
 # Build rule for subdir invocation for target.
 robot_localization/CMakeFiles/_run_tests_robot_localization_rostest_test_test_robot_localization_estimator.test.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 34
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 33
 	$(MAKE) -f CMakeFiles/Makefile2 robot_localization/CMakeFiles/_run_tests_robot_localization_rostest_test_test_robot_localization_estimator.test.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 0
 .PHONY : robot_localization/CMakeFiles/_run_tests_robot_localization_rostest_test_test_robot_localization_estimator.test.dir/rule
@@ -13917,7 +14026,7 @@ robot_localization/CMakeFiles/test_ukf.dir/all: robot_localization/CMakeFiles/fi
 
 # Build rule for subdir invocation for target.
 robot_localization/CMakeFiles/test_ukf.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 7
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 6
 	$(MAKE) -f CMakeFiles/Makefile2 robot_localization/CMakeFiles/test_ukf.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 0
 .PHONY : robot_localization/CMakeFiles/test_ukf.dir/rule
@@ -13951,7 +14060,7 @@ robot_localization/CMakeFiles/_run_tests_robot_localization_rostest_test_test_ro
 
 # Build rule for subdir invocation for target.
 robot_localization/CMakeFiles/_run_tests_robot_localization_rostest_test_test_ros_robot_localization_listener.test.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 34
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 33
 	$(MAKE) -f CMakeFiles/Makefile2 robot_localization/CMakeFiles/_run_tests_robot_localization_rostest_test_test_ros_robot_localization_listener.test.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/elliottwhite/proj515_ws/build/CMakeFiles 0
 .PHONY : robot_localization/CMakeFiles/_run_tests_robot_localization_rostest_test_test_ros_robot_localization_listener.test.dir/rule

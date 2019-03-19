@@ -47,18 +47,3 @@ if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspeci
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/odom_path_saver" TYPE FILE FILES "/home/elliottwhite/proj515_ws/src/odom_path_saver/package.xml")
 endif()
 
-if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/elliottwhite/proj515_ws/build/odom_path_saver/catkin_generated/installspace/odom_path_saver.pc")
-endif()
-
-if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/odom_path_saver/cmake" TYPE FILE FILES
-    "/home/elliottwhite/proj515_ws/build/odom_path_saver/catkin_generated/installspace/odom_path_saverConfig.cmake"
-    "/home/elliottwhite/proj515_ws/build/odom_path_saver/catkin_generated/installspace/odom_path_saverConfig-version.cmake"
-    )
-endif()
-
-if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/odom_path_saver" TYPE FILE FILES "/home/elliottwhite/proj515_ws/src/odom_path_saver/package.xml")
-endif()
-

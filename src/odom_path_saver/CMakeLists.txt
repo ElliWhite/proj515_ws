@@ -203,4 +203,3 @@ include_directories(
 
 add_executable(odom_path_saver src/odom_path_saver.cpp)
 target_link_libraries(odom_path_saver ${catkin_LIBRARIES})
-catkin_package()
