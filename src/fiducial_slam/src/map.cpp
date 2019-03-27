@@ -749,7 +749,7 @@ void Map::publishMarkers()
 
     for (it = fiducials.begin(); it != fiducials.end(); it++) {
         Fiducial &f = it->second;
-        if ((now - f.lastPublished).toSec() > 1.0) {
+        if ((now - f.lastPublished).toSec() > 0.1) {
             publishMarker(f);
         }
     }
@@ -762,8 +762,27 @@ void Map::publishMarker(Fiducial &fid)
 {
     fid.lastPublished = ros::Time::now();
 
-    // Flattened cube
     visualization_msgs::Marker marker;
+
+    // Text
+    visualization_msgs::Marker text;
+    text.type = visualization_msgs::Marker::TEXT_VIEW_FACING;
+    text.action = visualization_msgs::Marker::ADD;
+    text.header.frame_id = "/map";
+    text.color.r = text.color.g = text.color.b = text.color.a = 1.0f;
+    text.id = fid.id;
+    text.scale.x = text.scale.y = text.scale.z = 0.1;
+    text.pose.position.x = marker.pose.position.x;
+    text.pose.position.y = marker.pose.position.y;
+    text.pose.position.z = marker.pose.position.z;
+    text.pose.position.z += (marker.scale.z/2.0) + 0.1;
+    text.id = fid.id + 30000;
+    text.ns = "text";
+    text.text = std::to_string(fid.id);
+    markerPub.publish(text);
+
+
+    // Flattened cube
     marker.type = visualization_msgs::Marker::CUBE;
     marker.action = visualization_msgs::Marker::ADD;
     toMsg(fid.pose.transform, marker.pose);
@@ -788,6 +807,7 @@ void Map::publishMarker(Fiducial &fid)
     marker.header.frame_id = "/map";
     markerPub.publish(marker);
 
+    /*
     // cylinder scaled by stddev
     visualization_msgs::Marker cylinder;
     cylinder.type = visualization_msgs::Marker::CYLINDER;
@@ -806,25 +826,12 @@ void Map::publishMarker(Fiducial &fid)
     cylinder.pose.position.z = marker.pose.position.z;
     cylinder.pose.position.z += (marker.scale.z/2.0) + 0.05;
     markerPub.publish(cylinder);
+    */
 
-    // Text
-    visualization_msgs::Marker text;
-    text.type = visualization_msgs::Marker::TEXT_VIEW_FACING;
-    text.action = visualization_msgs::Marker::ADD;
-    text.header.frame_id = "/map";
-    text.color.r = text.color.g = text.color.b = text.color.a = 1.0f;
-    text.id = fid.id;
-    text.scale.x = text.scale.y = text.scale.z = 0.1;
-    text.pose.position.x = marker.pose.position.x;
-    text.pose.position.y = marker.pose.position.y;
-    text.pose.position.z = marker.pose.position.z;
-    text.pose.position.z += (marker.scale.z/2.0) + 0.1;
-    text.id = fid.id + 30000;
-    text.ns = "text";
-    text.text = std::to_string(fid.id);
-    markerPub.publish(text);
+    
 
     // Links
+    /*
     visualization_msgs::Marker links;
     links.type = visualization_msgs::Marker::LINE_LIST;
     links.action = visualization_msgs::Marker::ADD;
@@ -839,7 +846,7 @@ void Map::publishMarker(Fiducial &fid)
     links.pose.position.x = 0;
     links.pose.position.y = 0;
     links.pose.position.z = 0;
-
+    
     geometry_msgs::Point gp0, gp1;
     tf2::Vector3 p0 = fid.pose.transform.getOrigin();
     gp0.x = p0.x();
@@ -863,6 +870,7 @@ void Map::publishMarker(Fiducial &fid)
     }
 
     markerPub.publish(links);
+    */
 }
 
 

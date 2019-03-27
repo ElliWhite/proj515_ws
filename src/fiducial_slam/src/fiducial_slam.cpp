@@ -203,7 +203,7 @@ int main(int argc, char ** argv) {
     node = make_unique<FiducialSlam>(nh);
     signal(SIGINT, mySigintHandler);
 
-    ros::Rate r(20);
+    ros::Rate r(50);
     while (ros::ok()) {
         ros::spinOnce(); 
         r.sleep();

@@ -10,6 +10,7 @@ fiducial_localization/CMakeFiles/fiducial_localization.dir/src/fiducial_localiza
 fiducial_localization/CMakeFiles/fiducial_localization.dir/src/fiducial_localization.cpp.o: /opt/ros/kinetic/include/boost_161_pthread_condition_variable.h
 fiducial_localization/CMakeFiles/fiducial_localization.dir/src/fiducial_localization.cpp.o: /opt/ros/kinetic/include/boost_161_pthread_condition_variable_fwd.h
 fiducial_localization/CMakeFiles/fiducial_localization.dir/src/fiducial_localization.cpp.o: /opt/ros/kinetic/include/geometry_msgs/Point.h
+fiducial_localization/CMakeFiles/fiducial_localization.dir/src/fiducial_localization.cpp.o: /opt/ros/kinetic/include/geometry_msgs/Point32.h
 fiducial_localization/CMakeFiles/fiducial_localization.dir/src/fiducial_localization.cpp.o: /opt/ros/kinetic/include/geometry_msgs/PointStamped.h
 fiducial_localization/CMakeFiles/fiducial_localization.dir/src/fiducial_localization.cpp.o: /opt/ros/kinetic/include/geometry_msgs/Pose.h
 fiducial_localization/CMakeFiles/fiducial_localization.dir/src/fiducial_localization.cpp.o: /opt/ros/kinetic/include/geometry_msgs/PoseStamped.h
@@ -20,6 +21,7 @@ fiducial_localization/CMakeFiles/fiducial_localization.dir/src/fiducial_localiza
 fiducial_localization/CMakeFiles/fiducial_localization.dir/src/fiducial_localization.cpp.o: /opt/ros/kinetic/include/geometry_msgs/Transform.h
 fiducial_localization/CMakeFiles/fiducial_localization.dir/src/fiducial_localization.cpp.o: /opt/ros/kinetic/include/geometry_msgs/TransformStamped.h
 fiducial_localization/CMakeFiles/fiducial_localization.dir/src/fiducial_localization.cpp.o: /opt/ros/kinetic/include/geometry_msgs/Twist.h
+fiducial_localization/CMakeFiles/fiducial_localization.dir/src/fiducial_localization.cpp.o: /opt/ros/kinetic/include/geometry_msgs/TwistStamped.h
 fiducial_localization/CMakeFiles/fiducial_localization.dir/src/fiducial_localization.cpp.o: /opt/ros/kinetic/include/geometry_msgs/TwistWithCovariance.h
 fiducial_localization/CMakeFiles/fiducial_localization.dir/src/fiducial_localization.cpp.o: /opt/ros/kinetic/include/geometry_msgs/Vector3.h
 fiducial_localization/CMakeFiles/fiducial_localization.dir/src/fiducial_localization.cpp.o: /opt/ros/kinetic/include/geometry_msgs/Vector3Stamped.h
@@ -88,11 +90,21 @@ fiducial_localization/CMakeFiles/fiducial_localization.dir/src/fiducial_localiza
 fiducial_localization/CMakeFiles/fiducial_localization.dir/src/fiducial_localization.cpp.o: /opt/ros/kinetic/include/ros/wall_timer.h
 fiducial_localization/CMakeFiles/fiducial_localization.dir/src/fiducial_localization.cpp.o: /opt/ros/kinetic/include/ros/wall_timer_options.h
 fiducial_localization/CMakeFiles/fiducial_localization.dir/src/fiducial_localization.cpp.o: /opt/ros/kinetic/include/rosconsole/macros_generated.h
+fiducial_localization/CMakeFiles/fiducial_localization.dir/src/fiducial_localization.cpp.o: /opt/ros/kinetic/include/sensor_msgs/ChannelFloat32.h
+fiducial_localization/CMakeFiles/fiducial_localization.dir/src/fiducial_localization.cpp.o: /opt/ros/kinetic/include/sensor_msgs/PointCloud.h
 fiducial_localization/CMakeFiles/fiducial_localization.dir/src/fiducial_localization.cpp.o: /opt/ros/kinetic/include/std_msgs/ColorRGBA.h
 fiducial_localization/CMakeFiles/fiducial_localization.dir/src/fiducial_localization.cpp.o: /opt/ros/kinetic/include/std_msgs/Empty.h
 fiducial_localization/CMakeFiles/fiducial_localization.dir/src/fiducial_localization.cpp.o: /opt/ros/kinetic/include/std_msgs/Header.h
+fiducial_localization/CMakeFiles/fiducial_localization.dir/src/fiducial_localization.cpp.o: /opt/ros/kinetic/include/tf/FrameGraph.h
+fiducial_localization/CMakeFiles/fiducial_localization.dir/src/fiducial_localization.cpp.o: /opt/ros/kinetic/include/tf/FrameGraphRequest.h
+fiducial_localization/CMakeFiles/fiducial_localization.dir/src/fiducial_localization.cpp.o: /opt/ros/kinetic/include/tf/FrameGraphResponse.h
 fiducial_localization/CMakeFiles/fiducial_localization.dir/src/fiducial_localization.cpp.o: /opt/ros/kinetic/include/tf/LinearMath/Transform.h
+fiducial_localization/CMakeFiles/fiducial_localization.dir/src/fiducial_localization.cpp.o: /opt/ros/kinetic/include/tf/exceptions.h
+fiducial_localization/CMakeFiles/fiducial_localization.dir/src/fiducial_localization.cpp.o: /opt/ros/kinetic/include/tf/tf.h
+fiducial_localization/CMakeFiles/fiducial_localization.dir/src/fiducial_localization.cpp.o: /opt/ros/kinetic/include/tf/tfMessage.h
+fiducial_localization/CMakeFiles/fiducial_localization.dir/src/fiducial_localization.cpp.o: /opt/ros/kinetic/include/tf/time_cache.h
 fiducial_localization/CMakeFiles/fiducial_localization.dir/src/fiducial_localization.cpp.o: /opt/ros/kinetic/include/tf/transform_datatypes.h
+fiducial_localization/CMakeFiles/fiducial_localization.dir/src/fiducial_localization.cpp.o: /opt/ros/kinetic/include/tf/transform_listener.h
 fiducial_localization/CMakeFiles/fiducial_localization.dir/src/fiducial_localization.cpp.o: /opt/ros/kinetic/include/tf2/LinearMath/Matrix3x3.h
 fiducial_localization/CMakeFiles/fiducial_localization.dir/src/fiducial_localization.cpp.o: /opt/ros/kinetic/include/tf2/LinearMath/MinMax.h
 fiducial_localization/CMakeFiles/fiducial_localization.dir/src/fiducial_localization.cpp.o: /opt/ros/kinetic/include/tf2/LinearMath/QuadWord.h

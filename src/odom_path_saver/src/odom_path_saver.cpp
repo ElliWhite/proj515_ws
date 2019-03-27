@@ -25,7 +25,7 @@ int main(int argc, char** argv){
   // Main loop to execute while the node is connected
   while (nh.ok()){
 
-    // Wait for transform between map->base_link to occur
+    // Wait for transform between odom->base_link to occur
     try{
       listener.waitForTransform("odom", "base_link", ros::Time(0), ros::Duration(1.0) );
       listener.lookupTransform("odom", "base_link", ros::Time(0), transform_msg);        // Save the transform into transform_msg

@@ -98,13 +98,13 @@ fiducial_localization_EXTERNAL_OBJECTS =
 /home/elliottwhite/proj515_ws/devel/lib/fiducial_localization/fiducial_localization: /usr/lib/x86_64-linux-gnu/libboost_filesystem.so
 /home/elliottwhite/proj515_ws/devel/lib/fiducial_localization/fiducial_localization: /usr/lib/x86_64-linux-gnu/libboost_signals.so
 /home/elliottwhite/proj515_ws/devel/lib/fiducial_localization/fiducial_localization: /opt/ros/kinetic/lib/libxmlrpcpp.so
-/home/elliottwhite/proj515_ws/devel/lib/fiducial_localization/fiducial_localization: /opt/ros/kinetic/lib/libtf2.so
-/home/elliottwhite/proj515_ws/devel/lib/fiducial_localization/fiducial_localization: /opt/ros/kinetic/lib/libroscpp_serialization.so
 /home/elliottwhite/proj515_ws/devel/lib/fiducial_localization/fiducial_localization: /opt/ros/kinetic/lib/librosconsole.so
 /home/elliottwhite/proj515_ws/devel/lib/fiducial_localization/fiducial_localization: /opt/ros/kinetic/lib/librosconsole_log4cxx.so
 /home/elliottwhite/proj515_ws/devel/lib/fiducial_localization/fiducial_localization: /opt/ros/kinetic/lib/librosconsole_backend_interface.so
 /home/elliottwhite/proj515_ws/devel/lib/fiducial_localization/fiducial_localization: /usr/lib/x86_64-linux-gnu/liblog4cxx.so
 /home/elliottwhite/proj515_ws/devel/lib/fiducial_localization/fiducial_localization: /usr/lib/x86_64-linux-gnu/libboost_regex.so
+/home/elliottwhite/proj515_ws/devel/lib/fiducial_localization/fiducial_localization: /opt/ros/kinetic/lib/libtf2.so
+/home/elliottwhite/proj515_ws/devel/lib/fiducial_localization/fiducial_localization: /opt/ros/kinetic/lib/libroscpp_serialization.so
 /home/elliottwhite/proj515_ws/devel/lib/fiducial_localization/fiducial_localization: /opt/ros/kinetic/lib/librostime.so
 /home/elliottwhite/proj515_ws/devel/lib/fiducial_localization/fiducial_localization: /opt/ros/kinetic/lib/libcpp_common.so
 /home/elliottwhite/proj515_ws/devel/lib/fiducial_localization/fiducial_localization: /usr/lib/x86_64-linux-gnu/libboost_system.so

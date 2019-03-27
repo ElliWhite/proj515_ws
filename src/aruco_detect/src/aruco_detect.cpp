@@ -410,7 +410,7 @@ void FiducialsNode::imageCallback(const sensor_msgs::ImageConstPtr & msg) {
 
                 fta.transforms.push_back(ft);
             }
-            pose_pub->publish(fta);
+            //pose_pub->publish(fta);
         }
 
         if (publish_images) {
@@ -540,7 +540,7 @@ FiducialsNode::FiducialsNode(ros::NodeHandle & nh) : it(nh)
 
     vertices_pub = new ros::Publisher(nh.advertise<fiducial_msgs::FiducialArray>("/fiducial_vertices", 1));
 
-    pose_pub = new ros::Publisher(nh.advertise<fiducial_msgs::FiducialTransformArray>("/fiducial_transforms", 1));
+    //pose_pub = new ros::Publisher(nh.advertise<fiducial_msgs::FiducialTransformArray>("/fiducial_transforms", 1));
 
     dictionary = aruco::getPredefinedDictionary(dicno);
 

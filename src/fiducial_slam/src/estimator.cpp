@@ -243,7 +243,7 @@ void Estimator::estimatePoses(const fiducial_msgs::FiducialArray::ConstPtr& msg,
                 // vertex in world coordinates
                 tf2::Vector3 worldPoint = fiducialTransform * vertex2;
 
-                ROS_INFO("Fid in world = %f %f %f", worldPoint.x(), worldPoint.y(), worldPoint.z());
+                //ROS_INFO("Fid in world = %f %f %f", worldPoint.x(), worldPoint.y(), worldPoint.z());
 
                 allWorldPoints.push_back(Point3d(worldPoint.x(), worldPoint.y(), worldPoint.z()));
                 allImagePoints.push_back(corners[j]);
