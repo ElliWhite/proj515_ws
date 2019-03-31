@@ -239,7 +239,10 @@ CMAKE_STRIP:FILEPATH=/usr/bin/strip
 CMAKE_VERBOSE_MAKEFILE:BOOL=FALSE
 
 //Path to a program.
-DOXYGEN_EXECUTABLE:FILEPATH=DOXYGEN_EXECUTABLE-NOTFOUND
+DOXYGEN_EXECUTABLE:FILEPATH=/usr/bin/doxygen
+
+//Doxygen found
+DOXYGEN_FOUND:BOOL=TRUE
 
 //Path to a program.
 EMPY_EXECUTABLE:FILEPATH=/usr/bin/empy
@@ -369,6 +372,12 @@ aruco_map_BINARY_DIR:STATIC=/home/elliottwhite/proj515_ws/build/aruco_map
 
 //Value Computed by CMake
 aruco_map_SOURCE_DIR:STATIC=/home/elliottwhite/proj515_ws/src/aruco_map
+
+//Value Computed by CMake
+beta_urdf_BINARY_DIR:STATIC=/home/elliottwhite/proj515_ws/build/beta_urdf
+
+//Value Computed by CMake
+beta_urdf_SOURCE_DIR:STATIC=/home/elliottwhite/proj515_ws/src/beta_urdf
 
 //The directory containing a CMake configuration file for bond.
 bond_DIR:PATH=/opt/ros/kinetic/share/bond/cmake
@@ -580,6 +589,12 @@ libphidget21_SOURCE_DIR:STATIC=/home/elliottwhite/proj515_ws/src/phidgets_driver
 
 //The directory containing a CMake configuration file for map_msgs.
 map_msgs_DIR:PATH=/opt/ros/kinetic/share/map_msgs/cmake
+
+//Value Computed by CMake
+master_launch_BINARY_DIR:STATIC=/home/elliottwhite/proj515_ws/build/master_launch
+
+//Value Computed by CMake
+master_launch_SOURCE_DIR:STATIC=/home/elliottwhite/proj515_ws/src/master_launch
 
 //The directory containing a CMake configuration file for message_filters.
 message_filters_DIR:PATH=/opt/ros/kinetic/share/message_filters/cmake
@@ -1117,7 +1132,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=44
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=46
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP

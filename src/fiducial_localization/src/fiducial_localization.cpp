@@ -4,8 +4,6 @@
 
 #include "math.h"
 
-//#include "fiducial_localization/map.h"
-
 #include <ros/ros.h>
 #include <tf/transform_datatypes.h>
 #include <tf2/LinearMath/Transform.h>
@@ -24,7 +22,6 @@
 #include "fiducial_msgs/FiducialArray.h"
 #include "fiducial_msgs/FiducialTransform.h"
 #include "fiducial_msgs/FiducialTransformArray.h"
-
 
 #include "nav_msgs/Odometry.h"
 
@@ -59,7 +56,6 @@ class FiducialLocalization {
         std::string odom_topic;
         std::string fiducials_topic;
         
-
         ros::Publisher odom_pub;
 
         ros::Subscriber fiducial_transform_array_sub;
@@ -67,107 +63,65 @@ class FiducialLocalization {
 
         ros::NodeHandle nh_;
 
-        geometry_msgs::Transform transform_fid_cam;
-        geometry_msgs::PoseStamped pose_map_cam;
-
-        int observedFidID;
-
         void fiducialTransformArrayCb(const fiducial_msgs::FiducialTransformArray::ConstPtr& msg);
-        void fiducialsCb(const visualization_msgs::Marker &fid_msg);
 
+        //ros::Publisher test_viz_pub;
 
-
-        ros::Publisher test_viz_pub;
-
-        
     public:
 
         FiducialLocalization(ros::NodeHandle &nh);
-
 
 };
 
 
 void FiducialLocalization::fiducialTransformArrayCb(const fiducial_msgs::FiducialTransformArray::ConstPtr& fidTransArrMsg){
 
-    //ROS_INFO_STREAM("FiducialTransformArray received");
-
     const fiducial_msgs::FiducialTransform &ft = fidTransArrMsg->transforms[0];
-
     
     int numberOfIDs = fidTransArrMsg->transforms.size();
-    
+
+    // Initially no IDs are published until 1 marker as been seen
     if(numberOfIDs > 0){
         
-        this->observedFidID = ft.fiducial_id;
-
-        //ROS_INFO_STREAM("observedFidID " << this->observedFidID);
-
-        this->transform_fid_cam = ft.transform;
-        
-        tf2_ros::Buffer tfBuffer;
-        tf2_ros::TransformListener listener(tfBuffer);
-        geometry_msgs::TransformStamped geom_tfFid;
-        
-        tf::TransformListener listener2;
-        tf::StampedTransform transform_msg;
-
+        tf::TransformListener listener;
+        tf::StampedTransform t_baseFid;
 
         std::stringstream sstm;
-        sstm << "fid" << this->observedFidID;
+        sstm << "fid" << ft.fiducial_id;
         std::string fiducial_frame = sstm.str();
 
         bool foundTF = false;
-
-
         
         try{
-            listener2.waitForTransform(base_frame, fiducial_frame, ros::Time(0), ros::Duration(0.5));
-            listener2.lookupTransform(base_frame, fiducial_frame, ros::Time(0), transform_msg);
+            listener.waitForTransform(base_frame, fiducial_frame, ros::Time(0), ros::Duration(0.5));
+            listener.lookupTransform(base_frame, fiducial_frame, ros::Time(0), t_baseFid);
             foundTF = true;
-
         }
         catch(tf::TransformException ex){
             ROS_ERROR("%s", ex.what());
         }
         
-        
-        
-        try{
-            geom_tfFid = tfBuffer.lookupTransform(base_frame, fiducial_frame, ros::Time(0), ros::Duration(0.5));
-            foundTF = true;
-        }
-        catch(tf2::TransformException ex){
-            ROS_ERROR("%s", ex.what());
-        }
-        
-
         if(foundTF){
-
-            //ROS_INFO_STREAM(tfFid);
-            //ROS_INFO_STREAM(this->transform_fid_cam);
 
             boost::shared_ptr<visualization_msgs::Marker const> sharedPtr;
             visualization_msgs::Marker markerMsg;
-
-            sharedPtr = ros::topic::waitForMessage<visualization_msgs::Marker>(fiducials_topic, ros::Duration(2));
-
-            if(sharedPtr == NULL){
-                ROS_INFO_STREAM("No visualization_msg received");
-            }else{
-                markerMsg = *sharedPtr;
-            }
             
             ros::Time current_time = ros::Time::now();
 
-            while( markerMsg.id != this->observedFidID){
-                sharedPtr = ros::topic::waitForMessage<visualization_msgs::Marker>(fiducials_topic, ros::Duration(2));
+            bool foundCorrectVisMsg = false;
+
+            while(markerMsg.id != ft.fiducial_id){
+
+                sharedPtr = ros::topic::waitForMessage<visualization_msgs::Marker>(fiducials_topic, ros::Duration(0.5));
 
                 if(sharedPtr == NULL){
                     ROS_INFO_STREAM("No visualization_msg received while waiting for correct message");
                 }else{
                     markerMsg = *sharedPtr;
-                    ROS_INFO_STREAM("Latest Marker Message: " << markerMsg.ns << markerMsg.id);
+                }
+
+                if(markerMsg.id == ft.fiducial_id){
+                    foundCorrectVisMsg = true;
                 }
 
                 if(ros::Time::now().toSec() >= (current_time.toSec() + 2)){
@@ -175,231 +129,103 @@ void FiducialLocalization::fiducialTransformArrayCb(const fiducial_msgs::Fiducia
                 }
             }
 
-            ROS_INFO_STREAM("Correct fiducial marker message received");
-            ROS_INFO_STREAM("Observed Fiducial ID: " << this->observedFidID);
-            ROS_INFO_STREAM("Marker Message: " << markerMsg.ns << markerMsg.id);   
+            if(foundCorrectVisMsg){
 
-            // Now have transform from base_link to the detected fiducial
-            // and also the location of said fiducial relative to the map
-            geometry_msgs::PoseStamped tfRobot;
-            //markerMsg = location of marker relative to map
-            //tfFid = location of base_link relative to marker
-            /*
-            tfRobot.pose.position.x = markerMsg.pose.position.x * geom_tfFid.transform.x;
-            tfRobot.pose.position.y = markerMsg.pose.position.y * geom_tfFid.transform.translation.z;
-            tfRobot.pose.position.z = markerMsg.pose.position.z * geom_tfFid.transform.translation.z;
-            tfRobot.pose.orientation.x = markerMsg.pose.orientation.x * geom_tfFid.transform.rotation.x;
-            tfRobot.pose.orientation.y = markerMsg.pose.orientation.y * geom_tfFid.transform.rotation.y;
-            tfRobot.pose.orientation.z = markerMsg.pose.orientation.z * geom_tfFid.transform.rotation.z;
-            tfRobot.pose.orientation.w = markerMsg.pose.orientation.w * geom_tfFid.transform.rotation.w;
-            */
-            tfRobot.header.frame_id = map_frame;
-            /*
-            geometry_msgs::PoseStamped markerPose;
-            markerPose.pose.position.x = markerMsg.pose.position.x;
-            markerPose.pose.position.y = markerMsg.pose.position.y;
-            markerPose.pose.position.z = markerMsg.pose.position.z;
-            markerPose.pose.orientation.x = markerMsg.pose.orientation.x;
-            markerPose.pose.orientation.y = markerMsg.pose.orientation.y;
-            markerPose.pose.orientation.z = markerMsg.pose.orientation.z;
-            markerPose.pose.orientation.w = markerMsg.pose.orientation.w;
-            //2::doTransform(markerPose, tfRobot, geom_tfFid);
+                ROS_INFO_STREAM("Correct fiducial marker message received");
+                ROS_INFO_STREAM("Observed Fiducial ID: " << ft.fiducial_id);
+                ROS_INFO_STREAM("Marker Message: " << markerMsg.ns << markerMsg.id);   
+
+                tf::Transform t_mapFid;                                         // Create a transform of the fiducial from map->fid
+                
+                tfScalar m_x = markerMsg.pose.position.x;   
+                tfScalar m_y = markerMsg.pose.position.y;
+                tfScalar m_z = markerMsg.pose.position.z;
+                tf::Vector3 marker_origin(m_x,m_y,m_z);                         // Create a vector for the origin of the fiducial frame to be the
+                                                                                // same as the location of the observed marker
             
-            //ROS_INFO_STREAM(geom_tfFid);
-            //ROS_INFO_STREAM(tfRobot);
-            
-            /*
-            tf::Vector3 t = transform_msg.getOrigin();
-            double r, p, y;
-            transform_msg.getBasis().getRPY(r, p, y);
-            */
-            tf::Transform invs_transform_msg = transform_msg.inverse();
-            tf::Vector3 t = invs_transform_msg.getOrigin();
-            double r, p, y;
-            invs_transform_msg.getBasis().getRPY(r, p, y);
-            /*
-            geometry_msgs::TransformStamped t_marker;
-            geometry_msgs::Vector3 marker_origin;
-            marker_origin.x = markerMsg.pose.position.x;
-            marker_origin.y = markerMsg.pose.position.y;
-            marker_origin.z = markerMsg.pose.position.z;
+                t_mapFid.setOrigin(marker_origin);                              // Set the origin of the fiducial frame to be location of the marker
 
-            geometry_msgs::Quaternion marker_rotation;
-            marker_rotation.x =  markerMsg.pose.orientation.x;
-            marker_rotation.y =  markerMsg.pose.orientation.y;
-            marker_rotation.z =  markerMsg.pose.orientation.z;
-            marker_rotation.w =  markerMsg.pose.orientation.w;
+                tfScalar r_x = markerMsg.pose.orientation.x;
+                tfScalar r_y = markerMsg.pose.orientation.y;
+                tfScalar r_z = markerMsg.pose.orientation.z;
+                tfScalar r_w = markerMsg.pose.orientation.w;
 
-            t_marker.transform.translation = marker_origin;
-            t_marker.transform.rotation = marker_rotation;
-            t_marker.header.frame_id = map_frame;
-            t_marker.child_frame_id = "fid1";
+                tf::Quaternion marker_rotation(r_x, r_y, r_z, r_w);             // Create a quaternion for the fiducial frame to be the same
+                                                                                // as the quaternion of the observed marker
 
+                t_mapFid.setRotation(marker_rotation);                          // Set the rotation of the fiducial frame to be the same as the observed
+                                                                                // marker
 
-            geometry_msgs::TransformStamped t_Robot;
-            t_Robot.transform = t_marker.transform * geom_tfFid.transform;
-       
-            */ 
-            tf::Transform t_marker;
-            
-            tfScalar m_x = markerMsg.pose.position.x;
-            tfScalar m_y = markerMsg.pose.position.y;
-            tfScalar m_z = markerMsg.pose.position.z;
-            tf::Vector3 marker_origin(m_x,m_y,m_z);
+                tf::Transform t_fidBase = t_baseFid.inverse();                  // Create a transform from fid->base_link (originally base_link->fid, hence inverse)
 
-        
-            t_marker.setOrigin(marker_origin);
+                tf::Transform t_mapBase;                                        // Create a transform of the robot from map->base_link
+                t_mapBase.mult(t_mapFid, t_fidBase);                            // This transform is a result of map->fid and fid->base_link
+
+                foundTF = false;
+
+                tf::StampedTransform t_mapOdom;
+
+                // Try and find transform from map->odom
+                try{
+                    listener.waitForTransform(map_frame, odom_frame, ros::Time(0), ros::Duration(0.5));
+                    listener.lookupTransform(map_frame, odom_frame, ros::Time(0), t_mapOdom);
+                    foundTF = true;
+                }
+                catch(tf::TransformException ex){
+                    ROS_ERROR("%s", ex.what());
+                }
+
+                if(foundTF){
+
+                    tf::Transform t_odomMap = t_mapOdom.inverse();
+
+                    tf::Transform t_odomBase;
+                    t_odomBase.mult(t_odomMap, t_mapBase);
 
 
-            tfScalar r_x = markerMsg.pose.orientation.x;
-            tfScalar r_y = markerMsg.pose.orientation.y;
-            tfScalar r_z = markerMsg.pose.orientation.z;
-            tfScalar r_w = markerMsg.pose.orientation.w;
+                    tf::Vector3 t_odomBase_pose = t_odomBase.getOrigin();           // Get origin of base_link relative to map
+                    double r, p, y;
+                    t_odomBase.getBasis().getRPY(r, p, y);                          // Get orientation of base_link relative to map in RPY form
+                    tf::Quaternion t_odomBase_rot = t_odomBase.getRotation();       // Get quaternion of base_link so can extract Omega
 
-            tf::Quaternion marker_rotation(r_x, r_y, r_z, r_w);
+                    geometry_msgs::PoseStamped pose_Base;                           // Create PoseStamped message so can add Pose to RViz
+                    pose_Base.header.frame_id = odom_frame;                         // Set frame base_link tf is associated with to map frame
+                    pose_Base.pose.position.x = t_odomBase_pose.x();                // Set XYZ location of Pose to base_link pose
+                    pose_Base.pose.position.y = t_odomBase_pose.y();
+                    pose_Base.pose.position.z = t_odomBase_pose.z();
+                    pose_Base.pose.orientation.x = r;                               // Set RPY of Pose message to that of the base_link
+                    pose_Base.pose.orientation.y = p;
+                    pose_Base.pose.orientation.z = y;
+                    pose_Base.pose.orientation.w = t_odomBase_rot.getW()*2;         // Set Omega to that of base_link. Unsure why have to multiply by
+                                                                                    // 2 to get it to reflect actual Omega
+                    //test_viz_pub.publish(pose_Base);                                // Publish Pose 
 
-            t_marker.setRotation(marker_rotation);
+                    nav_msgs::Odometry odom_Base;                                   // Create Odometry message for fiducial localization
+                    odom_Base.header.frame_id = odom_frame;                         // Assign parent frame to odometry frame
+                    odom_Base.header.stamp = ros::Time::now();                      // Assign timestamp to the current time
+                    odom_Base.child_frame_id = base_frame;                          // Assign child frame to base_link
+                    
+                    odom_Base.pose.pose.position.x = t_odomBase_pose.x();           // Set XYZ location of base_link
+                    odom_Base.pose.pose.position.y = t_odomBase_pose.y();
+                    //odom_Base.pose.pose.position.z = t_odomBase_pose.pose.z();    // Don't need any Z estimation as on 2D plane only
+                    //odom_Base.pose.pose.orientation.x = r;                        // Don't need RP
+                    //odom_Base.pose.pose.orientation.y = p;
+                    odom_Base.pose.pose.orientation.z = y;                          // Set rotation around Z to be yaw
+                    odom_Base.pose.pose.orientation.w = t_odomBase_rot.getW()*2;    // Set Omega for base_link
+                    //odom_Base.twist.twist;                                        // Don't need as not calculating any velocities
 
-            tf::Transform t_Robot;
-            t_Robot.mult(t_marker, invs_transform_msg);
-
-
-
-            tf::Vector3 t_Robot_pose = t_Robot.getOrigin();
-            t_Robot.getBasis().getRPY(r, p, y);
-            tf::Quaternion t_Robot_rot = t_Robot.getRotation();
-            
-            tfRobot.pose.position.x = t_Robot_pose.x();
-            tfRobot.pose.position.y = t_Robot_pose.y();
-            tfRobot.pose.position.z = t_Robot_pose.z();
-            tfRobot.pose.orientation.x = r;
-            tfRobot.pose.orientation.y = p;
-            tfRobot.pose.orientation.z = y;
-            tfRobot.pose.orientation.w = t_Robot_rot.getW()*2;
-            ROS_INFO_STREAM(t.x() << " " << t.y() << " " << t.z() << " " << r << " " << p << " " << y);
-
-
-            /*
-
-            tf::Vector3 t = transform_msg.getOrigin();
-            double r, p, y;
-            transform_msg.getBasis().getRPY(r, p, y);
-
-            // this returns the same as the geom_tfFid message but is just a different way of extracting the info
-            ROS_INFO("Pose MUL %lf %lf %lf %lf %lf %lf",
-              t.x(), t.y(), t.z(), r, p, y);
+                    odom_pub.publish(odom_Base);
+                }
 
 
-            
-            /*
-            tf2Scalar t_x = ft.transform.translation.x;
-            tf2Scalar t_y = ft.transform.translation.y;
-            tf2Scalar t_z = ft.transform.translation.z;
-            tf2::Vector3 v_trans{t_x, t_y, t_z};
-            tf2::Transform T_fidCam;
-            T_fidCam.setOrigin(ft.transform.translation);
-            T_fidCam.setRotation(ft.transform.rotation);
-            */
-
-            
-
-            // this returns the same as the geom_tfFid message but is just a different way of extracting the info
-            ROS_INFO("Pose MUL %lf %lf %lf %lf %lf %lf",
-              t.x(), t.y(), t.z(), r, p, y);
-
-            //tf::StampedTransform trans = markerMsg.pose * transform_msg;
-           
-            /*
-            double variance = ft.object_error * 1e9;
-
-
-            Observation obs;
-            obs = Observation(ft.fiducial_id, tf2::Stamped<TransformWithVariance>(TransformWithVariance(ft.transform,variance),fidTransArrMsg->header.stamp, fidTransArrMsg->header.frame_id));
-            T_fid0Cam = obs.T_fidCam;
-            */
-
-            
-
-
-
-
-            test_viz_pub.publish(tfRobot);
-
-
-
-
-        }
-
-    }
-
-
-
-
-
-
-
-}
-
-void FiducialLocalization::fiducialsCb(const visualization_msgs::Marker &fid_msg){
-
-    if(fid_msg.ns == "fiducial"){
-        //ROS_INFO_STREAM("Marker received. ID = " << fid_msg.id);
-        //ROS_INFO_STREAM("Fiducial Pose " << fid_msg.pose);
-
-        tf2_ros::Buffer tfBuffer;
-        tf2_ros::TransformListener listener(tfBuffer);
-        geometry_msgs::TransformStamped transform_map_odom;
-
-        /*
-        try{
-            transform_map_odom = tfBuffer.lookupTransform(map_frame, odom_frame, ros::Time(0.5));
-        }
-        catch(tf2::TransformException ex){
-            ROS_ERROR("%s", ex.what());
-        }
-
-        if(transform_map_odom.child_frame_id != ""){
-            ROS_INFO_STREAM("Transform received");
-        }
-        */
-        /*
-
-        if(fid_msg.id == this->observedFidID){
-            ROS_INFO_STREAM("Transform: fid->cam" << this->transform_fid_cam);
-            //pose_map_cam.pose.position.x = fid_msg.pose.position.x + this->transform_fid_cam.translation.x;
-            //pose_map_cam.pose.position.y = fid_msg.pose.position.y + this->transform_fid_cam.translation.y;
-            //ROS_INFO_STREAM("Cam Pose: " <<pose_map_cam);
-            
-
-            float angle = this->transform_fid_cam.rotation.z;   //rotations are relative to world. Z = up
-            float hyp = this->transform_fid_cam.translation.z;  //translations are relative to camera. Z = away from cam
-            float new_x = hyp * sin(angle);
-            float new_y = hyp * cos(angle);
-
-            if(this->transform_fid_cam.translation.x != 0){
-                float xoffset = this->transform_fid_cam.translation.x;
-                new_x = xoffset * cos(angle);
-                new_y = xoffset * sin(angle);
             }
 
-            //now new x and y represent the camera relative to fiducial location
-
-            pose_map_cam.pose.position.x = fid_msg.pose.position.x - new_x;
-            pose_map_cam.pose.position.y = fid_msg.pose.position.y - new_y;
-
-
-            pose_map_cam.header.frame_id = map_frame;
-
-            test_viz_pub.publish(pose_map_cam);
         }
-
-        */
-
-
 
     }
 
 }
+
 
 
 
@@ -415,7 +241,7 @@ FiducialLocalization::FiducialLocalization(ros::NodeHandle &nh) : nh_(nh){
 
     fiducial_transform_array_topic = getParam<std::string>(nh_, "fiducial_transform_array_topic", "/fiducial_transforms");
 
-    odom_topic = getParam<std::string>(nh_, "odom_pub", "/fiducial_odom");
+    odom_topic = getParam<std::string>(nh_, "odom_pub", "/fiducial_localization/fiducial_odom");
 
     fiducials_topic = getParam<std::string>(nh_, "fiducials_topic", "/fiducials");
 
@@ -423,25 +249,9 @@ FiducialLocalization::FiducialLocalization(ros::NodeHandle &nh) : nh_(nh){
 
     fiducial_transform_array_sub = nh_.subscribe(fiducial_transform_array_topic, 1, &FiducialLocalization::fiducialTransformArrayCb, this);
 
-    //fiducials_sub = nh_.subscribe(fiducials_topic, 16, &FiducialLocalization::fiducialsCb, this);
-
-    this->observedFidID = 0;
-
-
-
-    test_viz_pub = nh_.advertise<geometry_msgs::PoseStamped>("/fiducial_localization/test_pose", 5);
-
-    
+    //test_viz_pub = nh_.advertise<geometry_msgs::PoseStamped>("/fiducial_localization/test_pose", 5);
+  
 }
-
-
-
-
-
-
- 
-    
-
 
 
 
@@ -460,8 +270,6 @@ int main(int argc, char **argv){
         ros::spinOnce();
         r.sleep();
     }
-
-    
 
     return 0;
 }

@@ -1,0 +1,104 @@
+<?xml version="1.0"?>
+
+<!--
+Proj515
+
+Beta robot "wallace"
+
+-->
+
+<robot name ="beta">
+
+  <link name="base_link">
+    <visual>
+      <origin rpy="1.57 0 1.57" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="file:/home/elliottwhite/proj515_ws/src/beta_urdf/src/base_link.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </visual>
+  </link>
+
+
+  <link name="laser">
+    <visual>
+      <origin rpy="1.57 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="file:/home/elliottwhite/proj515_ws/src/beta_urdf/src/urdf_lidar.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </visual>
+  </link>
+
+  <joint name="base_laser_joint" type="fixed">
+    <axis xyz="1 0 0"/>
+    <parent link="base_link"/>
+    <child link="laser"/>
+    <!-- old laser pos <origin rpy = "0 0 0" xyz = "0.203092 0 0.157933"/> -->
+    <origin rpy = "0 0 0" xyz = "0.13880 0 0.226999"/>
+  </joint>
+
+
+   <link name="usb_cam">
+    <visual>
+      <origin rpy="1.57 -1.57 1.57" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="file:/home/elliottwhite/proj515_ws/src/beta_urdf/src/urdf_usb_cam.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </visual>
+  </link>
+
+  <joint name="base_cam_joint" type="fixed">
+    <axis xyz="1 0 0"/>
+    <parent link="base_link"/>
+    <child link="usb_cam"/>
+    <!--           x     y    z     -->
+    <origin rpy = "-1.57 0 -1.57" xyz = "-0.152993 0 0.388138"/>
+  </joint>
+
+
+  <link name="imu">
+    <visual>
+      <origin rpy="0 -1.57 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="file:/home/elliottwhite/proj515_ws/src/beta_urdf/src/urdf_imu.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </visual>
+  </link>
+
+  <joint name="base_imu_joint" type="fixed">
+    <axis xyz="1 0 0"/>
+    <parent link="base_link"/>
+    <child link="imu"/>
+    <!--           x y z     -->
+    <origin rpy = "0 3.14 1.57" xyz = "0.006206 0.0102 0.061"/> 
+  </joint>
+
+
+</robot>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -764,25 +764,7 @@ void Map::publishMarker(Fiducial &fid)
 
     visualization_msgs::Marker marker;
 
-    // Text
-    visualization_msgs::Marker text;
-    text.type = visualization_msgs::Marker::TEXT_VIEW_FACING;
-    text.action = visualization_msgs::Marker::ADD;
-    text.header.frame_id = "/map";
-    text.color.r = text.color.g = text.color.b = text.color.a = 1.0f;
-    text.id = fid.id;
-    text.scale.x = text.scale.y = text.scale.z = 0.1;
-    text.pose.position.x = marker.pose.position.x;
-    text.pose.position.y = marker.pose.position.y;
-    text.pose.position.z = marker.pose.position.z;
-    text.pose.position.z += (marker.scale.z/2.0) + 0.1;
-    text.id = fid.id + 30000;
-    text.ns = "text";
-    text.text = std::to_string(fid.id);
-    markerPub.publish(text);
-
-
-    // Flattened cube
+        // Flattened cube
     marker.type = visualization_msgs::Marker::CUBE;
     marker.action = visualization_msgs::Marker::ADD;
     toMsg(fid.pose.transform, marker.pose);
@@ -805,7 +787,36 @@ void Map::publishMarker(Fiducial &fid)
     marker.id = fid.id;
     marker.ns = "fiducial";
     marker.header.frame_id = "/map";
+
+    // Text
+    visualization_msgs::Marker text;
+    text.type = visualization_msgs::Marker::TEXT_VIEW_FACING;
+    text.action = visualization_msgs::Marker::ADD;
+    text.header.frame_id = "/map";
+    text.color.r = text.color.g = text.color.b = text.color.a = 1.0f;
+    text.id = fid.id;
+    text.scale.x = text.scale.y = text.scale.z = 0.1;
+    text.pose.position.x = marker.pose.position.x;
+    text.pose.position.y = marker.pose.position.y;
+    text.pose.position.z = marker.pose.position.z;
+    text.pose.position.z += (marker.scale.z/2.0) + 0.1;
+    text.id = fid.id + 30000;
+    text.ns = "text";
+    text.text = std::to_string(fid.id);
+
+
+    markerPub.publish(text);
+
     markerPub.publish(marker);
+
+
+    /*==========================================
+
+    TURNED OFF PUBLISHING CYLINDERS AND LINKS TO
+    INCREASE RATE AT WHICH VISUALIZATION MESSAGE
+    IS PUBLISHED
+
+    ==========================================*/
 
     /*
     // cylinder scaled by stddev
