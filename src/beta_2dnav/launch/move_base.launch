@@ -1,0 +1,18 @@
+<launch>
+
+	<!-- Run the map server --> 
+	<node name="map_server" pkg="map_server" type="map_server" args="$(find map)/303/303_march_2.pgm 0.05"/>
+
+	<!--- Run AMCL --> 
+	<include file="$(find alpha_2dnav)/launch/amcl_diff.launch" />
+
+	<node pkg="move_base" type="move_base" respawn="false" name="move_base" output="screen">
+		<rosparam file="$(find alpha_2dnav)/costmap_common_params.yaml" command="load" ns="global_costmap" /> 
+		<rosparam file="$(find alpha_2dnav)/costmap_common_params.yaml" command="load" ns="local_costmap" />
+		<rosparam file="$(find alpha_2dnav)/local_costmap_params.yaml" command="load" />
+		<rosparam file="$(find alpha_2dnav)/global_costmap_params.yaml" command="load" /> 
+		<rosparam file="$(find alpha_2dnav)/base_local_planner_params.yaml" command="load" />
+		<param name= "controller_frequency" value = "1" />
+	</node>
+
+</launch> 

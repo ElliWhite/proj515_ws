@@ -37,7 +37,7 @@ Beta robot "wallace"
   </joint>
 
 
-   <link name="usb_cam">
+  <!-- <link name="usb_cam">
     <visual>
       <origin rpy="1.57 -1.57 1.57" xyz="0 0 0"/>
       <geometry>
@@ -50,9 +50,55 @@ Beta robot "wallace"
     <axis xyz="1 0 0"/>
     <parent link="base_link"/>
     <child link="usb_cam"/>
-    <!--           x     y    z     -->
+
     <origin rpy = "-1.57 0 -1.57" xyz = "-0.152993 0 0.388138"/>
+  </joint> -->
+  
+  
+  
+  
+  <link name="left_cam">
+    <visual>
+      <origin rpy="1.57 0 1.57" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="file:/home/elliottwhite/proj515_ws/src/beta_urdf/src/urdf_left_cam.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </visual>
+  </link>
+
+  <joint name="base_left_cam_joint" type="fixed">
+    <axis xyz="1 0 0"/>
+    <parent link="base_link"/>
+    <child link="left_cam"/>
+    <!--           x     y    z     -->
+    <origin rpy = "-1.57 0 -0.959135" xyz = "0.158486 0.031461 0.8045"/>
   </joint>
+  
+  
+  
+   <link name="right_cam">
+    <visual>
+      <origin rpy="1.57 0 1.57" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="file:/home/elliottwhite/proj515_ws/src/beta_urdf/src/urdf_right_cam.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </visual>
+  </link>
+
+  <joint name="base_right_cam_joint" type="fixed">
+    <axis xyz="1 0 0"/>
+    <parent link="base_link"/>
+    <child link="right_cam"/>
+    <!--           x     y    z     -->
+    <origin rpy = "-1.57 0 -2.1809" xyz = "0.158486 -0.031461 0.8045"/>
+  </joint>
+  
+  
+  
+  
+  
+  
+  
 
 
   <link name="imu">

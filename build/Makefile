@@ -1020,7 +1020,7 @@ std_msgs_generate_messages_lisp: cmake_check_build_system
 
 # fast build rule for target.
 std_msgs_generate_messages_lisp/fast:
-	$(MAKE) -f beta_urdf/CMakeFiles/std_msgs_generate_messages_lisp.dir/build.make beta_urdf/CMakeFiles/std_msgs_generate_messages_lisp.dir/build
+	$(MAKE) -f audio_player/CMakeFiles/std_msgs_generate_messages_lisp.dir/build.make audio_player/CMakeFiles/std_msgs_generate_messages_lisp.dir/build
 .PHONY : std_msgs_generate_messages_lisp/fast
 
 #=============================================================================
@@ -1033,7 +1033,7 @@ std_msgs_generate_messages_eus: cmake_check_build_system
 
 # fast build rule for target.
 std_msgs_generate_messages_eus/fast:
-	$(MAKE) -f beta_urdf/CMakeFiles/std_msgs_generate_messages_eus.dir/build.make beta_urdf/CMakeFiles/std_msgs_generate_messages_eus.dir/build
+	$(MAKE) -f audio_player/CMakeFiles/std_msgs_generate_messages_eus.dir/build.make audio_player/CMakeFiles/std_msgs_generate_messages_eus.dir/build
 .PHONY : std_msgs_generate_messages_eus/fast
 
 #=============================================================================
@@ -1046,7 +1046,7 @@ std_msgs_generate_messages_nodejs: cmake_check_build_system
 
 # fast build rule for target.
 std_msgs_generate_messages_nodejs/fast:
-	$(MAKE) -f beta_urdf/CMakeFiles/std_msgs_generate_messages_nodejs.dir/build.make beta_urdf/CMakeFiles/std_msgs_generate_messages_nodejs.dir/build
+	$(MAKE) -f audio_player/CMakeFiles/std_msgs_generate_messages_nodejs.dir/build.make audio_player/CMakeFiles/std_msgs_generate_messages_nodejs.dir/build
 .PHONY : std_msgs_generate_messages_nodejs/fast
 
 #=============================================================================
@@ -1059,7 +1059,7 @@ roscpp_generate_messages_lisp: cmake_check_build_system
 
 # fast build rule for target.
 roscpp_generate_messages_lisp/fast:
-	$(MAKE) -f beta_urdf/CMakeFiles/roscpp_generate_messages_lisp.dir/build.make beta_urdf/CMakeFiles/roscpp_generate_messages_lisp.dir/build
+	$(MAKE) -f audio_player/CMakeFiles/roscpp_generate_messages_lisp.dir/build.make audio_player/CMakeFiles/roscpp_generate_messages_lisp.dir/build
 .PHONY : roscpp_generate_messages_lisp/fast
 
 #=============================================================================
@@ -1072,7 +1072,7 @@ roscpp_generate_messages_nodejs: cmake_check_build_system
 
 # fast build rule for target.
 roscpp_generate_messages_nodejs/fast:
-	$(MAKE) -f beta_urdf/CMakeFiles/roscpp_generate_messages_nodejs.dir/build.make beta_urdf/CMakeFiles/roscpp_generate_messages_nodejs.dir/build
+	$(MAKE) -f audio_player/CMakeFiles/roscpp_generate_messages_nodejs.dir/build.make audio_player/CMakeFiles/roscpp_generate_messages_nodejs.dir/build
 .PHONY : roscpp_generate_messages_nodejs/fast
 
 #=============================================================================
@@ -1085,7 +1085,7 @@ roscpp_generate_messages_eus: cmake_check_build_system
 
 # fast build rule for target.
 roscpp_generate_messages_eus/fast:
-	$(MAKE) -f beta_urdf/CMakeFiles/roscpp_generate_messages_eus.dir/build.make beta_urdf/CMakeFiles/roscpp_generate_messages_eus.dir/build
+	$(MAKE) -f audio_player/CMakeFiles/roscpp_generate_messages_eus.dir/build.make audio_player/CMakeFiles/roscpp_generate_messages_eus.dir/build
 .PHONY : roscpp_generate_messages_eus/fast
 
 #=============================================================================
@@ -1098,7 +1098,7 @@ std_msgs_generate_messages_cpp: cmake_check_build_system
 
 # fast build rule for target.
 std_msgs_generate_messages_cpp/fast:
-	$(MAKE) -f beta_urdf/CMakeFiles/std_msgs_generate_messages_cpp.dir/build.make beta_urdf/CMakeFiles/std_msgs_generate_messages_cpp.dir/build
+	$(MAKE) -f audio_player/CMakeFiles/std_msgs_generate_messages_cpp.dir/build.make audio_player/CMakeFiles/std_msgs_generate_messages_cpp.dir/build
 .PHONY : std_msgs_generate_messages_cpp/fast
 
 #=============================================================================
@@ -1111,7 +1111,7 @@ roscpp_generate_messages_cpp: cmake_check_build_system
 
 # fast build rule for target.
 roscpp_generate_messages_cpp/fast:
-	$(MAKE) -f beta_urdf/CMakeFiles/roscpp_generate_messages_cpp.dir/build.make beta_urdf/CMakeFiles/roscpp_generate_messages_cpp.dir/build
+	$(MAKE) -f audio_player/CMakeFiles/roscpp_generate_messages_cpp.dir/build.make audio_player/CMakeFiles/roscpp_generate_messages_cpp.dir/build
 .PHONY : roscpp_generate_messages_cpp/fast
 
 #=============================================================================
@@ -1124,7 +1124,7 @@ rosgraph_msgs_generate_messages_nodejs: cmake_check_build_system
 
 # fast build rule for target.
 rosgraph_msgs_generate_messages_nodejs/fast:
-	$(MAKE) -f beta_urdf/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/build.make beta_urdf/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/build
+	$(MAKE) -f audio_player/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/build.make audio_player/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/build
 .PHONY : rosgraph_msgs_generate_messages_nodejs/fast
 
 #=============================================================================
@@ -1137,7 +1137,7 @@ rosgraph_msgs_generate_messages_eus: cmake_check_build_system
 
 # fast build rule for target.
 rosgraph_msgs_generate_messages_eus/fast:
-	$(MAKE) -f beta_urdf/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/build.make beta_urdf/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/build
+	$(MAKE) -f audio_player/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/build.make audio_player/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/build
 .PHONY : rosgraph_msgs_generate_messages_eus/fast
 
 #=============================================================================
@@ -1150,7 +1150,7 @@ roscpp_generate_messages_py: cmake_check_build_system
 
 # fast build rule for target.
 roscpp_generate_messages_py/fast:
-	$(MAKE) -f beta_urdf/CMakeFiles/roscpp_generate_messages_py.dir/build.make beta_urdf/CMakeFiles/roscpp_generate_messages_py.dir/build
+	$(MAKE) -f audio_player/CMakeFiles/roscpp_generate_messages_py.dir/build.make audio_player/CMakeFiles/roscpp_generate_messages_py.dir/build
 .PHONY : roscpp_generate_messages_py/fast
 
 #=============================================================================
@@ -1163,7 +1163,7 @@ rosgraph_msgs_generate_messages_cpp: cmake_check_build_system
 
 # fast build rule for target.
 rosgraph_msgs_generate_messages_cpp/fast:
-	$(MAKE) -f beta_urdf/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build.make beta_urdf/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build
+	$(MAKE) -f audio_player/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build.make audio_player/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build
 .PHONY : rosgraph_msgs_generate_messages_cpp/fast
 
 #=============================================================================
@@ -1176,7 +1176,7 @@ rosgraph_msgs_generate_messages_lisp: cmake_check_build_system
 
 # fast build rule for target.
 rosgraph_msgs_generate_messages_lisp/fast:
-	$(MAKE) -f beta_urdf/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build.make beta_urdf/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build
+	$(MAKE) -f audio_player/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build.make audio_player/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build
 .PHONY : rosgraph_msgs_generate_messages_lisp/fast
 
 #=============================================================================
@@ -1189,7 +1189,7 @@ std_msgs_generate_messages_py: cmake_check_build_system
 
 # fast build rule for target.
 std_msgs_generate_messages_py/fast:
-	$(MAKE) -f beta_urdf/CMakeFiles/std_msgs_generate_messages_py.dir/build.make beta_urdf/CMakeFiles/std_msgs_generate_messages_py.dir/build
+	$(MAKE) -f audio_player/CMakeFiles/std_msgs_generate_messages_py.dir/build.make audio_player/CMakeFiles/std_msgs_generate_messages_py.dir/build
 .PHONY : std_msgs_generate_messages_py/fast
 
 #=============================================================================
@@ -1202,7 +1202,7 @@ rosgraph_msgs_generate_messages_py: cmake_check_build_system
 
 # fast build rule for target.
 rosgraph_msgs_generate_messages_py/fast:
-	$(MAKE) -f beta_urdf/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build.make beta_urdf/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build
+	$(MAKE) -f audio_player/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build.make audio_player/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build
 .PHONY : rosgraph_msgs_generate_messages_py/fast
 
 #=============================================================================
@@ -1594,6 +1594,19 @@ geometry_msgs_generate_messages_nodejs: cmake_check_build_system
 geometry_msgs_generate_messages_nodejs/fast:
 	$(MAKE) -f camera_tests/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/build.make camera_tests/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/build
 .PHONY : geometry_msgs_generate_messages_nodejs/fast
+
+#=============================================================================
+# Target rules for targets named cam_rect_pub
+
+# Build rule for target.
+cam_rect_pub: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 cam_rect_pub
+.PHONY : cam_rect_pub
+
+# fast build rule for target.
+cam_rect_pub/fast:
+	$(MAKE) -f cam_rect_pub/CMakeFiles/cam_rect_pub.dir/build.make cam_rect_pub/CMakeFiles/cam_rect_pub.dir/build
+.PHONY : cam_rect_pub/fast
 
 #=============================================================================
 # Target rules for targets named phidgets_high_speed_encoder
@@ -5001,6 +5014,19 @@ move_base_gencfg/fast:
 	$(MAKE) -f alpha_2dnav/CMakeFiles/move_base_gencfg.dir/build.make alpha_2dnav/CMakeFiles/move_base_gencfg.dir/build
 .PHONY : move_base_gencfg/fast
 
+#=============================================================================
+# Target rules for targets named waypoint_navigation
+
+# Build rule for target.
+waypoint_navigation: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 waypoint_navigation
+.PHONY : waypoint_navigation
+
+# fast build rule for target.
+waypoint_navigation/fast:
+	$(MAKE) -f waypoint_navigation/CMakeFiles/waypoint_navigation.dir/build.make waypoint_navigation/CMakeFiles/waypoint_navigation.dir/build
+.PHONY : waypoint_navigation/fast
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -5124,6 +5150,7 @@ help:
 	@echo "... geometry_msgs_generate_messages_eus"
 	@echo "... geometry_msgs_generate_messages_lisp"
 	@echo "... geometry_msgs_generate_messages_nodejs"
+	@echo "... cam_rect_pub"
 	@echo "... phidgets_high_speed_encoder"
 	@echo "... phidgets_high_speed_encoder_genpy"
 	@echo "... phidgets_high_speed_encoder_generate_messages_py"
@@ -5386,6 +5413,7 @@ help:
 	@echo "... map_msgs_generate_messages_py"
 	@echo "... rviz_imu_plugin_automoc"
 	@echo "... move_base_gencfg"
+	@echo "... waypoint_navigation"
 .PHONY : help
 
 

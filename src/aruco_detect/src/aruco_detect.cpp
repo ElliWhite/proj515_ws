@@ -537,8 +537,9 @@ FiducialsNode::FiducialsNode(ros::NodeHandle & nh) : it(nh)
     }
 
     image_pub = it.advertise("/fiducial_images", 1);
-
-    vertices_pub = new ros::Publisher(nh.advertise<fiducial_msgs::FiducialArray>("/fiducial_vertices", 1));
+    string fiducial_vertices_topic;
+    nh.param<string>("fiducial_vertices_topic", fiducial_vertices_topic, "/fiducial_vertices");
+    vertices_pub = new ros::Publisher(nh.advertise<fiducial_msgs::FiducialArray>(fiducial_vertices_topic, 1));
 
     //pose_pub = new ros::Publisher(nh.advertise<fiducial_msgs::FiducialTransformArray>("/fiducial_transforms", 1));
 

@@ -1,0 +1,169 @@
+<launch>
+
+    <!-- Arguments -->
+    <arg name="camera" default="/usb_cam"/>
+    <arg name="map_frame" default="map"/>
+    <arg name="odom_frame" default="odom"/>
+    <arg name="base_frame" default="base_link"/>
+    <arg name="publish_tf" default="true"/>
+    <arg name="future_date_transforms" default="0.0"/>
+    <arg name="publish_6dof_pose" default="false"/>
+    <arg name="fiducial_len" default="0.14"/>
+    <arg name="systematic_error" default="0.01"/>
+    <arg name="do_pose_estimation" default="true"/>
+    <arg name="read_only_map" default="true" />
+
+    <arg name="image" default="image_raw"/>
+    <arg name="transport" default="compressed"/>
+    <arg name="dictionary" default="7"/>
+    <arg name="ignore_fiducials" default="" />
+    <arg name="fiducial_len_override" default="" />
+
+
+    <!-- USB_cam -->
+    <node name="usb_cam" pkg="usb_cam" type="usb_cam_node" output="screen" >
+        <param name="video_device" value="/dev/video1" />
+        <param name="image_width" value="640" />
+        <param name="image_height" value="480" /> 
+        <param name="pixel_format" value="yuyv" />
+        <param name="camera_frame_id" value="usb_cam" />
+        <param name="io_method" value="mmap"/>
+        <param name="framerate" value="60" />
+        <param name="camera_name" value="std_ps3_eye" />
+        <param name="camera_info_url" value="file://$(env HOME)/.ros/camera_info/std_ps3_eye.yaml" />
+    </node>
+
+
+    <!-- Aruco Detection -->
+    <node pkg="aruco_detect" name="aruco_detect" type="aruco_detect" respawn="true">
+        <param name="image_transport" value="$(arg transport)"/>
+        <param name="publish_images" value="true" />
+        <param name="fiducial_len" value="$(arg fiducial_len)"/>
+        <param name="dictionary" value="$(arg dictionary)"/>
+        <param name="do_pose_estimation" value="true"/>
+        <param name="ignore_fiducials" value="$(arg ignore_fiducials)"/>
+        <param name="fiducial_len_override" value="$(arg fiducial_len_override)"/>
+        <remap from="/camera/compressed" to="$(arg camera)/$(arg image)/$(arg transport)"/>
+        <remap from="/camera_info" to="$(arg camera)/camera_info"/>
+    </node>
+
+
+    <!-- Fiducial SLAM -->
+    <node type="fiducial_slam" pkg="fiducial_slam" output="screen" name="fiducial_slam">
+        <param name="map_file" value="/home/elliottwhite/proj515_ws/src/aruco_map/src/aruco_map.txt" />
+        <param name="map_frame" value="$(arg map_frame)" />
+        <param name="odom_frame" value="$(arg odom_frame)" />
+        <param name="base_frame" value="$(arg base_frame)" />
+        <param name="read_only_map" value="$(arg read_only_map)" />
+        <param name="future_date_transforms" value="$(arg future_date_transforms)" />
+        <param name="publish_6dof_pose" value="$(arg publish_6dof_pose)" />
+        <param name="do_pose_estimation" value="$(arg do_pose_estimation)"/>
+        <param name="sum_error_in_quadrature" value="true"/>
+        <param name="fiducial_len" value="$(arg fiducial_len)"/>
+        <remap from="/camera_info" to="$(arg camera)/camera_info"/>
+    </node>
+
+
+    <!--Transformation Configuration -->
+    <node name="robot_state_publisher" pkg="robot_state_publisher" type="state_publisher" />
+        <param name="robot_description" textfile="/home/elliottwhite/proj515_ws/src/beta_urdf/src/beta_urdf.xml" />
+    <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" />
+
+
+    <!-- Map Server --> 
+    <node name="map_server" pkg="map_server" type="map_server" args="/home/elliottwhite/proj515_ws/map/303/303_march_2.pgm 0.05"/>
+
+
+    <!-- AMCL --> 
+    <node pkg="amcl" type="amcl" name="amcl" output="screen">
+        <!-- Publish scans from best pose at a max of 10 Hz -->
+        <param name="odom_model_type" value="diff"/>
+        <param name="odom_alpha5" value="0.1"/>
+        <param name="transform_tolerance" value="0.2" />
+        <param name="gui_publish_rate" value="10.0"/>
+        <param name="laser_max_beams" value="30"/>
+        <param name="min_particles" value="500"/>
+        <param name="max_particles" value="5000"/>
+        <param name="kld_err" value="0.05"/>
+        <param name="kld_z" value="0.99"/>
+        <param name="odom_alpha1" value="0.2"/>
+        <param name="odom_alpha2" value="0.2"/>
+        <!-- translation std dev, m -->
+        <param name="odom_alpha3" value="0.8"/>
+        <param name="odom_alpha4" value="0.2"/>
+        <param name="laser_z_hit" value="0.5"/>
+        <param name="laser_z_short" value="0.05"/>
+        <param name="laser_z_max" value="0.05"/>
+        <param name="laser_z_rand" value="0.5"/>
+        <param name="laser_sigma_hit" value="0.2"/>
+        <param name="laser_lambda_short" value="0.1"/>
+        <param name="laser_lambda_short" value="0.1"/>
+        <param name="laser_model_type" value="likelihood_field"/>
+        <!-- <param name="laser_model_type" value="beam"/> -->
+        <param name="laser_likelihood_max_dist" value="2.0"/>
+        <param name="update_min_d" value="0.2"/>
+        <param name="update_min_a" value="0.5"/>
+        <param name="odom_frame_id" value="odom"/>
+        <param name="resample_interval" value="1"/>
+        <param name="transform_tolerance" value="0.1"/>
+        <param name="recovery_alpha_slow" value="0.0"/>
+        <param name="recovery_alpha_fast" value="0.0"/>
+    </node>
+
+
+    <!-- Move Base -->
+    <node pkg="move_base" type="move_base" respawn="false" name="move_base" output="screen">
+        <rosparam file="$(find alpha_2dnav)/costmap_common_params.yaml" command="load" ns="global_costmap" />
+        <rosparam file="$(find alpha_2dnav)/costmap_common_params.yaml" command="load" ns="local_costmap" />
+        <rosparam file="$(find alpha_2dnav)/local_costmap_params.yaml" command="load" />
+        <rosparam file="$(find alpha_2dnav)/global_costmap_params.yaml" command="load" />
+        <rosparam file="$(find alpha_2dnav)/base_local_planner_params.yaml" command="load" />
+        <param name= "controller_frequency" value = "1" />
+    </node>
+
+
+    <!-- Lidar -->
+    <node name="rplidarNode"          pkg="rplidar_ros"  type="rplidarNode" output="screen">
+        <param name="serial_port"         type="string" value="/dev/ttyUSB0"/>
+        <param name="serial_baudrate"     type="int"    value="115200"/><!--A1/A2 -->
+        <!--param name="serial_baudrate"     type="int"    value="256000"--><!--A3 -->
+        <param name="frame_id"            type="string" value="laser"/>
+        <param name="inverted"            type="bool"   value="false"/>
+        <param name="angle_compensate"    type="bool"   value="true"/>
+    </node>
+
+
+    <!-- Serial Node/Odometry -->
+    <node pkg="rosserial_python" type="serial_node.py" name="serial_node" respawn="true">
+        <param name="port" value="/dev/ttyACM0"/>
+        <param name="baud" value="921600"/>
+    </node>
+
+
+    <!-- RViz -->
+    <node pkg="rviz" type="rviz" name="$(anon rviz)" args="-d $(find aruco_map)/aruco_map_rviz.rviz"/>
+
+
+    <!-- Fiducial Localization -->
+    <node pkg="fiducial_localization" type="fiducial_localization" name="fiducial_localization" output="screen">
+        <param name="map_frame" value="$(arg map_frame)"/>
+        <param name="odom_frame" value="$(arg odom_frame)"/>
+        <param name="camera_frame" value="usb_cam"/>
+        <param name="base_link_frame" value="$(arg base_frame)"/>
+        <param name="fiducial_transform_array_topic" value="/fiducial_transforms"/>
+        <param name="fiducials_topic" value="/fiducials"/>
+        <param name="odom_pub" value="/fiducial_localization/fiducial_odom"/>
+    </node>
+
+
+
+    <!-- Robot Localization -->
+    <node pkg="robot_localization" type="ekf_localization_node" name="ekf_se" clear_params="true">
+        <rosparam command="load" file="$(find robot_localization)/params/ekf_params_no_imu.yaml" />
+
+        <!--  Placeholder for output topic remapping -->
+        <remap from="odometry/filtered" to="odom"/>
+  </node>
+
+
+</launch>

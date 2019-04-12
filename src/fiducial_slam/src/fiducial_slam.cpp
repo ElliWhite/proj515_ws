@@ -166,18 +166,22 @@ FiducialSlam::FiducialSlam(ros::NodeHandle &nh) : estimator(fiducialMap),
 
         estimator.setFiducialLen(fiducialLen);
         estimator.setErrorThreshold(errorThreshold);
-
-        verticesSub = nh.subscribe("/fiducial_vertices", 1,
+        string fiducial_vertices_topic;
+        nh.param<string>("fiducial_vertices_topic", fiducial_vertices_topic, "/fiducial_vertices");
+        verticesSub = nh.subscribe(fiducial_vertices_topic, 1,
                              &FiducialSlam::verticesCallback, this); 
 
         cameraInfoSub = nh.subscribe("/camera_info", 1,
                               &FiducialSlam::camInfoCallback, this);
-
+        string fiducial_transforms_topic;
+        nh.param<string>("fiducial_transforms_topic", fiducial_transforms_topic, "/fiducial_transforms");
         ftPub = ros::Publisher(nh.advertise
-           <fiducial_msgs::FiducialTransformArray>("/fiducial_transforms", 1));
+           <fiducial_msgs::FiducialTransformArray>(fiducial_transforms_topic, 1));
     }
     else {
-        ft_sub = nh.subscribe("/fiducial_transforms", 1,
+        string fiducial_transforms_topic;
+        nh.param<string>("fiducial_transforms_topic", fiducial_transforms_topic, "/fiducial_transforms");
+        ft_sub = nh.subscribe(fiducial_transforms_topic, 1,
                               &FiducialSlam::transformCallback, this);
     }
 

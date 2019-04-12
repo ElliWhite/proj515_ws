@@ -182,11 +182,13 @@ Map::Map(ros::NodeHandle &nh) : tfBuffer(ros::Duration(30.0)){
     cameraPosePub = ros::Publisher(
           nh.advertise<geometry_msgs::PoseWithCovarianceStamped>("/fiducial_slam/camera_pose", 1));
 
+    string fiducials_topic;
+    nh.param<string>("fiducials_topic", fiducials_topic, "/fiducials");
+
+
     markerPub = ros::Publisher(
-          nh.advertise<visualization_msgs::Marker>("/fiducials", 100));
-    mapPub = ros::Publisher(
-          nh.advertise<fiducial_msgs::FiducialMapEntryArray>("/fiducial_map",
-          1));
+          nh.advertise<visualization_msgs::Marker>(fiducials_topic, 100));
+    mapPub = ros::Publisher(nh.advertise<fiducial_msgs::FiducialMapEntryArray>("/fiducial_map", 1));
 
     clearSrv = nh.advertiseService("clear_map", &Map::clearCallback, this);
 
@@ -764,7 +766,7 @@ void Map::publishMarker(Fiducial &fid)
 
     visualization_msgs::Marker marker;
 
-        // Flattened cube
+    // Flattened cube
     marker.type = visualization_msgs::Marker::CUBE;
     marker.action = visualization_msgs::Marker::ADD;
     toMsg(fid.pose.transform, marker.pose);

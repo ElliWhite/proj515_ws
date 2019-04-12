@@ -6,14 +6,6 @@
 
 #include <ros/ros.h>
 #include <tf/transform_datatypes.h>
-#include <tf2/LinearMath/Transform.h>
-#include <tf2/LinearMath/Scalar.h>
-#include <tf2/LinearMath/Vector3.h>
-#include <tf2/LinearMath/Quaternion.h>
-#include <tf2_ros/buffer.h>
-#include <tf2_ros/transform_broadcaster.h>
-#include <tf2_ros/transform_listener.h>
-#include <tf2_geometry_msgs/tf2_geometry_msgs.h>
 #include <tf/transform_datatypes.h>
 #include <tf/transform_listener.h>
 
@@ -24,6 +16,13 @@
 #include "fiducial_msgs/FiducialTransformArray.h"
 
 #include "nav_msgs/Odometry.h"
+
+#include "geometry_msgs/PoseArray.h"
+#include "geometry_msgs/Transform.h"
+
+#include <boost/filesystem.hpp>
+#include <stdio.h>
+
 
 
 template<typename T>
@@ -42,47 +41,68 @@ T getParam(ros::NodeHandle& n, const std::string& name, const T& defaultValue)
     return defaultValue;
 }
 
-using namespace std;
+
+static geometry_msgs::Quaternion createQuaternionFromRPY(double roll, double pitch, double yaw) {
+    geometry_msgs::Quaternion q;
+    double t0 = cos(yaw * 0.5);
+    double t1 = sin(yaw * 0.5);
+    double t2 = cos(roll * 0.5);
+    double t3 = sin(roll * 0.5);
+    double t4 = cos(pitch * 0.5);
+    double t5 = sin(pitch * 0.5);
+    q.w = t0 * t2 * t4 + t1 * t3 * t5;
+    q.x = t0 * t3 * t4 - t1 * t2 * t5;
+    q.y = t0 * t2 * t5 + t1 * t3 * t4;
+    q.z = t1 * t2 * t4 - t0 * t3 * t5;
+    return q;
+}
 
 
-class FiducialLocalization {  
-    
-    private:
-    	std::string map_frame;
-    	std::string odom_frame;
-        std::string base_frame;
-        std::string cam_frame;
-    	std::string fiducial_transform_array_topic;
-        std::string odom_topic;
-        std::string fiducials_topic;
-        
-        ros::Publisher odom_pub;
 
-        ros::Subscriber fiducial_transform_array_sub;
-        ros::Subscriber fiducials_sub;
+class FiducialLocalization {
 
-        ros::NodeHandle nh_;
+private:
+    std::string map_frame;
+    std::string odom_frame;
+    std::string base_frame;
+    std::string cam_frame;
+    std::string fiducial_transform_array_topic;
+    std::string odom_topic;
+    std::string fiducials_topic;
+    std::string map_filename;
 
-        void fiducialTransformArrayCb(const fiducial_msgs::FiducialTransformArray::ConstPtr& msg);
+    geometry_msgs::PoseArray fiducial_poses;
+    std::vector<int>fiducial_ids;
 
-        //ros::Publisher test_viz_pub;
+    ros::Publisher odom_pub;
 
-    public:
+    ros::Subscriber fiducial_transform_array_sub;
+    ros::Subscriber fiducials_sub;
 
-        FiducialLocalization(ros::NodeHandle &nh);
+    ros::NodeHandle nh_;
+
+    void fiducialTransformArrayCb(const fiducial_msgs::FiducialTransformArray::ConstPtr& msg);
+
+    bool loadMap(std::string filename);
+
+    ros::Publisher test_viz_pub;
+
+public:
+
+    FiducialLocalization(ros::NodeHandle &nh);
 
 };
 
 
-void FiducialLocalization::fiducialTransformArrayCb(const fiducial_msgs::FiducialTransformArray::ConstPtr& fidTransArrMsg){
+void FiducialLocalization::fiducialTransformArrayCb(const fiducial_msgs::FiducialTransformArray::ConstPtr& fidTransArrMsg) {
 
     const fiducial_msgs::FiducialTransform &ft = fidTransArrMsg->transforms[0];
-    
+
     int numberOfIDs = fidTransArrMsg->transforms.size();
 
     // Initially no IDs are published until 1 marker as been seen
-    if(numberOfIDs > 0){
-        
+    if (numberOfIDs > 0) {
+
         tf::TransformListener listener;
         tf::StampedTransform t_baseFid;
 
@@ -91,70 +111,49 @@ void FiducialLocalization::fiducialTransformArrayCb(const fiducial_msgs::Fiducia
         std::string fiducial_frame = sstm.str();
 
         bool foundTF = false;
-        
-        try{
-            listener.waitForTransform(base_frame, fiducial_frame, ros::Time(0), ros::Duration(0.5));
+
+        try {
+            listener.waitForTransform(base_frame, fiducial_frame, ros::Time(0), ros::Duration(1.0));
             listener.lookupTransform(base_frame, fiducial_frame, ros::Time(0), t_baseFid);
             foundTF = true;
         }
-        catch(tf::TransformException ex){
+        catch (tf::TransformException ex) {
             ROS_ERROR("%s", ex.what());
         }
-        
-        if(foundTF){
 
-            boost::shared_ptr<visualization_msgs::Marker const> sharedPtr;
-            visualization_msgs::Marker markerMsg;
-            
-            ros::Time current_time = ros::Time::now();
+        if (foundTF) {
 
-            bool foundCorrectVisMsg = false;
+            // Find the detected fiducial ID in list of IDs
+            std::vector<int>::iterator it = std::find(fiducial_ids.begin(), fiducial_ids.end(), ft.fiducial_id);
 
-            while(markerMsg.id != ft.fiducial_id){
+            if (it != fiducial_ids.end()) {
 
-                sharedPtr = ros::topic::waitForMessage<visualization_msgs::Marker>(fiducials_topic, ros::Duration(0.5));
+                // Found ID in list
+                int index = std::distance(fiducial_ids.begin(), it);
+                geometry_msgs::Pose fiducial_pose = fiducial_poses.poses[index];
 
-                if(sharedPtr == NULL){
-                    ROS_INFO_STREAM("No visualization_msg received while waiting for correct message");
-                }else{
-                    markerMsg = *sharedPtr;
-                }
-
-                if(markerMsg.id == ft.fiducial_id){
-                    foundCorrectVisMsg = true;
-                }
-
-                if(ros::Time::now().toSec() >= (current_time.toSec() + 2)){
-                    break;
-                }
-            }
-
-            if(foundCorrectVisMsg){
-
-                ROS_INFO_STREAM("Correct fiducial marker message received");
-                ROS_INFO_STREAM("Observed Fiducial ID: " << ft.fiducial_id);
-                ROS_INFO_STREAM("Marker Message: " << markerMsg.ns << markerMsg.id);   
+                ROS_INFO_STREAM("Found observed fiducial ID in list of fiducials currently in the map");
 
                 tf::Transform t_mapFid;                                         // Create a transform of the fiducial from map->fid
-                
-                tfScalar m_x = markerMsg.pose.position.x;   
-                tfScalar m_y = markerMsg.pose.position.y;
-                tfScalar m_z = markerMsg.pose.position.z;
-                tf::Vector3 marker_origin(m_x,m_y,m_z);                         // Create a vector for the origin of the fiducial frame to be the
-                                                                                // same as the location of the observed marker
-            
-                t_mapFid.setOrigin(marker_origin);                              // Set the origin of the fiducial frame to be location of the marker
 
-                tfScalar r_x = markerMsg.pose.orientation.x;
-                tfScalar r_y = markerMsg.pose.orientation.y;
-                tfScalar r_z = markerMsg.pose.orientation.z;
-                tfScalar r_w = markerMsg.pose.orientation.w;
+                tfScalar m_x = fiducial_pose.position.x;
+                tfScalar m_y = fiducial_pose.position.y;
+                tfScalar m_z = fiducial_pose.position.z;
+                tf::Vector3 fiducial_origin(m_x, m_y, m_z);                       // Create a vector for the origin of the fiducial frame to be the
+                // same as the location of the observed marker
 
-                tf::Quaternion marker_rotation(r_x, r_y, r_z, r_w);             // Create a quaternion for the fiducial frame to be the same
-                                                                                // as the quaternion of the observed marker
+                t_mapFid.setOrigin(fiducial_origin);                              // Set the origin of the fiducial frame to be location of the marker
 
-                t_mapFid.setRotation(marker_rotation);                          // Set the rotation of the fiducial frame to be the same as the observed
-                                                                                // marker
+                tfScalar r_x = fiducial_pose.orientation.x;
+                tfScalar r_y = fiducial_pose.orientation.y;
+                tfScalar r_z = fiducial_pose.orientation.z;
+                tfScalar r_w = fiducial_pose.orientation.w;
+
+                tf::Quaternion fiducial_rotation(r_x, r_y, r_z, r_w);             // Create a quaternion for the fiducial frame to be the same
+                // as the quaternion of the observed marker
+
+                t_mapFid.setRotation(fiducial_rotation);                          // Set the rotation of the fiducial frame to be the same as the observed
+                // marker
 
                 tf::Transform t_fidBase = t_baseFid.inverse();                  // Create a transform from fid->base_link (originally base_link->fid, hence inverse)
 
@@ -166,16 +165,16 @@ void FiducialLocalization::fiducialTransformArrayCb(const fiducial_msgs::Fiducia
                 tf::StampedTransform t_mapOdom;
 
                 // Try and find transform from map->odom
-                try{
+                try {
                     listener.waitForTransform(map_frame, odom_frame, ros::Time(0), ros::Duration(0.5));
                     listener.lookupTransform(map_frame, odom_frame, ros::Time(0), t_mapOdom);
                     foundTF = true;
                 }
-                catch(tf::TransformException ex){
+                catch (tf::TransformException ex) {
                     ROS_ERROR("%s", ex.what());
                 }
 
-                if(foundTF){
+                if (foundTF) {
 
                     tf::Transform t_odomMap = t_mapOdom.inverse();
 
@@ -196,28 +195,29 @@ void FiducialLocalization::fiducialTransformArrayCb(const fiducial_msgs::Fiducia
                     pose_Base.pose.orientation.x = r;                               // Set RPY of Pose message to that of the base_link
                     pose_Base.pose.orientation.y = p;
                     pose_Base.pose.orientation.z = y;
-                    pose_Base.pose.orientation.w = t_odomBase_rot.getW()*2;         // Set Omega to that of base_link. Unsure why have to multiply by
-                                                                                    // 2 to get it to reflect actual Omega
-                    //test_viz_pub.publish(pose_Base);                                // Publish Pose 
+                    pose_Base.pose.orientation.w = t_odomBase_rot.getW() * 2;       // Set Omega to that of base_link. Unsure why have to multiply by
+                    // 2 to get it to reflect actual Omega
+                    test_viz_pub.publish(pose_Base);                                // Publish Pose
 
                     nav_msgs::Odometry odom_Base;                                   // Create Odometry message for fiducial localization
                     odom_Base.header.frame_id = odom_frame;                         // Assign parent frame to odometry frame
                     odom_Base.header.stamp = ros::Time::now();                      // Assign timestamp to the current time
                     odom_Base.child_frame_id = base_frame;                          // Assign child frame to base_link
-                    
+
                     odom_Base.pose.pose.position.x = t_odomBase_pose.x();           // Set XYZ location of base_link
                     odom_Base.pose.pose.position.y = t_odomBase_pose.y();
                     //odom_Base.pose.pose.position.z = t_odomBase_pose.pose.z();    // Don't need any Z estimation as on 2D plane only
                     //odom_Base.pose.pose.orientation.x = r;                        // Don't need RP
                     //odom_Base.pose.pose.orientation.y = p;
                     odom_Base.pose.pose.orientation.z = y;                          // Set rotation around Z to be yaw
-                    odom_Base.pose.pose.orientation.w = t_odomBase_rot.getW()*2;    // Set Omega for base_link
+                    odom_Base.pose.pose.orientation.w = t_odomBase_rot.getW() * 2;  // Set Omega for base_link
                     //odom_Base.twist.twist;                                        // Don't need as not calculating any velocities
 
                     odom_pub.publish(odom_Base);
                 }
 
-
+            } else {
+                ROS_ERROR("Could not find Fiducial ID %d in list of fiducials currently in the map\n", ft.fiducial_id);
             }
 
         }
@@ -227,11 +227,81 @@ void FiducialLocalization::fiducialTransformArrayCb(const fiducial_msgs::Fiducia
 }
 
 
+bool FiducialLocalization::loadMap(std::string filename) {
+
+    // Load Aruco marker map
+    ROS_INFO_STREAM("Load map " << filename);
+
+    FILE *fp = fopen(filename.c_str(), "r");
+
+    if (fp == NULL) {
+        return false;
+    }
+
+    int numRead = 0;
+
+    const int BUFSIZE = 2048;
+    char linebuf[BUFSIZE];
+    char linkbuf[BUFSIZE];
+
+    while (!feof(fp)) {
+        // Break if can't read line
+        if (fgets(linebuf, BUFSIZE - 1, fp) == NULL)
+            break;
+
+        int id;
+        double tx, ty, tz, rx, ry, rz, var;
+        int numObs = 0;
+        linkbuf[0] = '\0';
+
+        // Read line
+        int nElems = sscanf(linebuf, "%d %lf %lf %lf %lf %lf %lf %lf %d%[^\t\n]*s",
+                            &id, &tx, &ty, &tz, &rx, &ry, &rz, &var, &numObs, linkbuf);
+        if (nElems == 9 || nElems == 10) {
+
+            // Push back ID
+            fiducial_ids.push_back(id);
+
+            // Create a pose to hold fiducial pose
+            geometry_msgs::Pose fiducial_pose;
+
+            // Set pose information
+            fiducial_pose.position.x = tx;
+            fiducial_pose.position.y = ty;
+            fiducial_pose.position.z = tz;
+
+            // Create a quaternion as transforms take orientation in quaternion form
+            geometry_msgs::Quaternion q;
+            q = createQuaternionFromRPY((rx * M_PI / 180), (ry * M_PI / 180), (rz * M_PI / 180));
+
+            // Set orientation information
+            fiducial_pose.orientation.x = q.x;
+            fiducial_pose.orientation.y = q.y;
+            fiducial_pose.orientation.z = q.z;
+            fiducial_pose.orientation.w = q.w;
+
+            // Add fiducial pose to list of poses
+            fiducial_poses.poses.push_back(fiducial_pose);
+
+            numRead++;
+        }
+        else {
+            ROS_WARN("Invalid line: %s", linebuf);
+        }
+    }
+
+    // Close file
+    fclose(fp);
+    ROS_INFO("Load map %s read %d entries", filename.c_str(), numRead);
+    return true;
+
+}
 
 
-FiducialLocalization::FiducialLocalization(ros::NodeHandle &nh) : nh_(nh){
-  
-    map_frame = getParam<std::string>(nh_, "map_frame", "map"); 
+
+FiducialLocalization::FiducialLocalization(ros::NodeHandle &nh) : nh_(nh) {
+
+    map_frame = getParam<std::string>(nh_, "map_frame", "map");
 
     odom_frame = getParam<std::string>(nh_, "odom_frame", "odom");
 
@@ -245,18 +315,28 @@ FiducialLocalization::FiducialLocalization(ros::NodeHandle &nh) : nh_(nh){
 
     fiducials_topic = getParam<std::string>(nh_, "fiducials_topic", "/fiducials");
 
+    map_filename = getParam<std::string>(nh_, "map_file", std::string(getenv("HOME")) + "/.ros/slam/map.txt");
+
     odom_pub = nh_.advertise<nav_msgs::Odometry>(odom_topic, 10);
 
     fiducial_transform_array_sub = nh_.subscribe(fiducial_transform_array_topic, 1, &FiducialLocalization::fiducialTransformArrayCb, this);
 
-    //test_viz_pub = nh_.advertise<geometry_msgs::PoseStamped>("/fiducial_localization/test_pose", 5);
-  
+    test_viz_pub = nh_.advertise<geometry_msgs::PoseStamped>("/fiducial_localization/test_pose", 5);
+
+    boost::filesystem::path mapPath(map_filename);
+    boost::filesystem::path dir = mapPath.parent_path();
+    boost::filesystem::create_directories(dir);
+
+    if (!loadMap(map_filename)) {
+        ROS_ERROR("Could not open %s for read", map_filename.c_str());
+    }
+
 }
 
 
 
 
-int main(int argc, char **argv){
+int main(int argc, char **argv) {
 
     ros::init(argc, argv, "fiducial_localization");
 
@@ -266,7 +346,7 @@ int main(int argc, char **argv){
 
     ros::Rate r(10);
 
-    while(ros::ok()){
+    while (ros::ok()) {
         ros::spinOnce();
         r.sleep();
     }

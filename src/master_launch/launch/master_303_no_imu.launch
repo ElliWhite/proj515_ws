@@ -113,12 +113,12 @@
 
     <!-- Move Base -->
     <node pkg="move_base" type="move_base" respawn="false" name="move_base" output="screen">
-        <rosparam file="$(find alpha_2dnav)/costmap_common_params.yaml" command="load" ns="global_costmap" />
-        <rosparam file="$(find alpha_2dnav)/costmap_common_params.yaml" command="load" ns="local_costmap" />
-        <rosparam file="$(find alpha_2dnav)/local_costmap_params.yaml" command="load" />
-        <rosparam file="$(find alpha_2dnav)/global_costmap_params.yaml" command="load" />
-        <rosparam file="$(find alpha_2dnav)/base_local_planner_params.yaml" command="load" />
-        <param name= "controller_frequency" value = "1" />
+        <rosparam file="$(find beta_2dnav)/costmap_common_params.yaml" command="load" ns="global_costmap" />
+        <rosparam file="$(find beta_2dnav)/costmap_common_params.yaml" command="load" ns="local_costmap" />
+        <rosparam file="$(find beta_2dnav)/local_costmap_params.yaml" command="load" />
+        <rosparam file="$(find beta_2dnav)/global_costmap_params.yaml" command="load" />
+        <rosparam file="$(find beta_2dnav)/base_local_planner_params.yaml" command="load" />
+        <param name= "controller_frequency" value = "3" />
     </node>
 
 
@@ -141,7 +141,7 @@
 
 
     <!-- RViz -->
-    <node pkg="rviz" type="rviz" name="$(anon rviz)" args="-d $(find master_launch)/master_303_rviz.rviz"/>
+    <node pkg="rviz" type="rviz" name="$(anon rviz)" args="-d $(find aruco_map)/aruco_map_rviz.rviz"/>
 
 
     <!-- Fiducial Localization -->
@@ -156,46 +156,10 @@
     </node>
 
 
-    <!-- IMU Manager -->
-    <node pkg="nodelet" type="nodelet" name="imu_manager" 
-    args="manager" output="screen" />
-
-
-    <!-- IMU Driver -->
-    <node pkg="nodelet" type="nodelet" name="PhidgetsImuNodelet" args="load phidgets_imu/PhidgetsImuNodelet imu_manager"    output="screen">
-        # supported data rates: 4 8 16 24 32 40 ... 1000 (in ms)
-        <param name="period" value="4"/>
-        # optional param serial_number, default is -1
-        <!-- <param name="serial_number" value="123456"/> -->
-        # compass correction params (see http://www.phidgets.com/docs/1044_User_Guide)
-        <!-- <param name="cc_mag_field" value="0.52859"/>
-             <param name="cc_offset0" value="0.03921"/>
-             <param name="cc_offset1" value="0.19441"/>
-             <param name="cc_offset2" value="-0.03493"/>
-             <param name="cc_gain0" value="1.81704"/>
-             <param name="cc_gain1" value="1.81028"/>
-             <param name="cc_gain2" value="2.04819"/>
-             <param name="cc_t0" value="0.00142"/>
-             <param name="cc_t1" value="-0.03591"/>
-             <param name="cc_t2" value="0.00160 "/>
-             <param name="cc_t3" value="-0.05038"/>
-             <param name="cc_t4" value="-0.03942"/>
-             <param name="cc_t5" value="-0.05673"/> -->
-    </node>
-
-
-    <!-- IMU Orientation Filter -->
-    <node pkg="nodelet" type="nodelet" name="ImuFilterNodelet" args="load imu_filter_madgwick/ImuFilterNodelet imu_manager" 
-    output="screen">
-        <param name="fixed_frame" value="base_link"/>
-        <param name="use_mag" value="true"/>
-        <param name="use_magnetic_field_msg" value="true"/>
-        <param name="publish_tf" value="false"/>
-    </node>
 
     <!-- Robot Localization -->
     <node pkg="robot_localization" type="ekf_localization_node" name="ekf_se" clear_params="true">
-        <rosparam command="load" file="$(find robot_localization)/params/ekf_params.yaml" />
+        <rosparam command="load" file="$(find robot_localization)/params/ekf_params_no_imu.yaml" />
 
         <!--  Placeholder for output topic remapping -->
         <remap from="odometry/filtered" to="odom"/>
