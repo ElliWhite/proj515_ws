@@ -45,11 +45,11 @@ int main(int argc, char** argv)
 
     string intrinsic_filename;
 
-    nh.param<string>("cam_intrinsic_loc", intrinsic_filename, "empty");
+    nh.param<string>("cam_intrinsic_loc", intrinsic_filename, "/home/elliottwhite/proj515_ws/src/cam_rect_pub/src/data/intrinsics.xml");
     nh.param<int>("cam_right", cam_right, 1);
     nh.param<int>("cam_left", cam_left, 2);
-    nh.param<int>("cam_width", cam_width, 1280);
-    nh.param<int>("cam_height", cam_height, 720);
+    nh.param<int>("cam_width", cam_width, 1920);
+    nh.param<int>("cam_height", cam_height, 1080);
 
     image_transport::ImageTransport it(nh);
     image_transport::Publisher pub_right = it.advertise("cameras/image_rect_right", 1);
@@ -77,7 +77,6 @@ int main(int argc, char** argv)
         fs["D1"] >> D1;
         fs["M2"] >> M2;
         fs["D2"] >> D2;
-        ROS_WARN_STREAM(M1);
         cameraInfoMessage_right.header.frame_id = "right_cam";
         cameraInfoMessage_right.binning_x = 0;
         cameraInfoMessage_right.binning_y = 0;
