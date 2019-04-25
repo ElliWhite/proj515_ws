@@ -4,6 +4,10 @@ project(waypoint_navigation)
 ## Compile as C++11, supported in ROS Kinetic and newer
 # add_compile_options(-std=c++11)
 
+
+# Action messages
+
+
 ## Find catkin macros and libraries
 ## if COMPONENTS list like find_package(catkin REQUIRED COMPONENTS xyz)
 ## is used, also find other catkin packages
@@ -12,7 +16,15 @@ find_package(catkin REQUIRED COMPONENTS
   nav_msgs
   roscpp
   tf
+  genmsg
+  actionlib_msgs
+  actionlib
+  move_base_msgs
 )
+
+add_action_files(DIRECTORY action FILES goToWaypoint.action)
+generate_messages(DEPENDENCIES actionlib_msgs move_base_msgs)
+
 
 ## System dependencies are found with CMake's conventions
 # find_package(Boost REQUIRED COMPONENTS system)
@@ -93,6 +105,8 @@ find_package(catkin REQUIRED COMPONENTS
 #   cfg/DynReconf1.cfg
 #   cfg/DynReconf2.cfg
 # )
+
+
 
 ###################################
 ## catkin specific configuration ##

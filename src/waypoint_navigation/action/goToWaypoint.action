@@ -1,0 +1,8 @@
+# Define the goal
+move_base_msgs/MoveBaseActionGoal move_base_goal
+---
+# Define the result
+move_base_msgs/MoveBaseActionResult move_base_goal_result
+---
+# Define the feedback
+actionlib_msgs/GoalStatusArray move_base_goal_status
