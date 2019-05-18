@@ -24,7 +24,7 @@
 #include <stdio.h>
 
 
-
+/* Function to get a parameter from the launch file */
 template<typename T>
 T getParam(ros::NodeHandle& n, const std::string& name, const T& defaultValue)
 {
@@ -42,6 +42,7 @@ T getParam(ros::NodeHandle& n, const std::string& name, const T& defaultValue)
 }
 
 
+/* Function to create a quaternion from Euler angles */
 static geometry_msgs::Quaternion createQuaternionFromRPY(double roll, double pitch, double yaw) {
     geometry_msgs::Quaternion q;
     double t0 = cos(yaw * 0.5);
@@ -61,35 +62,35 @@ static geometry_msgs::Quaternion createQuaternionFromRPY(double roll, double pit
 
 class FiducialLocalization {
 
-private:
-    std::string map_frame;
-    std::string odom_frame;
-    std::string base_frame;
-    std::string cam_frame;
-    std::string fiducial_transform_array_topic;
-    std::string odom_topic;
-    std::string fiducials_topic;
-    std::string map_filename;
+    private:
+        std::string map_frame;
+        std::string odom_frame;
+        std::string base_frame;
+        std::string cam_frame;
+        std::string fiducial_transform_array_topic;
+        std::string odom_topic;
+        std::string fiducials_topic;
+        std::string map_filename;
 
-    geometry_msgs::PoseArray fiducial_poses;
-    std::vector<int>fiducial_ids;
+        geometry_msgs::PoseArray fiducial_poses;
+        std::vector<int>fiducial_ids;
 
-    ros::Publisher odom_pub;
+        ros::Publisher odom_pub;
 
-    ros::Subscriber fiducial_transform_array_sub;
-    ros::Subscriber fiducials_sub;
+        ros::Subscriber fiducial_transform_array_sub;
+        ros::Subscriber fiducials_sub;
 
-    ros::NodeHandle nh_;
+        ros::NodeHandle nh_;
 
-    void fiducialTransformArrayCb(const fiducial_msgs::FiducialTransformArray::ConstPtr& msg);
+        void fiducialTransformArrayCb(const fiducial_msgs::FiducialTransformArray::ConstPtr& msg);
 
-    bool loadMap(std::string filename);
+        bool loadMap(std::string filename);
 
-    ros::Publisher test_viz_pub;
+        ros::Publisher test_viz_pub;
 
-public:
+    public:
 
-    FiducialLocalization(ros::NodeHandle &nh);
+        FiducialLocalization(ros::NodeHandle &nh);
 
 };
 
@@ -112,6 +113,7 @@ void FiducialLocalization::fiducialTransformArrayCb(const fiducial_msgs::Fiducia
 
         bool foundTF = false;
 
+        // Listen for transform base_link -> fiducial
         try {
             listener.waitForTransform(base_frame, fiducial_frame, ros::Time(0), ros::Duration(1.0));
             listener.lookupTransform(base_frame, fiducial_frame, ros::Time(0), t_baseFid);
@@ -157,6 +159,8 @@ void FiducialLocalization::fiducialTransformArrayCb(const fiducial_msgs::Fiducia
 
                 tf::Transform t_fidBase = t_baseFid.inverse();                  // Create a transform from fid->base_link (originally base_link->fid, hence inverse)
 
+                ROS_INFO_STREAM(t_fidBase.getOrigin());
+
                 tf::Transform t_mapBase;                                        // Create a transform of the robot from map->base_link
                 t_mapBase.mult(t_mapFid, t_fidBase);                            // This transform is a result of map->fid and fid->base_link
 
@@ -178,7 +182,7 @@ void FiducialLocalization::fiducialTransformArrayCb(const fiducial_msgs::Fiducia
 
                     tf::Transform t_odomMap = t_mapOdom.inverse();
 
-                    tf::Transform t_odomBase;
+                    tf::Transform t_odomBase;                                       // Create transform odom -> base_link
                     t_odomBase.mult(t_odomMap, t_mapBase);
 
 
@@ -187,6 +191,8 @@ void FiducialLocalization::fiducialTransformArrayCb(const fiducial_msgs::Fiducia
                     t_odomBase.getBasis().getRPY(r, p, y);                          // Get orientation of base_link relative to map in RPY form
                     tf::Quaternion t_odomBase_rot = t_odomBase.getRotation();       // Get quaternion of base_link so can extract Omega
 
+                    t_odomBase_rot.normalize();
+
                     geometry_msgs::PoseStamped pose_Base;                           // Create PoseStamped message so can add Pose to RViz
                     pose_Base.header.frame_id = odom_frame;                         // Set frame base_link tf is associated with to map frame
                     pose_Base.pose.position.x = t_odomBase_pose.x();                // Set XYZ location of Pose to base_link pose
@@ -194,9 +200,8 @@ void FiducialLocalization::fiducialTransformArrayCb(const fiducial_msgs::Fiducia
                     pose_Base.pose.position.z = t_odomBase_pose.z();
                     pose_Base.pose.orientation.x = r;                               // Set RPY of Pose message to that of the base_link
                     pose_Base.pose.orientation.y = p;
-                    pose_Base.pose.orientation.z = y;
-                    pose_Base.pose.orientation.w = t_odomBase_rot.getW() * 2;       // Set Omega to that of base_link. Unsure why have to multiply by
-                    // 2 to get it to reflect actual Omega
+                    pose_Base.pose.orientation.z = t_odomBase_rot.z();
+                    pose_Base.pose.orientation.w = t_odomBase_rot.getW();           // Set Omega to that of base_link
                     test_viz_pub.publish(pose_Base);                                // Publish Pose
 
                     nav_msgs::Odometry odom_Base;                                   // Create Odometry message for fiducial localization
@@ -209,11 +214,11 @@ void FiducialLocalization::fiducialTransformArrayCb(const fiducial_msgs::Fiducia
                     //odom_Base.pose.pose.position.z = t_odomBase_pose.pose.z();    // Don't need any Z estimation as on 2D plane only
                     //odom_Base.pose.pose.orientation.x = r;                        // Don't need RP
                     //odom_Base.pose.pose.orientation.y = p;
-                    odom_Base.pose.pose.orientation.z = y;                          // Set rotation around Z to be yaw
-                    odom_Base.pose.pose.orientation.w = t_odomBase_rot.getW() * 2;  // Set Omega for base_link
+                    odom_Base.pose.pose.orientation.z = t_odomBase_rot.z();         // Set rotation around Z to be yaw
+                    odom_Base.pose.pose.orientation.w = t_odomBase_rot.getW();      // Set Omega for base_link
                     //odom_Base.twist.twist;                                        // Don't need as not calculating any velocities
 
-                    odom_pub.publish(odom_Base);
+                    odom_pub.publish(odom_Base);                                    // Publish odometry message
                 }
 
             } else {
@@ -226,7 +231,7 @@ void FiducialLocalization::fiducialTransformArrayCb(const fiducial_msgs::Fiducia
 
 }
 
-
+/* Function to load aruco map file */
 bool FiducialLocalization::loadMap(std::string filename) {
 
     // Load Aruco marker map
@@ -246,8 +251,9 @@ bool FiducialLocalization::loadMap(std::string filename) {
 
     while (!feof(fp)) {
         // Break if can't read line
-        if (fgets(linebuf, BUFSIZE - 1, fp) == NULL)
+        if (fgets(linebuf, BUFSIZE - 1, fp) == NULL) {
             break;
+        }
 
         int id;
         double tx, ty, tz, rx, ry, rz, var;
