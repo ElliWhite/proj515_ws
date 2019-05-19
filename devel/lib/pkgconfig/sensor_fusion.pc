@@ -1,0 +1,8 @@
+prefix=/home/elliottwhite/proj515_ws/devel
+
+Name: sensor_fusion
+Description: Description of sensor_fusion
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/elliottwhite/proj515_ws/devel/lib 
+Requires: 

@@ -1,13 +1,14 @@
 <launch>
 
 	<!--Sensor -->
-	<node name="rplidarNode" pkg="rplidar_ros"  type="rplidarNode" output="screen">
+	<node name="rplidarNode" pkg="rplidar_ros"  type="rplidarNode" output="screen" respawn="true">
 		<param name="serial_port"         type="string" value="/dev/ttyUSB0"/>
 		<param name="serial_baudrate"     type="int"    value="115200"/><!--A1/A2 -->
 		<!--param name="serial_baudrate"     type="int"    value="256000"--><!--A3 -->
 		<param name="frame_id"            type="string" value="laser"/>
 		<param name="inverted"            type="bool"   value="false"/>
 		<param name="angle_compensate"    type="bool"   value="true"/>
+		<param name="scan_mode"			  type="string" value="Boost"/>
 	</node>
 
 	<!--Odometry -->
@@ -19,7 +20,7 @@
 
 	<!--Transformation Configuration -->
 	<node name="robot_state_publisher" pkg="robot_state_publisher" type="state_publisher" />
-		<param name="robot_description" textfile="/home/elliottwhite/proj515_ws/src/alpha_urdf/src/alpha_w_cam_imu.xml" />
+		<param name="robot_description" textfile="/home/elliottwhite/proj515_ws/src/beta_urdf/src/beta_urdf.xml" />
 	<node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" />
 
 </launch> 

@@ -58,9 +58,13 @@ def audio_state(x):
 
 if __name__ == '__main__':
 
-    file_path = rospy.get_param('audio_file_path')
-    at_topic = rospy.get_param('/at_topic')
-    as_topic = rospy.get_param('/as_topic')
+    #file_path = rospy.get_param('audio_file_path')
+    #at_topic = rospy.get_param('/at_topic')
+    #as_topic = rospy.get_param('/as_topic')
+
+    file_path = "/home/elliottwhite/proj515_ws/src/audio_player/src/audiofiles"
+    at_topic = "/audio_trigger"
+    as_topic = "/audio_status"
 
     audio_files = sorted(glob.glob(file_path + "/*"))
     num_files = len(audio_files)

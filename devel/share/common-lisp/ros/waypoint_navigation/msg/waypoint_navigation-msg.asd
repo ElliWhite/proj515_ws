@@ -1,0 +1,38 @@
+
+(cl:in-package :asdf)
+
+(defsystem "waypoint_navigation-msg"
+  :depends-on (:roslisp-msg-protocol :roslisp-utils :actionlib_msgs-msg
+               :move_base_msgs-msg
+               :std_msgs-msg
+)
+  :components ((:file "_package")
+    (:file "cancelWaypointAction" :depends-on ("_package_cancelWaypointAction"))
+    (:file "_package_cancelWaypointAction" :depends-on ("_package"))
+    (:file "cancelWaypointActionFeedback" :depends-on ("_package_cancelWaypointActionFeedback"))
+    (:file "_package_cancelWaypointActionFeedback" :depends-on ("_package"))
+    (:file "cancelWaypointActionGoal" :depends-on ("_package_cancelWaypointActionGoal"))
+    (:file "_package_cancelWaypointActionGoal" :depends-on ("_package"))
+    (:file "cancelWaypointActionResult" :depends-on ("_package_cancelWaypointActionResult"))
+    (:file "_package_cancelWaypointActionResult" :depends-on ("_package"))
+    (:file "cancelWaypointFeedback" :depends-on ("_package_cancelWaypointFeedback"))
+    (:file "_package_cancelWaypointFeedback" :depends-on ("_package"))
+    (:file "cancelWaypointGoal" :depends-on ("_package_cancelWaypointGoal"))
+    (:file "_package_cancelWaypointGoal" :depends-on ("_package"))
+    (:file "cancelWaypointResult" :depends-on ("_package_cancelWaypointResult"))
+    (:file "_package_cancelWaypointResult" :depends-on ("_package"))
+    (:file "goToWaypointAction" :depends-on ("_package_goToWaypointAction"))
+    (:file "_package_goToWaypointAction" :depends-on ("_package"))
+    (:file "goToWaypointActionFeedback" :depends-on ("_package_goToWaypointActionFeedback"))
+    (:file "_package_goToWaypointActionFeedback" :depends-on ("_package"))
+    (:file "goToWaypointActionGoal" :depends-on ("_package_goToWaypointActionGoal"))
+    (:file "_package_goToWaypointActionGoal" :depends-on ("_package"))
+    (:file "goToWaypointActionResult" :depends-on ("_package_goToWaypointActionResult"))
+    (:file "_package_goToWaypointActionResult" :depends-on ("_package"))
+    (:file "goToWaypointFeedback" :depends-on ("_package_goToWaypointFeedback"))
+    (:file "_package_goToWaypointFeedback" :depends-on ("_package"))
+    (:file "goToWaypointGoal" :depends-on ("_package_goToWaypointGoal"))
+    (:file "_package_goToWaypointGoal" :depends-on ("_package"))
+    (:file "goToWaypointResult" :depends-on ("_package_goToWaypointResult"))
+    (:file "_package_goToWaypointResult" :depends-on ("_package"))
+  ))

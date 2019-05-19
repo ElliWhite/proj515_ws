@@ -1,0 +1,8 @@
+# Cancel the goal
+actionlib_msgs/GoalID move_base_cancel_goal
+---
+# Define the result
+move_base_msgs/MoveBaseActionResult move_base_cancel_goal_result
+---
+# Define the feedback
+actionlib_msgs/GoalStatusArray move_base_cancel_goal_status

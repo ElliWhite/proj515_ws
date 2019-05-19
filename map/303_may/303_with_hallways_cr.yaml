@@ -1,0 +1,6 @@
+free_thresh: 0.196
+image: 303_with_hallways_cr.pgm
+negate: 0
+occupied_thresh: 0.65
+origin: [-6.699999999999989, -77.6, 0.0]
+resolution: 0.05

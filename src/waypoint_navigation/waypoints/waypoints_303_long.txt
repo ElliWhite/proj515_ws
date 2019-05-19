@@ -1,0 +1,8 @@
+showcase 40.2 15.05
+projects 44.15 13.4
+end_of_lab 52.0 13.65
+302 58.35 14.85
+random_quip_1 48.15 13.75
+stores 37.7 12.65
+3d_print 28.55 12.15
+return_showcase 38.95 15.7

@@ -1,11 +1,14 @@
 TrajectoryPlannerROS:
-  max_vel_x: 0.5
-  min_vel_x: 0.1
-  max_vel_theta: 0.2
-  min_in_place_vel_theta: 0.1
+  max_vel_x: 0.35
+  min_vel_x: 0.2
+  max_vel_theta: 0.5
+  min_in_place_vel_theta: 0.3
 
-  acc_lim_theta: 0.05
-  acc_lim_x: 0.05
+  acc_lim_theta: 0.01
+  acc_lim_x: 0.08 
   acc_lim_y: 0.2
 
   holonomic_robot: false
+  meter_scoring: false    # Set to true if believe the resolution of map might change
+
+  pdist_scale: 0.2

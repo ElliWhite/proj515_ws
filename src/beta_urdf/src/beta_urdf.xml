@@ -21,9 +21,9 @@ Beta robot "wallace"
 
   <link name="laser">
     <visual>
-      <origin rpy="1.57 0 0" xyz="0 0 0"/>
+      <origin rpy="0 0 3.925" xyz="0.08 -0.45 -0.52"/>
       <geometry>
-        <mesh filename="file:/home/elliottwhite/proj515_ws/src/beta_urdf/src/urdf_lidar.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="file:/home/elliottwhite/proj515_ws/src/beta_urdf/src/urdf_lidara2.stl" scale="0.001 0.001 0.001"/>
       </geometry>
     </visual>
   </link>
@@ -33,26 +33,27 @@ Beta robot "wallace"
     <parent link="base_link"/>
     <child link="laser"/>
     <!-- old laser pos <origin rpy = "0 0 0" xyz = "0.203092 0 0.157933"/> -->
-    <origin rpy = "0 0 0" xyz = "0.13880 0 0.226999"/>
+    <origin rpy = "0 0 2.355" xyz = "0.13880 0 0.226999"/>
   </joint>
 
 
-  <!-- <link name="usb_cam">
+  <link name="full_body">
     <visual>
-      <origin rpy="1.57 -1.57 1.57" xyz="0 0 0"/>
+      <origin rpy="1.57 0 1.57" xyz="0 0 -0.03"/>
       <geometry>
-        <mesh filename="file:/home/elliottwhite/proj515_ws/src/beta_urdf/src/urdf_usb_cam.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="file:/home/elliottwhite/proj515_ws/src/beta_urdf/src/urdf_full_body.stl" scale="0.00090 0.00090 0.00090"/>
       </geometry>
     </visual>
   </link>
 
-  <joint name="base_cam_joint" type="fixed">
-    <axis xyz="1 0 0"/>
+  <joint name="base_full_body_joint" type="fixed">
+    <axis xyz="0 0 0"/>
     <parent link="base_link"/>
-    <child link="usb_cam"/>
+    <child link="full_body"/>
+    <!-- old laser pos <origin rpy = "0 0 0" xyz = "0.203092 0 0.157933"/> -->
+    <origin rpy = "0 0 0" xyz = "0.04 0 0.0"/>
+  </joint>
 
-    <origin rpy = "-1.57 0 -1.57" xyz = "-0.152993 0 0.388138"/>
-  </joint> -->
   
   
   
@@ -71,7 +72,7 @@ Beta robot "wallace"
     <parent link="base_link"/>
     <child link="left_cam"/>
     <!--           x     y    z     -->
-    <origin rpy = "-1.57 0 -0.959135" xyz = "0.158486 0.031461 0.8045"/>
+    <origin rpy = "-1.57 0 -0.959135" xyz = "0.205486 0.031461 0.8545"/>
   </joint>
   
   
@@ -90,14 +91,8 @@ Beta robot "wallace"
     <parent link="base_link"/>
     <child link="right_cam"/>
     <!--           x     y    z     -->
-    <origin rpy = "-1.57 0 -2.1809" xyz = "0.158486 -0.031461 0.8045"/>
+    <origin rpy = "-1.57 0 -2.1809" xyz = "0.205486 -0.031461 0.8545"/>
   </joint>
-  
-  
-  
-  
-  
-  
   
 
 
@@ -115,8 +110,188 @@ Beta robot "wallace"
     <parent link="base_link"/>
     <child link="imu"/>
     <!--           x y z     -->
-    <origin rpy = "0 3.14 1.57" xyz = "0.006206 0.0102 0.061"/> 
+    <origin rpy = "0 3.14 1.57" xyz = "0.006206 0.0102 0.111"/> 
   </joint>
+
+
+  <!-- ULTRASOUND SENSORS -->
+  <link name="uss_cb1">
+    <visual>
+      <origin rpy="1.57 0 1.57" xyz="0 -0.02 0"/>
+      <geometry>
+        <mesh filename="file:/home/elliottwhite/proj515_ws/src/beta_urdf/src/urdf_uss.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </visual>
+  </link>
+
+  <joint name="base_uss_cb1_joint" type="fixed">
+    <axis xyz="1 0 0"/>
+    <parent link="base_link"/>
+    <child link="uss_cb1"/>
+    <!--           x y z     -->
+    <origin rpy = "0 0 0" xyz = "0.25 0.0 0.05"/> 
+  </joint>
+
+
+  <link name="uss_cb2">
+    <visual>
+      <origin rpy="1.57 0 1.57" xyz="0 -0.02 0"/>
+      <geometry>
+        <mesh filename="file:/home/elliottwhite/proj515_ws/src/beta_urdf/src/urdf_uss.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </visual>
+  </link>
+
+  <joint name="base_uss_cb2_joint" type="fixed">
+    <axis xyz="1 0 0"/>
+    <parent link="base_link"/>
+    <child link="uss_cb2"/>
+    <!--           x y z     -->
+    <origin rpy = "0 0 1.57" xyz = "0.0 0.25 0.05"/> 
+  </joint>
+
+
+  <link name="uss_cb3">
+    <visual>
+      <origin rpy="1.57 0 1.57" xyz="0 -0.02 0"/>
+      <geometry>
+        <mesh filename="file:/home/elliottwhite/proj515_ws/src/beta_urdf/src/urdf_uss.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </visual>
+  </link>
+
+  <joint name="base_uss_cb3_joint" type="fixed">
+    <axis xyz="1 0 0"/>
+    <parent link="base_link"/>
+    <child link="uss_cb3"/>
+    <!--           x y z     -->
+    <origin rpy = "0 0 3.14" xyz = "-0.25 0.0 0.05"/> 
+  </joint>
+
+
+  <link name="uss_cb4">
+    <visual>
+      <origin rpy="1.57 0 1.57" xyz="0 -0.02 0"/>
+      <geometry>
+        <mesh filename="file:/home/elliottwhite/proj515_ws/src/beta_urdf/src/urdf_uss.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </visual>
+  </link>
+
+  <joint name="base_uss_cb4_joint" type="fixed">
+    <axis xyz="1 0 0"/>
+    <parent link="base_link"/>
+    <child link="uss_cb4"/>
+    <!--           x y z     -->
+    <origin rpy = "0 0 4.71" xyz = "0.0 -0.25 0.05"/> 
+  </joint>
+
+
+  <link name="uss_cb5">
+    <visual>
+      <origin rpy="1.57 0 1.57" xyz="0 -0.02 0"/>
+      <geometry>
+        <mesh filename="file:/home/elliottwhite/proj515_ws/src/beta_urdf/src/urdf_uss.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </visual>
+  </link>
+
+  <joint name="base_uss_cb5_joint" type="fixed">
+    <axis xyz="1 0 0"/>
+    <parent link="base_link"/>
+    <child link="uss_cb5"/>
+    <origin rpy = "0 0 0" xyz = "0.25 -0.198 0.05"/> 
+  </joint>
+
+
+  <link name="uss_cb6">
+    <visual>
+      <origin rpy="1.57 0 1.57" xyz="0 -0.02 0"/>
+      <geometry>
+        <mesh filename="file:/home/elliottwhite/proj515_ws/src/beta_urdf/src/urdf_uss.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </visual>
+  </link>
+
+  <joint name="base_uss_cb6_joint" type="fixed">
+    <axis xyz="1 0 0"/>
+    <parent link="base_link"/>
+    <child link="uss_cb6"/>
+    <origin rpy = "0 0 0" xyz = "0.25 0.198 0.05"/> 
+  </joint>
+  
+
+  <link name="uss_cf1">
+    <visual>
+      <origin rpy="1.57 0 1.57" xyz="0 -0.02 0"/>
+      <geometry>
+        <mesh filename="file:/home/elliottwhite/proj515_ws/src/beta_urdf/src/urdf_uss.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </visual>
+  </link>
+
+  <joint name="base_uss_cf1_joint" type="fixed">
+    <axis xyz="1 0 0"/>
+    <parent link="base_link"/>
+    <child link="uss_cf1"/>
+    <!--           x y z     -->
+    <origin rpy = "0 0 0.785" xyz = "0.25 0.25 0.05"/> 
+  </joint>
+
+
+  <link name="uss_cf2">
+    <visual>
+      <origin rpy="1.57 0 1.57" xyz="0 -0.02 0"/>
+      <geometry>
+        <mesh filename="file:/home/elliottwhite/proj515_ws/src/beta_urdf/src/urdf_uss.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </visual>
+  </link>
+
+  <joint name="base_uss_cf2_joint" type="fixed">
+    <axis xyz="1 0 0"/>
+    <parent link="base_link"/>
+    <child link="uss_cf2"/>
+    <!--           x y z     -->
+    <origin rpy = "0 0 2.355" xyz = "-0.25 0.25 0.05"/> 
+  </joint>
+
+
+  <link name="uss_cf3">
+    <visual>
+      <origin rpy="1.57 0 1.57" xyz="0 -0.02 0"/>
+      <geometry>
+        <mesh filename="file:/home/elliottwhite/proj515_ws/src/beta_urdf/src/urdf_uss.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </visual>
+  </link>
+
+  <joint name="base_uss_cf3_joint" type="fixed">
+    <axis xyz="1 0 0"/>
+    <parent link="base_link"/>
+    <child link="uss_cf3"/>
+    <!--           x y z     -->
+    <origin rpy = "0 0 3.925" xyz = "-0.25 -0.25 0.05"/> 
+  </joint>
+
+
+  <link name="uss_cf4">
+    <visual>
+      <origin rpy="1.57 0 1.57" xyz="0 -0.02 0"/>
+      <geometry>
+        <mesh filename="file:/home/elliottwhite/proj515_ws/src/beta_urdf/src/urdf_uss.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </visual>
+  </link>
+
+  <joint name="base_uss_cf4_joint" type="fixed">
+    <axis xyz="1 0 0"/>
+    <parent link="base_link"/>
+    <child link="uss_cf4"/>
+    <!--           x y z     -->
+    <origin rpy = "0 0 5.495" xyz = "0.25 -0.25 0.05"/> 
+  </joint>
+
 
 
 </robot>

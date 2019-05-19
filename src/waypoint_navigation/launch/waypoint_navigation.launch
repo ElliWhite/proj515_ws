@@ -6,6 +6,15 @@
     <arg name="audio_trigger_topic" default="/audio_trigger"/>
     <arg name="audio_status_topic" default="/audio_status"/>
 
+    <!-- Waypoints -->
+    <arg name="initial_pose_x" value="38.8"/>
+    <arg name="initial_pose_y" value="16"/>
+    <arg name="initial_pose_heading" value="0"/>
+    <arg name="waypoints_file_folder" value="/home/elliottwhite/proj515_ws/src/waypoint_navigation/waypoints"/>
+
+    <!-- Map Server --> 
+    <node name="map_server" pkg="map_server" type="map_server" args="/home/elliottwhite/proj515_ws/map/303/303.pgm 0.05"/>
+
     <!-- Waypoint navigation -->
     <node pkg="waypoint_navigation" type="waypoint_navigation" name="waypoint_navigation" output="screen">
         <param name="map_frame" value="$(arg map_frame)"/>
@@ -13,18 +22,11 @@
         <param name="base_link_frame" value="$(arg base_frame)"/>
         <param name="audio_trigger_topic" value="$(arg audio_trigger_topic)"/>
         <param name="audio_status_topic" value="$(arg audio_status_topic)"/>
-        <param name="number_of_waypoints" value="2"/>
-        <param name="waypoint_0_name" value="Babbage"/>
-        <param name="waypoint_0_x" value="0"/>
-        <param name="waypoint_0_y" value="0.8"/>
-        <param name="waypoint_1_name" value="Rolle"/>
-        <param name="waypoint_1_x" value="4.5"/>
-        <param name="waypoint_1_y" value="0"/>
+        <param name="initial_pose_x" value="$(arg initial_pose_x)"/>
+        <param name="initial_pose_y" value="$(arg initial_pose_y)"/>
+        <param name="initial_pose_heading" value="$(arg initial_pose_heading)"/>
+        <param name="waypoints_file_folder" value="$(arg waypoints_file_folder)"/>
     </node>
-
-
-
-
 
 
 </launch>

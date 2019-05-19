@@ -3,6 +3,6 @@ prefix=/home/elliottwhite/proj515_ws/devel
 Name: waypoint_navigation
 Description: Description of waypoint_navigation
 Version: 0.0.0
-Cflags: 
+Cflags: -I/home/elliottwhite/proj515_ws/devel/include
 Libs: -L/home/elliottwhite/proj515_ws/devel/lib 
 Requires: 

@@ -1,0 +1,8 @@
+prefix=/home/elliottwhite/proj515_ws/install
+
+Name: range_sensor_layer
+Description: Description of range_sensor_layer
+Version: 0.2.1
+Cflags: -I/home/elliottwhite/proj515_ws/install/include
+Libs: -L/home/elliottwhite/proj515_ws/install/lib 
+Requires: sensor_msgs

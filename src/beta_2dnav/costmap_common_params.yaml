@@ -1,14 +1,25 @@
-obstacle_range: 3.5
-raytrace_range: 4.5
-footprint: [[-0.35,-0.35], [-0.35, 0.35], [0.35, 0.35], [0.35, -0.35]]
-#footprint: [[-1,-1], [-1, 1], [1, 1], [1, 1]]
-#robot_radius: ir_of_robot
-inflation_radius: 0.05
+footprint: [[-0.25,-0.28], [-0.25, 0.28], [0.34, 0.28], [0.34, -0.28]]
 
-observation_sources: laser_scan_sensor
 
-#laser_scan_sensor: {sensor_frame: frame_name, data_type: LaserScan, topic: topic_name, marking: true, clearing: true}
+obstacle_layer:
+  obstacle_range: 4
+  raytrace_range: 12
+  map_type: costmap
+  inflation_radius: 0.15
 
-laser_scan_sensor: {sensor_frame: laser, data_type: LaserScan, topic: scan, marking: true, clearing: true}
+  observation_sources: laser_scan_sensor
+  laser_scan_sensor: {sensor_frame: laser, data_type: LaserScan, topic: scan, marking: true, clearing: true}
+
+inflation_layer:
+  inflation_radius: 0.15
+  cost_scaling_factor: 10.0
+
+
+range_sensor_layer:
+  clear_threshold:    0.3
+  mark_threshold:     0.8
+  clear_on_max_reading: true
+  ns:   /ultrasound
+  topics: ["cf1", "cf2", "cf3", "cf4", "cb1", "cb2", "cb3", "cb4"]
 
 

@@ -1,8 +1,7 @@
 import cv2
 import time
 
-map = cv2.imread('/home/elliottwhite/proj515_ws/map/303.pgm')
-
+map = cv2.imread('/home/elliottwhite/proj515_ws/map/hallways/hallway_cr.pgm')
 
 
 while(1):

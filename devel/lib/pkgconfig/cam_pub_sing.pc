@@ -1,0 +1,8 @@
+prefix=/home/elliottwhite/proj515_ws/devel
+
+Name: cam_pub_sing
+Description: Description of cam_pub_sing
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/elliottwhite/proj515_ws/devel/lib 
+Requires: 

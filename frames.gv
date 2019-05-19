@@ -1,11 +1,13 @@
 digraph G {
-"base_link" -> "usb_cam"[label="Broadcaster: /robot_state_publisher\nAverage rate: 10000.000 Hz\nMost recent transform: 0.000 ( 1552916894.662 sec old)\nBuffer length: 0.000 sec\n"];
-"odom" -> "base_link"[label="Broadcaster: /serial_node\nAverage rate: 75.843 Hz\nMost recent transform: 1552916894.648 ( 0.014 sec old)\nBuffer length: 4.918 sec\n"];
-"base_link" -> "imu"[label="Broadcaster: /robot_state_publisher\nAverage rate: 10000.000 Hz\nMost recent transform: 0.000 ( 1552916894.662 sec old)\nBuffer length: 0.000 sec\n"];
-"base_link" -> "laser"[label="Broadcaster: /robot_state_publisher\nAverage rate: 10000.000 Hz\nMost recent transform: 0.000 ( 1552916894.662 sec old)\nBuffer length: 0.000 sec\n"];
-"map" -> "odom"[label="Broadcaster: /amcl\nAverage rate: 7.390 Hz\nMost recent transform: 1552916894.487 ( 0.175 sec old)\nBuffer length: 4.736 sec\n"];
+"odom" -> "base_link"[label="Broadcaster: /play_1557753146094373646\nAverage rate: 68.966 Hz\nMost recent transform: 1557752381.243 ( 978.931 sec old)\nBuffer length: 0.087 sec\n"];
+"right_cam" -> "fid4"[label="Broadcaster: /play_1557753146094373646\nAverage rate: 10000.000 Hz\nMost recent transform: 0.000 ( 1557753360.174 sec old)\nBuffer length: 0.000 sec\n"];
+"right_cam" -> "fid0"[label="Broadcaster: /play_1557753146094373646\nAverage rate: 10000.000 Hz\nMost recent transform: 0.000 ( 1557753360.174 sec old)\nBuffer length: 0.000 sec\n"];
 edge [style=invis];
  subgraph cluster_legend { style=bold; color=black; label ="view_frames Result";
-"Recorded at time: 1552916894.662"[ shape=plaintext ] ;
- }->"map";
+"Recorded at time: 1557753360.174"[ shape=plaintext ] ;
+ }->"odom";
+edge [style=invis];
+ subgraph cluster_legend { style=bold; color=black; label ="view_frames Result";
+"Recorded at time: 1557753360.174"[ shape=plaintext ] ;
+ }->"right_cam";
 }

@@ -771,9 +771,9 @@ void Map::publishMarker(Fiducial &fid)
     marker.action = visualization_msgs::Marker::ADD;
     toMsg(fid.pose.transform, marker.pose);
 
-    marker.scale.x = 0.15;
-    marker.scale.y = 0.15;
-    marker.scale.z = 0.01;
+    marker.scale.x = 0.272;     
+    marker.scale.y = 0.272;
+    marker.scale.z = 0.02;  
     if (fid.visible) {
         marker.color.r = 1.0f;
         marker.color.g = 0.0f;
@@ -795,16 +795,19 @@ void Map::publishMarker(Fiducial &fid)
     text.type = visualization_msgs::Marker::TEXT_VIEW_FACING;
     text.action = visualization_msgs::Marker::ADD;
     text.header.frame_id = "/map";
-    text.color.r = text.color.g = text.color.b = text.color.a = 1.0f;
+    text.color.r = 0.223f;
+    text.color.g = 0.9f;
+    text.color.b = 0.0f;
+    text.color.a = 1.0f;
     text.id = fid.id;
-    text.scale.x = text.scale.y = text.scale.z = 0.1;
+    text.scale.x = text.scale.y = text.scale.z = 0.66;
     text.pose.position.x = marker.pose.position.x;
     text.pose.position.y = marker.pose.position.y;
     text.pose.position.z = marker.pose.position.z;
     text.pose.position.z += (marker.scale.z/2.0) + 0.1;
     text.id = fid.id + 30000;
     text.ns = "text";
-    text.text = std::to_string(fid.id);
+    text.text = "Fid ID " + std::to_string(fid.id);
 
 
     markerPub.publish(text);
